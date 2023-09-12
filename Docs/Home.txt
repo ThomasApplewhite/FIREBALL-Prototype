@@ -4,3 +4,18 @@ Creation-Date: 2023-09-11T20:40:11-07:00
 
 ====== Home ======
 Created Monday 11 September 2023
+
+FIREBALL is a tiny little phone game about casting spells at monsters until you can launch the big ol' FIREBALL.
+
+Tap to shoot a spell in a direction. Spells hurt monsters.
+Tap to pick a spell.
+Spells have the following  properties:
+* Damage: How much damage the spell does
+* Size: How big the spell is
+* Range: How far the spell goes
+* Cooldown: How long it takes for the spell to recharge
+* Stacks: How many times the spell can be stored while already ready
+* Special: Anything cool!
+* Global CD: How much other spell have their cooldowns changed when this spell is cast
+
+Other than the spells, everything is simple. Black-and-white pixel 8 or 4 bit. Pixel music. One enemy type that just walks, maybe with increasing health. Scaling levels. A pause menu. And that's it. Maybe if it's quick and goes well I'll put other mobile integrations and stuff in and put it on app stores. But only if I'm not sick of it.
