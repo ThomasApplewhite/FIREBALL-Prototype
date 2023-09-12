@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-11T20:59:59-07:00
+
+====== FunctionalityDocs ======
+Created Monday 11 September 2023
+

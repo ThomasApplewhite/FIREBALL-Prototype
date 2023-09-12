@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-11T21:01:41-07:00
+
+====== InitialDevelopmentTODO ======
+Created Monday 11 September 2023
+
+[ ] Shooting Spells
+[ ] Enemies that come towards the "player"^{1}
+[ ] Enemy Health
+[ ] Enemy Spawning
+[ ] Collisions
+[ ] Player Health
+[ ] "Losing"
+[ ] Basic Enemy, Spell, and Player sprites
+[ ] Basic Music
+
+1. The player is at the bottom center of the screen. Enemies should move in a straight-ish line towards the player from the top edge and top corners of the screen.
