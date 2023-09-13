@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://m4sy3bd0hudy"]
+
+[ext_resource type="Script" path="res://Source/SpellProvider/stub_spell_provider.gd" id="1_ede6k"]
+
+[node name="StubSpellProvider" type="Node"]
+script = ExtResource("1_ede6k")

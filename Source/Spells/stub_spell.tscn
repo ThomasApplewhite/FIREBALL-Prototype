@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cld4jmh16vpm2"]
+
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_j2o5t"]
+[ext_resource type="Script" path="res://Source/Spells/stub_spell.gd" id="1_yxcyb"]
+[ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="2_p84rt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa6f5"]
+
+[node name="StubSpell" type="CharacterBody2D"]
+script = ExtResource("1_yxcyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sa6f5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_j2o5t")
+
+[node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_body") instance=ExtResource("2_p84rt")]
+spell_body = NodePath("..")
+spell_speed = 100.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqq8oe5o5y7cj"]
+
+[ext_resource type="Script" path="res://Source/SpellMovers/linear_spell_mover.gd" id="1_ckkr0"]
+
+[node name="LinearSpellMover" type="Node"]
+script = ExtResource("1_ckkr0")

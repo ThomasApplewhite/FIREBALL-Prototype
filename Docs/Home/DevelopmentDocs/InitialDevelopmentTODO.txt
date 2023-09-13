@@ -5,7 +5,7 @@ Creation-Date: 2023-09-11T21:01:41-07:00
 ====== InitialDevelopmentTODO ======
 Created Monday 11 September 2023
 
-[ ] Shooting Spells
+[*] Shooting Spells
 [ ] Enemies that come towards the "player"^{1}
 [ ] Enemy Health
 [ ] Enemy Spawning
