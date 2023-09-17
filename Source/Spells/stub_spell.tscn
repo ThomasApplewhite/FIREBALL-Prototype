@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cld4jmh16vpm2"]
 
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_j2o5t"]
 [ext_resource type="Script" path="res://Source/Spells/stub_spell.gd" id="1_yxcyb"]
+[ext_resource type="Texture2D" uid="uid://cvdbf2f7l0tgr" path="res://Assets/Spells/ZapSpell_Large.png" id="2_iwk86"]
 [ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="2_p84rt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa6f5"]
@@ -13,9 +13,10 @@ script = ExtResource("1_yxcyb")
 shape = SubResource("RectangleShape2D_sa6f5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_j2o5t")
+texture = ExtResource("2_iwk86")
 
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_body") instance=ExtResource("2_p84rt")]
 spell_body = NodePath("..")
-spell_speed = 100.0
+spell_speed = 1000.0

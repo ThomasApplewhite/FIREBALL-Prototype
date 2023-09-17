@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdb8bmcb68xps"]
 
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_m1kg6"]
+[ext_resource type="Texture2D" uid="uid://dgyaktecbg6ip" path="res://Assets/Player/Player_Large.png" id="1_2hu3t"]
 [ext_resource type="PackedScene" uid="uid://dqhluqo06p4b3" path="res://Source/Player/player_functionality.tscn" id="2_4gyl4"]
 [ext_resource type="PackedScene" uid="uid://m4sy3bd0hudy" path="res://Source/SpellProvider/stub_spell_provider.tscn" id="3_rk87e"]
 [ext_resource type="PackedScene" uid="uid://cld4jmh16vpm2" path="res://Source/Spells/stub_spell.tscn" id="4_0hduj"]
@@ -11,7 +11,7 @@ size = Vector2(128, 128)
 [node name="Player" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_m1kg6")
+texture = ExtResource("1_2hu3t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y4rvp")

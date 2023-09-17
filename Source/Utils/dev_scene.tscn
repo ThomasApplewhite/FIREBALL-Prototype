@@ -4,5 +4,11 @@
 
 [node name="DevScene" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.76, 19.76)
+color = Color(0, 0, 0, 1)
+
 [node name="Player" parent="." instance=ExtResource("1_bewvo")]
 position = Vector2(580, 575)

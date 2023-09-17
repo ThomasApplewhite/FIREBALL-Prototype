@@ -15,4 +15,6 @@ Created Monday 11 September 2023
 [ ] Basic Enemy, Spell, and Player sprites
 [ ] Basic Music
 
+Make sure to make assets as you go. Art assets need to have higher resolutions to maintain sharpness and size
+
 1. The player is at the bottom center of the screen. Enemies should move in a straight-ish line towards the player from the top edge and top corners of the screen.
