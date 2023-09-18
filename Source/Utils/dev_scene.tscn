@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwdjpl0p2513d"]
+[gd_scene load_steps=4 format=3 uid="uid://dwdjpl0p2513d"]
 
 [ext_resource type="PackedScene" uid="uid://cdb8bmcb68xps" path="res://Source/Player/player.tscn" id="1_bewvo"]
+[ext_resource type="PackedScene" uid="uid://ddsruk6y2ega7" path="res://Source/Enemies/enemy_spawner.tscn" id="2_dvohq"]
+[ext_resource type="PackedScene" uid="uid://bku5f54g2jeph" path="res://Source/Enemies/enemy.tscn" id="3_dbsbs"]
 
 [node name="DevScene" type="Node2D"]
 
@@ -12,3 +14,8 @@ color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_bewvo")]
 position = Vector2(580, 575)
+
+[node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_dvohq")]
+position = Vector2(576, -10)
+packed_enemy = ExtResource("3_dbsbs")
+player = NodePath("../Player")
