@@ -18,7 +18,5 @@ func _physics_process(delta):
 		return
 	
 	var move_dir = (target_node.global_position - global_position).normalized()
-	global_transform.x = move_dir
-	global_transform.y = move_dir.orthogonal()
-	velocity = global_transform.x * enemy_speed
+	velocity = move_dir * enemy_speed
 	move_and_slide()

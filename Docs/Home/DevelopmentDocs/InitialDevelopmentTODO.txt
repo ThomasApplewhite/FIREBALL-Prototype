@@ -6,13 +6,13 @@ Creation-Date: 2023-09-11T21:01:41-07:00
 Created Monday 11 September 2023
 
 [*] Shooting Spells
-[ ] Enemies that come towards the "player"^{1}
+[*] Enemies that come towards the "player"^{1}
 [ ] Enemy Health
 [ ] Enemy Spawning
 [ ] Collisions
 [ ] Player Health
 [ ] "Losing"
-[ ] Basic Enemy, Spell, and Player sprites
+[*] Basic Enemy, Spell, and Player sprites
 [ ] Basic Music
 
 Make sure to make assets as you go. Art assets need to have higher resolutions to maintain sharpness and size
