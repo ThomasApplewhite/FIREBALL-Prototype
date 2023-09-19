@@ -7,9 +7,9 @@ Created Monday 11 September 2023
 
 [*] Shooting Spells
 [*] Enemies that come towards the "player"^{1}
-[ ] Enemy Health
-[ ] Enemy Spawning
-[ ] Collisions
+[*] Enemy Health
+[*] Enemy Spawning
+[*] Collisions
 [ ] Player Health
 [ ] "Losing"
 [*] Basic Enemy, Spell, and Player sprites

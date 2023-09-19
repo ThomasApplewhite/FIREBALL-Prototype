@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-# step 1: find the player
-# step 2: move towards them
-
 @export
 var enemy_speed = 10.0
 
@@ -20,3 +17,7 @@ func _physics_process(delta):
 	var move_dir = (target_node.global_position - global_position).normalized()
 	velocity = move_dir * enemy_speed
 	move_and_slide()
+
+
+func _on_health_counter_health_depleted():
+	queue_free()
