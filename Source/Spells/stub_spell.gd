@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Area2D
 
 @onready
 var spell_mover = $LinearSpellMover

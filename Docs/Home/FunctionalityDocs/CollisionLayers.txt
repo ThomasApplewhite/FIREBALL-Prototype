@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-17T22:41:50-07:00
+
+====== CollisionLayers ======
+Created Sunday 17 September 2023
+
+In Godot, the Layer is the collision layer the Node exists on, and the Mask is the collision layer the Node collides with
+
+1. Characters: Enemies and the Player
+2. Spells

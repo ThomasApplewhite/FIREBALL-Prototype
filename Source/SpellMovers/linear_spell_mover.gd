@@ -1,7 +1,7 @@
 extends Node
 
 @export
-var spell_body : CharacterBody2D
+var spell_node : Node2D
 
 @export
 var spell_speed = 10.0
@@ -16,5 +16,4 @@ func launch():
 	is_launched = true
 
 func _move_spell_body(delta):
-	spell_body.velocity = spell_body.global_transform.x * spell_speed
-	spell_body.move_and_slide()
+	spell_node.global_position += spell_node.global_transform.x * spell_speed * delta
