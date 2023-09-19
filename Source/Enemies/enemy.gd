@@ -28,7 +28,13 @@ func _handle_collision():
 	for i in get_slide_collision_count():
 		var collision_obj = get_slide_collision(i).get_collider()
 		if not collision_obj.collision_layer & int(pow(2, enemy_collision_layer-1)):
-			_on_non_enemy_collision.emit(collision_obj)
+			_attack_target(collision_obj)
+			return
+			
+
+func _attack_target(target):
+	_on_non_enemy_collision.emit(target)
+	queue_free()
 
 func _on_health_counter_health_depleted():
 	queue_free()
