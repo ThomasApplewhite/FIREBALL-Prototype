@@ -7,5 +7,13 @@ Created Sunday 17 September 2023
 
 In Godot, the Layer is the collision layer the Node exists on, and the Mask is the collision layer the Node collides with
 
-1. Characters: Enemies and the Player
-2. Spells
+Layers:
+1. The Player
+2. Enemies
+3. Spells
+
+Interactions:
+Players mask Enemies
+Enemies mask Players and Enemies
+Spells mask Enemies
+

@@ -10,7 +10,7 @@ Created Monday 11 September 2023
 [*] Enemy Health
 [*] Enemy Spawning
 [*] Collisions
-[ ] Player Health
+[*] Player Health^{2}
 [ ] "Losing"
 [*] Basic Enemy, Spell, and Player sprites
 [ ] Basic Music
@@ -18,3 +18,4 @@ Created Monday 11 September 2023
 Make sure to make assets as you go. Art assets need to have higher resolutions to maintain sharpness and size
 
 1. The player is at the bottom center of the screen. Enemies should move in a straight-ish line towards the player from the top edge and top corners of the screen.
+2. For sanity's sake, you need to decide what happens when an enemy hit the player, other than damage, so they don't just hit the player forever until they instantly die

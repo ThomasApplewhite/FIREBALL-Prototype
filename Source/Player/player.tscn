@@ -10,6 +10,7 @@
 size = Vector2(128, 128)
 
 [node name="Player" type="StaticBody2D"]
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2hu3t")
@@ -28,3 +29,4 @@ position = Vector2(0, -85)
 stub_spell = ExtResource("4_0hduj")
 
 [node name="HealthCounter" parent="." instance=ExtResource("5_j5vxp")]
+position = Vector2(168, 0)

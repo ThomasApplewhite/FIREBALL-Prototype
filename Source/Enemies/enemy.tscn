@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bku5f54g2jeph"]
+[gd_scene load_steps=6 format=3 uid="uid://bku5f54g2jeph"]
 
 [ext_resource type="Script" path="res://Source/Enemies/enemy.gd" id="1_nebdt"]
 [ext_resource type="Texture2D" uid="uid://c7lcwb5multyn" path="res://Assets/Enemies/Enemy.png" id="2_nrxgy"]
 [ext_resource type="PackedScene" uid="uid://dbnrjfvelxmbi" path="res://Source/Functionality/health_counter.tscn" id="3_1vk7p"]
+[ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="4_ri7ys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_626be"]
 size = Vector2(80, 80)
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_nebdt")
 enemy_speed = 40.0
@@ -21,4 +23,7 @@ texture = ExtResource("2_nrxgy")
 [node name="HealthCounter" parent="." instance=ExtResource("3_1vk7p")]
 position = Vector2(0, -67)
 
+[node name="DamageDealer" parent="." instance=ExtResource("4_ri7ys")]
+
+[connection signal="_on_non_enemy_collision" from="." to="DamageDealer" method="_on_damage_triggered"]
 [connection signal="health_depleted" from="HealthCounter" to="." method="_on_health_counter_health_depleted"]
