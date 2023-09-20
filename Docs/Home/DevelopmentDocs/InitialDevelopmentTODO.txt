@@ -11,9 +11,9 @@ Created Monday 11 September 2023
 [*] Enemy Spawning
 [*] Collisions
 [*] Player Health^{2}
-[ ] "Losing"
+[*] "Losing"
 [*] Basic Enemy, Spell, and Player sprites
-[ ] Basic Music
+[ ] Basic Music and Sound
 
 Make sure to make assets as you go. Art assets need to have higher resolutions to maintain sharpness and size
 

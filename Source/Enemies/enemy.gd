@@ -7,18 +7,18 @@ var enemy_collision_layer = 0x0002
 
 signal _on_non_enemy_collision(Node2D)
 
-var target_node : Node2D
+var target_location : Vector2
 var initialized = false
 
 func init_enemy(new_target : Node2D):
-	target_node = new_target
+	target_location = new_target.global_position
 	initialized = true
 
 func _physics_process(delta):
 	if not initialized:
 		return
 	
-	var move_dir = (target_node.global_position - global_position).normalized()
+	var move_dir = (target_location - global_position).normalized()
 	velocity = move_dir * enemy_speed
 	var collided = move_and_slide()
 	if collided:

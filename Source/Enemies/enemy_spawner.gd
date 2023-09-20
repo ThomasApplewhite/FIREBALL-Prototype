@@ -12,6 +12,8 @@ func _on_timer_timeout():
 	spawn_enemy()
 
 func spawn_enemy():
+	if not player:
+		return
 	var enemy_instance = packed_enemy.instantiate()
 	get_parent().add_child(enemy_instance)
 	enemy_instance.global_position = get_random_point_in_area()
