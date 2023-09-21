@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-20T22:37:38-07:00
+
+====== GameplayDevelopment ======
+Created Wednesday 20 September 2023
+
+I've figured out all the basic stuff, so now what?
+
+I think what I want to do is have a bunch of spells to pick from, and that each spell has shared properties, and that casting a spell modifies the CD of other spells until you can cast the fireball.
+
+[ ] Spell Selector^{1}
+[ ] Zap spell assets^{2}
+[ ] Basic Spell B^{2}
+[ ] Basic Spell C^{2}
+[ ] The FIREBALL^{2}
+[ ] Win State
+
+1. What even goes into the spell selector?
+[ ] Spell Selection UI element
+[ ] Auto-Generate Elements from list of spell nodes? No, from some sort of data structure that contains a packed scene and spell data. A resource that does that, yeah
+[ ] Cooldown managment
+[ ] Global cooldown modification for spell CDs
+
+2. What do spells even need
+* Sprites
+* SFX
+* Icons for the spell selector
+* Maybe some VFX? I'll decide later
