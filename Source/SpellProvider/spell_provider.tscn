@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xo43g1fmqpao"]
+
+[ext_resource type="Script" path="res://Source/SpellProvider/spell_provider.gd" id="1_ryj2y"]
+[ext_resource type="Resource" uid="uid://dedrdyxv5pma6" path="res://Assets/Spells/SpellData/stub_spell_data.tres" id="2_klqqq"]
+
+[node name="SpellProvider" type="Node"]
+script = ExtResource("1_ryj2y")
+spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("2_klqqq"), ExtResource("2_klqqq"), ExtResource("2_klqqq")])
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3

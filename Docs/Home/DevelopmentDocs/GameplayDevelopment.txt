@@ -17,10 +17,11 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 [ ] Win State
 
 1. What even goes into the spell selector?
-[ ] Spell Selection UI element
-[ ] Auto-Generate Elements from list of spell nodes? No, from some sort of data structure that contains a packed scene and spell data. A resource that does that, yeah
+[*] Spell Selection UI element
+[*] Auto-Generate Elements from list of spell nodes? No, from some sort of data structure that contains a packed scene and spell data. A resource that does that, yeah
 [ ] Cooldown managment
 [ ] Global cooldown modification for spell CDs
+[ ] Somehow get spells to not cast when the buttons are selected
 
 2. What do spells even need
 * Sprites
