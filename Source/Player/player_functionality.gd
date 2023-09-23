@@ -7,7 +7,10 @@ var spell_spawn_point : Node2D
 @export
 var spell_provider : Node
 
-func _input(event):
+
+# If this stops working, make sure all created Controls in play scenes are
+# set to ignore mouse
+func _unhandled_input(event):
 	# Any other screen touch not consumed by a UI feature is a spell cast
 	if event is InputEventScreenTouch and event.is_pressed():
 		cast_spell(event.position)

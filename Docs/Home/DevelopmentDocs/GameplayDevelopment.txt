@@ -19,12 +19,16 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 1. What even goes into the spell selector?
 [*] Spell Selection UI element
 [*] Auto-Generate Elements from list of spell nodes? No, from some sort of data structure that contains a packed scene and spell data. A resource that does that, yeah
-[ ] Cooldown managment
-[ ] Global cooldown modification for spell CDs
-[ ] Somehow get spells to not cast when the buttons are selected
+[ ] Cooldown managment^{3}
+[ ] Global cooldown modification for spell CDs^{3}
+[*] Somehow get spells to not cast when the buttons are selected
 
 2. What do spells even need
 * Sprites
 * SFX
 * Icons for the spell selector
 * Maybe some VFX? I'll decide later
+
+3. Multiple spells should be implemented before doing this
+
+I'll need to work on screen layout to make all the buttons fit and stuff. So, time to work on screen layout
