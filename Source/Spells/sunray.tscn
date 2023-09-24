@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmf0ck72mo3t7"]
+
+[ext_resource type="Script" path="res://Source/Spells/sunray.gd" id="1_en6t8"]
+[ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_q17av"]
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="2_ygi8q"]
+
+[node name="Sunray" type="Node2D"]
+script = ExtResource("1_en6t8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ygi8q")
+
+[node name="DamageDealer" parent="." instance=ExtResource("2_q17av")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
