@@ -13,7 +13,7 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 [ ] Zap spell assets^{2}
 [ ] Basic Spell B^{2}
 [ ] Basic Spell C^{2}
-[ ] The FIREBALL^{2}
+[ ] The FIREBALL^{4}
 [ ] Win State
 
 1. What even goes into the spell selector?
@@ -30,5 +30,7 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 * Maybe some VFX? I'll decide later
 
 3. Multiple spells should be implemented before doing this
+
+4. Make this the Basic Spell C for right now I think
 
 I'll need to work on screen layout to make all the buttons fit and stuff. So, time to work on screen layout

@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-23T16:49:33-07:00
+
+====== SpellDevelopmentToDos ======
+Created Saturday 23 September 2023
+
+Spells Need:
+* Sprites
+* Icon for the spell selector
+* Behavior
+
+Later on they'll need description text, maybe, as well as their stats exported to a resource, so they get constructed together from their spell data rather than having a dedicated node. Yeah. But that comes later.
+
+Zap
+[*] Visual
+[*] Behavior
+[*] Selector Icon
+
+Sun Ray
+[ ] Visual
+[ ] Behavior
+[ ] Selector Icon
+
+FIREBALL
+[ ] Visual
+[ ] Behavior
+[ ] Selector Icon

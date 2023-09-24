@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_8luxm"]
 [ext_resource type="PackedScene" uid="uid://cld4jmh16vpm2" path="res://Source/Spells/stub_spell.tscn" id="1_wk663"]
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="3_7je8v"]
+[ext_resource type="Texture2D" uid="uid://ckbkt1riqg5mw" path="res://Assets/Icons/ZapSpellIcon.png" id="3_0op43"]
 
 [resource]
 script = ExtResource("1_8luxm")
 spell_name = "Zap"
-spell_icon = ExtResource("3_7je8v")
+spell_icon = ExtResource("3_0op43")
 packed_spell = ExtResource("1_wk663")
