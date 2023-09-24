@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-23T17:17:28-07:00
+
+====== DamageDealingFlow ======
+Created Saturday 23 September 2023
+
+Damage is dealt in this order of events:
+1. Object B enters Object A
+2. Object A has a DamageDealer node that is signal-connected to a collision area
+3. Object A's DamageDealer checks for Object B's health on "^HealthCounter"
+4. If found, Object A's DamageDealer calls Object B's HealthCounter.decrease_health()

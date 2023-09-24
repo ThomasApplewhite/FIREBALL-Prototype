@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-23T17:20:39-07:00
+
+====== NiceToHaves ======
+Created Saturday 23 September 2023
+
+1. Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
