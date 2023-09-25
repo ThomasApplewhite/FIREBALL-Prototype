@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=4 format=3 uid="uid://c1v47eymax6vh"]
+
+[ext_resource type="PackedScene" uid="uid://csch451ab72a5" path="res://Source/Spells/magic_top.tscn" id="1_cegvl"]
+[ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_d2wbm"]
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="3_nfscj"]
+
+[resource]
+script = ExtResource("1_d2wbm")
+spell_name = "Magic Top"
+spell_icon = ExtResource("3_nfscj")
+packed_spell = ExtResource("1_cegvl")

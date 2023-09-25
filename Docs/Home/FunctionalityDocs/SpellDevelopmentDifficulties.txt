@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-24T23:04:04-07:00
+
+====== SpellDevelopmentDifficulties ======
+Created Sunday 24 September 2023
+
+Sunray: Need to figure out how to stretch a sprite to cover a defined box region, based on pixels rather than a transform.
+
+Magic Top: Need to figure out an expenential decay function such that it will approach 0 at a specific value and starts at a specific value.

@@ -11,6 +11,7 @@ Spells Need:
 * Behavior
 
 Later on they'll need description text, maybe, as well as their stats exported to a resource, so they get constructed together from their spell data rather than having a dedicated node. Yeah. But that comes later.
+Some spells will want a second functionality pass, but that also comes later.
 
 Zap
 [*] Visual
@@ -20,6 +21,11 @@ Zap
 Sun Ray
 [ ] Visual
 [ ] Behavior
+[ ] Selector Icon
+
+Magic Top
+[ ] Visual
+[*] Behavior
 [ ] Selector Icon
 
 FIREBALL

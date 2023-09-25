@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Source/SpellProvider/spell_provider.gd" id="1_ryj2y"]
 [ext_resource type="Resource" uid="uid://dedrdyxv5pma6" path="res://Assets/Spells/SpellData/stub_spell_data.tres" id="2_klqqq"]
-[ext_resource type="Resource" uid="uid://cd8pxrr28ovob" path="res://Assets/Spells/SpellData/sunray_spell_day.tres" id="3_wtm4r"]
+[ext_resource type="Resource" uid="uid://c1v47eymax6vh" path="res://Assets/Spells/SpellData/magic_top_spell_data.tres" id="3_p80l2"]
 
 [node name="SpellProvider" type="Node"]
 script = ExtResource("1_ryj2y")
-spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("2_klqqq"), ExtResource("3_wtm4r"), ExtResource("2_klqqq")])
+spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("2_klqqq"), ExtResource("3_p80l2"), ExtResource("2_klqqq")])
 
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 8

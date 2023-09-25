@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://csch451ab72a5"]
+
+[ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="1_1fac3"]
+[ext_resource type="Script" path="res://Source/Spells/magic_top.gd" id="1_u48ue"]
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="2_a8wmm"]
+[ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_vopk1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er0lx"]
+
+[node name="MagicTop" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_u48ue")
+spell_lifetime = 1.5
+spell_stoptime = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_er0lx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_a8wmm")
+
+[node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("1_1fac3")]
+spell_node = NodePath("..")
+spell_speed = 1500.0
+
+[node name="DamageDealer" parent="." instance=ExtResource("2_vopk1")]
+damage = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
