@@ -14,6 +14,8 @@ var timer = $Timer
 var spell_mover = $LinearSpellMover
 @onready
 var damage_dealer = $DamageDealer
+@onready
+var sprite = $Sprite2D
 
 var initial_speed
 
@@ -28,6 +30,9 @@ func _ready():
 func _process(delta):
 	var time_elapsed = spell_lifetime - timer.time_left
 	spell_mover.spell_speed = calculate_new_spell_speed(time_elapsed)
+
+	# ideal world: make sure the top always faces straight up and down, rather
+	# than rotating with the rest of the spell.
 
 func _physics_process(delta):
 	damage_colliding_bodies(get_overlapping_bodies())

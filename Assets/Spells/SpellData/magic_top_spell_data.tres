@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://csch451ab72a5" path="res://Source/Spells/magic_top.tscn" id="1_cegvl"]
 [ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_d2wbm"]
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="3_nfscj"]
+[ext_resource type="Texture2D" uid="uid://cfrvkiqia8orv" path="res://Assets/Icons/MagicTopSpellIcon.png" id="3_oyfj7"]
 
 [resource]
 script = ExtResource("1_d2wbm")
 spell_name = "Magic Top"
-spell_icon = ExtResource("3_nfscj")
+spell_icon = ExtResource("3_oyfj7")
 packed_spell = ExtResource("1_cegvl")

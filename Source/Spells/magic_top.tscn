@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="1_1fac3"]
 [ext_resource type="Script" path="res://Source/Spells/magic_top.gd" id="1_u48ue"]
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="2_a8wmm"]
+[ext_resource type="Texture2D" uid="uid://cifqufhetbrfn" path="res://Assets/Spells/MagicTopSpell_Large.png" id="2_cjdoe"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_vopk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_er0lx"]
@@ -18,8 +18,9 @@ spell_stoptime = 0.5
 shape = SubResource("RectangleShape2D_er0lx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_a8wmm")
+texture = ExtResource("2_cjdoe")
 
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("1_1fac3")]
 spell_node = NodePath("..")

@@ -24,9 +24,9 @@ Sun Ray
 [ ] Selector Icon
 
 Magic Top
-[ ] Visual
+[*] Visual
 [*] Behavior
-[ ] Selector Icon
+[*] Selector Icon
 
 FIREBALL
 [ ] Visual
