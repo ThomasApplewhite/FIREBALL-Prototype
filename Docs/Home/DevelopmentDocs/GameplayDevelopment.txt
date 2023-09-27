@@ -12,8 +12,8 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 [ ] Spell Selector^{1}
 [*] Zap spell assets^{2}
 [*] Basic Spell B^{2}
-[ ] Basic Spell C^{2}
-[ ] The FIREBALL^{4}
+[*] Basic Spell C^{2}
+[*] The FIREBALL^{4}
 [ ] Win State
 
 1. What even goes into the spell selector?

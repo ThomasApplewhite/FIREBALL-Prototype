@@ -29,6 +29,6 @@ Magic Top
 [*] Selector Icon
 
 FIREBALL
-[ ] Visual
+[*] Visual
 [*] Behavior
-[ ] Selector Icon
+[*] Selector Icon
