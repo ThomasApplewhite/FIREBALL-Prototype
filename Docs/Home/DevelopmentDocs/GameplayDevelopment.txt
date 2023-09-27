@@ -14,7 +14,7 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 [*] Basic Spell B^{2}
 [*] Basic Spell C^{2}
 [*] The FIREBALL^{4}
-[ ] Win State
+[*] Win State
 
 1. What even goes into the spell selector?
 [*] Spell Selection UI element

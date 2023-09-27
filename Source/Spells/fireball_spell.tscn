@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhg4by5ck0naw"]
+[gd_scene load_steps=6 format=3 uid="uid://bhg4by5ck0naw"]
 
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="1_32h0n"]
 [ext_resource type="Script" path="res://Source/Spells/fireball_spell.gd" id="1_74lgl"]
 [ext_resource type="Texture2D" uid="uid://bh2r5qiojpjtq" path="res://Assets/Spells/FireballSpell_Large.png" id="2_e4ruj"]
 [ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="2_o83ik"]
+[ext_resource type="PackedScene" uid="uid://ci0gmpvdti68" path="res://Source/Functionality/game_win_causer.tscn" id="5_jafb5"]
 
 [node name="FireballSpell" type="Node2D"]
 script = ExtResource("1_74lgl")
@@ -18,3 +19,5 @@ texture = ExtResource("2_e4ruj")
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("2_o83ik")]
 spell_node = NodePath("..")
 spell_speed = 750.0
+
+[node name="GameWinCauser" parent="." instance=ExtResource("5_jafb5")]

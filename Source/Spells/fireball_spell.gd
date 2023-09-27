@@ -9,6 +9,8 @@ var fireball_collision_mask
 var spell_mover = $LinearSpellMover
 @onready
 var damage_dealer = $DamageDealer
+@onready
+var win_causer = $GameWinCauser
 
 var screen_center : Vector2
 var screen_size : Vector2
@@ -53,5 +55,7 @@ func kill_all_enemies():
 	for result in space_state.intersect_shape(query):
 		if result.collider:
 			damage_dealer.instant_kill_node(result.collider)
+	
+	win_causer.win_triggered.emit()
 
 	queue_free()

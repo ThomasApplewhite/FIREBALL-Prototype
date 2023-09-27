@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci0gmpvdti68"]
+
+[ext_resource type="Script" path="res://Source/Functionality/game_win_causer.gd" id="1_7mc0w"]
+
+[node name="GameWinCauser" type="Node"]
+script = ExtResource("1_7mc0w")
