@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhg4by5ck0naw"]
+
+[ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="1_32h0n"]
+[ext_resource type="Script" path="res://Source/Spells/fireball_spell.gd" id="1_74lgl"]
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="2_aoe14"]
+[ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="2_o83ik"]
+
+[node name="FireballSpell" type="Node2D"]
+script = ExtResource("1_74lgl")
+fireball_collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_aoe14")
+
+[node name="DamageDealer" parent="." instance=ExtResource("1_32h0n")]
+
+[node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("2_o83ik")]
+spell_node = NodePath("..")
+spell_speed = 750.0

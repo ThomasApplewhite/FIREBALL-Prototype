@@ -10,8 +10,8 @@ I've figured out all the basic stuff, so now what?
 I think what I want to do is have a bunch of spells to pick from, and that each spell has shared properties, and that casting a spell modifies the CD of other spells until you can cast the fireball.
 
 [ ] Spell Selector^{1}
-[ ] Zap spell assets^{2}
-[ ] Basic Spell B^{2}
+[*] Zap spell assets^{2}
+[*] Basic Spell B^{2}
 [ ] Basic Spell C^{2}
 [ ] The FIREBALL^{4}
 [ ] Win State
