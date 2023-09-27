@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_ajc67"]
 [ext_resource type="PackedScene" uid="uid://bhg4by5ck0naw" path="res://Source/Spells/fireball_spell.tscn" id="1_gae0w"]
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="3_ppyse"]
+[ext_resource type="Texture2D" uid="uid://30g2d3kkooy6" path="res://Assets/Icons/FireballSpellIcon.png" id="3_drcj8"]
 
 [resource]
 script = ExtResource("1_ajc67")
 spell_name = "FIREBALL"
-spell_icon = ExtResource("3_ppyse")
+spell_icon = ExtResource("3_drcj8")
 packed_spell = ExtResource("1_gae0w")

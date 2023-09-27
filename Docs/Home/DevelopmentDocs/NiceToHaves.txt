@@ -6,3 +6,4 @@ Creation-Date: 2023-09-23T17:20:39-07:00
 Created Saturday 23 September 2023
 
 1. Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
+2. Instead of spells moving on their X axis and needing to inspector-rotate all of the sprites, just have them move on their y axis. They all use linear spell movers (so far) anyways
