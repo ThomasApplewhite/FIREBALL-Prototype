@@ -24,7 +24,7 @@ texture = ExtResource("2_cjdoe")
 
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("1_1fac3")]
 spell_node = NodePath("..")
-spell_speed = 1500.0
+spell_speed = 1000.0
 
 [node name="DamageDealer" parent="." instance=ExtResource("2_vopk1")]
 damage = 1.0
