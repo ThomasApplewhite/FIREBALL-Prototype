@@ -7,5 +7,6 @@
 [resource]
 script = ExtResource("1_ajc67")
 spell_name = "FIREBALL"
+spell_cooldown = 10.0
 spell_icon = ExtResource("3_drcj8")
 packed_spell = ExtResource("1_gae0w")

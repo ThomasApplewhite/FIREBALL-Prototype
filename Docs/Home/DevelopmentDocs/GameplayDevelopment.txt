@@ -19,7 +19,7 @@ I think what I want to do is have a bunch of spells to pick from, and that each 
 1. What even goes into the spell selector?
 [*] Spell Selection UI element
 [*] Auto-Generate Elements from list of spell nodes? No, from some sort of data structure that contains a packed scene and spell data. A resource that does that, yeah
-[ ] Cooldown managment^{3}
+[*] Cooldown managment^{3}
 [ ] Global cooldown modification for spell CDs^{3}
 [*] Somehow get spells to not cast when the buttons are selected
 

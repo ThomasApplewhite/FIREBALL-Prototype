@@ -17,6 +17,9 @@ func _unhandled_input(event):
 
 func cast_spell(screen_touch_position : Vector2):
 	var packed_spell = spell_provider.cast_selected_spell()
+	if not packed_spell:
+		return
+	
 	var spell_instance = packed_spell.instantiate()
 	var spell_direction = screen_touch_position - spell_spawn_point.global_position
 	spell_direction = spell_direction.normalized()

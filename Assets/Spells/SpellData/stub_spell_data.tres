@@ -7,5 +7,6 @@
 [resource]
 script = ExtResource("1_8luxm")
 spell_name = "Zap"
+spell_cooldown = 1.0
 spell_icon = ExtResource("3_0op43")
 packed_spell = ExtResource("1_wk663")

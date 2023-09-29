@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-09-27T14:46:47-07:00
+
+====== SpellProviderCooldownTimer ======
+Created Wednesday 27 September 2023
+
+tl;dr:
+use 1 global 100,000 second float timer
+have an array with 1 index per spell
+array entry will contain time at last spell cast
+when a spell is cast, if timer is greater than value + that spell's cooldown or is less than value (if timer looped), spell is castable
+global CD changes modify the value of the timer to effect all spell cooldowns
+if timer reaches 100,000, it will reset to 0 (if timer + delta > 100,000, timer = delta)
+
+potential issue:
+if timer value is reduced to be less than the timer's value when a spell is cast, its cooldown will "reset" when it shouldn't
+	WRONG: timer value is never reduced
+if timer gets looped, everything will reset
+
+
+different idea: use a singular timer for judging spell times, but when it expires, update the cooldown times of all the spells to represent them getting "looped"
+when the timer gets decreased pass zero, just do the looping manually and don't even change the timer
+
+as for cooldown graphics, dont sweat doing them as a for loop. If its really too  much of a performance drag, I can deal with that later
+
