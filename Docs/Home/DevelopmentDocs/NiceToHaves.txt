@@ -12,3 +12,6 @@ Created Saturday 23 September 2023
 5. Layout changes so the game looks nicer
 6. Sprite healthbars
 7. break up the functionality in spell provider among more scripts. seperate timing/casting from button managment
+8. cleanup stacking logic because I just pullsed it out of nowhere
+9. tbh just clean up the spell provider its doing too much rn
+10. do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up

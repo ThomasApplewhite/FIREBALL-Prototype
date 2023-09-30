@@ -24,3 +24,17 @@ when the timer gets decreased pass zero, just do the looping manually and don't 
 
 as for cooldown graphics, dont sweat doing them as a for loop. If its really too  much of a performance drag, I can deal with that later
 
+Bit of a problem: cooldown mods work right now for reducing cooldown values, but not for increasing them.
+If a spell is fully cooled down, increasing the cooldown by x will not set that spell's cooldown to x.
+
+I could manually increase cooldowns for positive cooldown values, I guess.
+OR I could design everything around only reducing cooldowns
+
+neither seem very cash money/what I want to be doing. Let me think...
+OR I could do nothing
+
+Maybe I let players leverage "stacks" of spells. Get your CD reduction so high you can just cast 90 FIREBALLs in a row.
+
+Yeah. That sounds like the most fun choice.
+
+I just need to change cooldown logic to modify the current cooldown amount, not reset it.

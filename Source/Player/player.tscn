@@ -28,3 +28,4 @@ position = Vector2(0, -85)
 position = Vector2(168, 0)
 
 [node name="SpellProvider" parent="." instance=ExtResource("6_o616n")]
+starting_spell_index = 0
