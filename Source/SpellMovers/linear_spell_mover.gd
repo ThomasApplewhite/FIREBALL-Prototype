@@ -16,4 +16,4 @@ func launch():
 	is_launched = true
 
 func _move_spell_body(delta):
-	spell_node.global_position += spell_node.global_transform.x * spell_speed * delta
+	spell_node.global_position -= spell_node.global_transform.y * spell_speed * delta

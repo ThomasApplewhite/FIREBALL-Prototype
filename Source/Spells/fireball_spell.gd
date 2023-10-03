@@ -30,7 +30,7 @@ func _process(delta):
 	# checking vector dots is slightly more expensive than checking position,
 	# but it will work even if the spell overshoots the exact position because
 	# of subpixel movement or whatever else.
-	if global_transform.x.dot(dir_to_center) <= 0:
+	if global_transform.y.dot(dir_to_center) > 0:
 		kill_all_enemies()
 
 func get_dir_to_explosion_position() -> Vector2:
@@ -39,8 +39,8 @@ func get_dir_to_explosion_position() -> Vector2:
 func launch():
 	# rotate towards screen center
 	var dir_to_center = get_dir_to_explosion_position()
-	global_transform.x = dir_to_center
-	global_transform.y = dir_to_center.orthogonal()
+	global_transform.y = -dir_to_center
+	global_transform.x = -(dir_to_center.orthogonal())
 	
 	spell_mover.launch()
 	

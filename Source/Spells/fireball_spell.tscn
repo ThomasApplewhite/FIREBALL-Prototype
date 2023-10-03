@@ -11,7 +11,6 @@ script = ExtResource("1_74lgl")
 fireball_collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
 texture = ExtResource("2_e4ruj")
 
 [node name="DamageDealer" parent="." instance=ExtResource("1_32h0n")]

@@ -16,7 +16,6 @@ script = ExtResource("1_yxcyb")
 shape = SubResource("RectangleShape2D_sa6f5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_iwk86")
 

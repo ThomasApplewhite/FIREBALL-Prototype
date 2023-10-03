@@ -26,8 +26,9 @@ func cast_spell(screen_touch_position : Vector2):
 	
 	spell_spawn_point.add_child(spell_instance)
 	spell_instance.global_position = spell_spawn_point.global_position
-	spell_instance.global_transform.x = spell_direction
-	spell_instance.global_transform.y = spell_direction.orthogonal()
+	# Reverse the spell direction because up is -Y (and all spells go some degree of up)
+	spell_instance.global_transform.y = -spell_direction
+	spell_instance.global_transform.x = -spell_direction.orthogonal()
 	# correcting transform skew. Why does that happen?
 	# spell_instance.global_transform.skew = 0.0
 	

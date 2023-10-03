@@ -5,15 +5,16 @@ Creation-Date: 2023-10-02T19:06:28-07:00
 ====== PolishPassOctober2023 ======
 Created Monday 02 October 2023
 
-[ ] Refactor LinearSpellMover and Enemies to move on the local Y axis
-[ ] Clean up path-string-based node access in GameState and HealthCounter
-[ ] Clear all warning in console
+[*] Refactor LinearSpellMover and Enemies to move on the local Y axis
+[*] Clean up path-string-based node access in GameState and HealthCounter
+[ ] Figure out how to make access to movement nodes on spells easy
 [ ] Screen Layout/Screen Size pass
 [ ] Sprite Healthbars
 [ ] Clean Spell Provider Functionality^{2}
 [ ] Spell Cooldown Testing^{3}
 [ ] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
 [ ] Spell Factory^{1}
+[ ] Clear all warning in console
 
 What needs to happen for the Spell Factory?
 [ ] Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
