@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-02T22:23:22-07:00
+
+====== SpellStructureDifficulties ======
+Created Monday 02 October 2023
+
+How do I launch spells? Spell launching functionality should be in  LinearSpellMover or some other spell movement thing, but there's no easy way to access them.
+But the thing is that each spell has to have a 'launch' method and they all need to have access to their spell movers anyways to make that start.
+Is there any way to fix both of those birds with one stone?
+
+How can the spell mover node of a spell be accessed without needing to refer to an explicit name?
+
+Okay, idea: What if spells have a spell functionality node, and THAT has access to everything. It works for health counter, I guess.
+
+Yes, let'd do that. A "spell functionality" node that gives access to general spell functionality and components, and that has a static path accessor like GameState.

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://csch451ab72a5"]
+[gd_scene load_steps=7 format=3 uid="uid://csch451ab72a5"]
 
 [ext_resource type="PackedScene" uid="uid://dqq8oe5o5y7cj" path="res://Source/SpellMovers/linear_spell_mover.tscn" id="1_1fac3"]
 [ext_resource type="Script" path="res://Source/Spells/magic_top.gd" id="1_u48ue"]
 [ext_resource type="Texture2D" uid="uid://cifqufhetbrfn" path="res://Assets/Spells/MagicTopSpell_Large.png" id="2_cjdoe"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_vopk1"]
+[ext_resource type="PackedScene" uid="uid://bf7t2l6ea2juh" path="res://Source/Functionality/spell_funcationality.tscn" id="5_qwyc1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_er0lx"]
 
@@ -29,5 +30,8 @@ spell_speed = 1000.0
 damage = 1.0
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="SpellFuncationality" parent="." node_paths=PackedStringArray("spell_mover") instance=ExtResource("5_qwyc1")]
+spell_mover = NodePath("../LinearSpellMover")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

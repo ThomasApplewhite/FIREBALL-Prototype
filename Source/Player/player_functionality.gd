@@ -3,6 +3,9 @@ extends Node
 @export
 var spell_spawn_point : Node2D
 
+@export
+var spell_func_path = ^"SpellFuncationality"
+
 # This will be some other type once I make the thing that picks the spells
 @export
 var spell_provider : Node
@@ -26,12 +29,8 @@ func cast_spell(screen_touch_position : Vector2):
 	
 	spell_spawn_point.add_child(spell_instance)
 	spell_instance.global_position = spell_spawn_point.global_position
-	# Reverse the spell direction because up is -Y (and all spells go some degree of up)
-	spell_instance.global_transform.y = -spell_direction
-	spell_instance.global_transform.x = -spell_direction.orthogonal()
-	# correcting transform skew. Why does that happen?
-	# spell_instance.global_transform.skew = 0.0
 	
-	spell_instance.launch()
+	var spell_func = spell_instance.get_node(spell_func_path)
+	spell_func.launch(spell_direction)
 	
 	

@@ -8,7 +8,7 @@ var main_status_text = $RichTextLabel
 
 const game_state_group_name = "GameStates"
 
-static func get_game_state(context_scene_tree : SceneTree) -> Node2D:
+static func get_game_state(context_scene_tree : SceneTree) -> Node:
 	var game_states = context_scene_tree.get_nodes_in_group(game_state_group_name)
 	
 	if game_states.size() < 1:

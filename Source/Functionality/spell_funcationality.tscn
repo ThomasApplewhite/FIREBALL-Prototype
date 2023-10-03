@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf7t2l6ea2juh"]
+
+[ext_resource type="Script" path="res://Source/Functionality/spell_funcationality.gd" id="1_tems0"]
+
+[node name="SpellFuncationality" type="Node"]
+script = ExtResource("1_tems0")

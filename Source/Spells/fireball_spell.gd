@@ -35,14 +35,6 @@ func _process(delta):
 
 func get_dir_to_explosion_position() -> Vector2:
 	return (explosion_position - global_position).normalized()
-		
-func launch():
-	# rotate towards screen center
-	var dir_to_center = get_dir_to_explosion_position()
-	global_transform.y = -dir_to_center
-	global_transform.x = -(dir_to_center.orthogonal())
-	
-	spell_mover.launch()
 	
 func kill_all_enemies():
 	var space_state = get_world_2d().direct_space_state
@@ -59,3 +51,10 @@ func kill_all_enemies():
 	win_causer.win_triggered.emit()
 
 	queue_free()
+
+func _on_spell_funcationality_spell_launched():
+	# rotate towards screen center
+	var dir_to_center = get_dir_to_explosion_position()
+	spell_mover.move_direction = dir_to_center
+	global_transform.y = -dir_to_center
+	global_transform.x = -(dir_to_center.orthogonal())

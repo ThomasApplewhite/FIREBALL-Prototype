@@ -7,13 +7,14 @@ Created Monday 02 October 2023
 
 [*] Refactor LinearSpellMover and Enemies to move on the local Y axis
 [*] Clean up path-string-based node access in GameState and HealthCounter
-[ ] Figure out how to make access to movement nodes on spells easy
+[*] Refactor LinearSpellMover to have a movement direction and to set up rotation, rather than relying on node transforms to decide which way to move.
 [ ] Screen Layout/Screen Size pass
 [ ] Sprite Healthbars
 [ ] Clean Spell Provider Functionality^{2}
 [ ] Spell Cooldown Testing^{3}
 [ ] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
 [ ] Spell Factory^{1}
+[ ] Fix the SpellFuncationality error
 [ ] Clear all warning in console
 
 What needs to happen for the Spell Factory?
