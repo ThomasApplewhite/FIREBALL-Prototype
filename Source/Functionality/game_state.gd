@@ -9,23 +9,16 @@ var main_status_text = $RichTextLabel
 const game_state_group_name = "GameStates"
 
 static func get_game_state(context_scene_tree : SceneTree) -> Node2D:
-	# how should we access the game state if it's not on scene root?
-	return context_scene_tree.get_nodes_in_group(game_state_group_name)[0]
-	return null
-	var root = context_scene_tree.get_root()
-	var game_state = root.get_node_or_null(^"./GameState")
+	var game_states = context_scene_tree.get_nodes_in_group(game_state_group_name)
 	
-	if game_state:
-		return game_state
-		
-	# GameState not the root? Try one step lower!
-	game_state = root.get_node_or_null(^"././GameState")
-	
-	if game_state:
-		return game_state
-	else:
-		push_error("GameState node is not a Root Chlld or Grandchild!")
+	if game_states.size() < 1:
+		push_error("SceneTree has no GameState node!")
 		return null
+	
+	if game_states.size() > 1:
+		push_warning("There are multiple GameState nodes. Returning the first to be ready")
+
+	return game_states[0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
