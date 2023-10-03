@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-02T19:06:28-07:00
+
+====== PolishPassOctober2023 ======
+Created Monday 02 October 2023
+
+[ ] Refactor LinearSpellMover and Enemies to move on the local Y axis
+[ ] Clean up path-string-based node access in GameState and HealthCounter
+[ ] Clear all warning in console
+[ ] Screen Layout/Screen Size pass
+[ ] Sprite Healthbars
+[ ] Clean Spell Provider Functionality^{2}
+[ ] Spell Cooldown Testing^{3}
+[ ] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
+[ ] Spell Factory^{1}
+
+What needs to happen for the Spell Factory?
+[ ] Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
+[ ] Research if compositing scenes at runtime is faster than instancing scenes normally.
+[ ] Make SpellData fields private and give them accessors
+[ ] Add fields for more spell config info (damage, speed, etc)
+
+An idea I'm having: We can have a universal Spell Factory, which handles global spell initialization, and a custom spell initializer, which can do custom field/script setup.
+Whether or not the main script of a spell should do its own setup is something to define later.
+
+Remember, the goal here is not complexity. The goal is to move as much of magic-number spell setup as possible to SpellData for ease and convinience. Not to mention, if enough of spell setup is parameterized, it can be moved to spreadsheets/json/generateive data methods that are even easier to modify/expand. Though that might be a bit beyond this project.
+
+
+What needs to happen for the Spell Provider cleanup?
+[ ] break up the functionality in spell provider among more scripts. seperate timing/casting from button managment
+[ ] cleanup stacking logic because I just pullsed it out of nowhere
+[ ] tbh just clean up the spell provider its doing too much rn
+
+What needs to be done for Spell Cooldown Testing
+[ ] rigorous Spell Stacking test
+[ ] rigorous Cooldown test
