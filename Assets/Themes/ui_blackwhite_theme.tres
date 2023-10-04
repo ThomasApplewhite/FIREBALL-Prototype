@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c1ldb3mtl66yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pebs2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amquy"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+ProgressBar/colors/font_outline_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_shadow_color = Color(0, 0, 0, 0)
+ProgressBar/styles/background = SubResource("StyleBoxEmpty_pebs2")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_amquy")
