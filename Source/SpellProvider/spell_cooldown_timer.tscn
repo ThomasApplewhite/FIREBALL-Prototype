@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wr8iy48boafo"]
+
+[ext_resource type="Script" path="res://Source/SpellProvider/spell_cooldown_timer.gd" id="1_byamt"]
+
+[node name="SpellCooldownTimer" type="Timer"]
+script = ExtResource("1_byamt")

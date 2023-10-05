@@ -10,7 +10,7 @@ Created Monday 02 October 2023
 [*] Refactor LinearSpellMover to have a movement direction and to set up rotation, rather than relying on node transforms to decide which way to move.
 [ ] Screen Layout/Screen Size pass
 [*] Sprite Healthbars
-[ ] Clean Spell Provider Functionality^{2}
+[*] Clean Spell Provider Functionality^{2}
 [ ] Spell Cooldown Testing^{3}
 [ ] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
 [ ] Spell Factory^{1}
@@ -32,10 +32,15 @@ Remember, the goal here is not complexity. The goal is to move as much of magic-
 
 
 What needs to happen for the Spell Provider cleanup?
-[ ] break up the functionality in spell provider among more scripts. seperate timing/casting from button managment
-[ ] cleanup stacking logic because I just pullsed it out of nowhere
-[ ] tbh just clean up the spell provider its doing too much rn
+[*] break up the functionality in spell provider among more scripts. seperate timing/casting from button managment
+[*] Create a SpellStatus Node, a primary access point for spell cooldown and stat information (this is where cooldowns aand stacks happen)
+	This is the SpellCooldownTimer
+[*] Create a SpellSelection Node, which will handle all the buttons and their creation
+	This is the SpellButtonGridContainer
+[*] Refactor SpellProvider to be the forward facing node for spell providing. Outside nodes get spell info and cast spells from here
+
 
 What needs to be done for Spell Cooldown Testing
 [ ] rigorous Spell Stacking test
 [ ] rigorous Cooldown test
+[ ] Clean up and solidify spell stacking logic into concrete functionality

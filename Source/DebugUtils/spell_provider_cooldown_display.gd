@@ -17,10 +17,10 @@ func _process(delta):
 	var time_remaining
 	var stacks
 	var time_left = spell_provider.cooldown_timer.get_time_left()
-	var time_max = spell_provider.cooldown_timer_max	
+	var time_max = spell_provider.cooldown_timer.cooldown_timer_max	
 		
-	for i in spell_provider.spell_cooldowns.size():
-		var cooldown = spell_provider.spell_cooldowns[i]
+	for i in spell_provider.get_cooldowns().size():
+		var cooldown = spell_provider.get_cooldowns()[i]
 		var base_cooldown = spell_provider.spell_datas[i].spell_cooldown
 		
 		if(cooldown < 0):
@@ -33,7 +33,7 @@ func _process(delta):
 		time_remaining = 0 if time_remaining <= 0 else time_remaining
 		
 		cool_labels[i].text = "%.2f" % time_remaining
-		stack_labels[i].text = "%d" % spell_provider.get_spell_stacks(i)
+		stack_labels[i].text = "%d" % spell_provider.cooldown_timer.get_spell_stacks(i)
 		
 
 func enable_debug_display(new_spell_provider):
@@ -43,7 +43,7 @@ func enable_debug_display(new_spell_provider):
 	display_enabled = true
 	
 func generate_display_text():
-	var spell_count = spell_provider.spell_cooldowns.size()
+	var spell_count = spell_provider.cooldowns.size()
 	cool_labels.resize(spell_count)
 	stack_labels.resize(spell_count)
 	grid_container.columns = spell_count

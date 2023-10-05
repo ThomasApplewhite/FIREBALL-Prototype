@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://5llp4orwvhsj"]
+
+[ext_resource type="Script" path="res://Source/SpellProvider/spell_button_grid_container.gd" id="1_j6b8e"]
+
+[node name="SpellButtonGridContainer" type="GridContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_j6b8e")

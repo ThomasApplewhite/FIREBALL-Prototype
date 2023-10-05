@@ -1,29 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://xo43g1fmqpao"]
+[gd_scene load_steps=8 format=3 uid="uid://xo43g1fmqpao"]
 
 [ext_resource type="Script" path="res://Source/SpellProvider/spell_provider.gd" id="1_ryj2y"]
 [ext_resource type="Resource" uid="uid://dedrdyxv5pma6" path="res://Assets/Spells/SpellData/stub_spell_data.tres" id="2_klqqq"]
 [ext_resource type="Resource" uid="uid://c1v47eymax6vh" path="res://Assets/Spells/SpellData/magic_top_spell_data.tres" id="3_p80l2"]
 [ext_resource type="Resource" uid="uid://c2jqoxy3lnyv7" path="res://Assets/Spells/SpellData/fireball_spell_data.tres" id="4_4gxc8"]
 [ext_resource type="PackedScene" uid="uid://csc6mddwb30s2" path="res://Source/DebugUtils/spell_provider_cooldown_display.tscn" id="5_350ia"]
+[ext_resource type="PackedScene" uid="uid://5llp4orwvhsj" path="res://Source/SpellProvider/spell_button_grid_container.tscn" id="6_2rhjt"]
+[ext_resource type="PackedScene" uid="uid://wr8iy48boafo" path="res://Source/SpellProvider/spell_cooldown_timer.tscn" id="7_2teav"]
 
 [node name="SpellProvider" type="Node"]
 script = ExtResource("1_ryj2y")
 spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("2_klqqq"), ExtResource("3_p80l2"), ExtResource("4_4gxc8")])
 debug_enable_cooldowns_display = true
 
-[node name="GridContainer" type="GridContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-mouse_filter = 2
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="SpellProviderCooldownDisplay" parent="." instance=ExtResource("5_350ia")]
+
+[node name="SpellButtonGridContainer" parent="." instance=ExtResource("6_2rhjt")]
+
+[node name="SpellCooldownTimer" parent="." instance=ExtResource("7_2teav")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
