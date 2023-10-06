@@ -35,7 +35,7 @@ func init_cooldown_timer():
 	reduce.resize(size)
 	for i in size:
 		base[i] = spell_datas[i].spell_cooldown
-		reduce[i] = spell_datas[i].global_cooldown_reduction
+		reduce[i] = spell_datas[i].global_cooldown_change
 	cooldown_timer.init_cooldowns(size, base, reduce)
 
 func get_cooldowns() -> Array[float]:

@@ -8,6 +8,6 @@
 script = ExtResource("1_d2wbm")
 spell_name = "Magic Top"
 spell_cooldown = 3.0
-global_cooldown_reduction = -2.0
+global_cooldown_change = 2.0
 spell_icon = ExtResource("3_oyfj7")
 packed_spell = ExtResource("1_cegvl")

@@ -2,7 +2,7 @@ extends Timer
 
 var base_cooldowns :Array [float]
 var cooldowns : Array[float]
-var cooldown_reductions : Array[float]
+var cooldown_adjusts : Array[float]
 
 # Timer max will be the starting point for timer loops
 # Timers will automatically loop if reduced below cooldown_min to avoid
@@ -19,20 +19,20 @@ func start_cooldown_timer():
 	start(cooldown_timer_max)
 
 
-func init_cooldowns(array_size : int, new_base : Array[float], new_reductions : Array[float]):
+func init_cooldowns(array_size : int, new_base : Array[float], new_adjusts : Array[float]):
 	base_cooldowns = new_base
-	cooldown_reductions = new_reductions
+	cooldown_adjusts = new_adjusts
 	cooldowns.resize(array_size)
 	for i in array_size:
 		cooldowns[i] = cooldown_timer_max - base_cooldowns[i]
 
 
 func get_spell_stacks(index : int) -> int:
-	return floor((cooldowns[index] - get_time_left()) / base_cooldowns[index])
+	return floor((cooldowns[index] - get_time_left()) / base_cooldowns[index]) + 1
 
 
-func reduce_all_spell_cooldowns(cooldown_reduction : float):
-	var new_time = get_time_left() - cooldown_reduction
+func adjust_all_spell_cooldowns(cooldown_change : float):
+	var new_time = get_time_left() + cooldown_change
 	if new_time > reduced_cooldown_min:
 		start(new_time)
 	else:
@@ -47,9 +47,9 @@ func loop_spell_timer(timer_carryover : float):
 
 
 func adjust_cooldowns_from_spell_cast(index : int):
-	# Subtracting the global reduction prevents from making themselves cooldown faster
-	cooldowns[index] -= base_cooldowns[index] - cooldown_reductions[index]
-	reduce_all_spell_cooldowns(cooldown_reductions[index])
+	# "Subtracting" the global reduction prevents from making themselves cooldown faster
+	cooldowns[index] -= base_cooldowns[index] - cooldown_adjusts[index]
+	adjust_all_spell_cooldowns(cooldown_adjusts[index])
 
 
 func _on_timer_timeout():
