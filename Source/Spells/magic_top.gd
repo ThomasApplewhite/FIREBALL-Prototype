@@ -40,9 +40,6 @@ func _physics_process(delta):
 func _on_timer_timeout():
 	queue_free()
 
-func launch():
-	spell_mover.launch()
-
 func calculate_new_spell_speed(time_elapsed : float) -> float:
 	var speed_mod = -(time_elapsed/spell_stoptime) + 1
 	return clamp(speed_mod, 0, 1) * initial_speed
