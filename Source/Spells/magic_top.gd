@@ -27,14 +27,14 @@ func _ready():
 	timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var time_elapsed = spell_lifetime - timer.time_left
 	spell_mover.spell_speed = calculate_new_spell_speed(time_elapsed)
 
 	# ideal world: make sure the top always faces straight up and down, rather
 	# than rotating with the rest of the spell.
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	damage_colliding_bodies(get_overlapping_bodies())
 	
 func _on_timer_timeout():

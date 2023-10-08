@@ -19,6 +19,10 @@ config/icon="res://PlayerIcon.png"
 
 window/size/resizable=false
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true

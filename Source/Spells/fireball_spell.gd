@@ -24,7 +24,7 @@ func _ready():
 	explosion_position = screen_center + explosion_position_offset
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var dir_to_center = get_dir_to_explosion_position()
 	
 	# checking vector dots is slightly more expensive than checking position,

@@ -14,16 +14,16 @@ Created Monday 02 October 2023
 [*] Spell Cooldown Testing^{3}
 [*] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
 [*] Spell Factory^{1}
-[ ] Fix the SpellFuncationality spelling error
-[ ] Clear all warning in console
+[x] Fix the SpellFuncationality spelling error
+[*] Clear all warning in console
 
 What needs to happen for the Spell Factory?
 Thiss must happen. Manually modifying every spell is a massive pain.
 
-[ ] Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
-[ ] Research if compositing scenes at runtime is faster than instancing scenes normally.
-[ ] Make SpellData fields private and give them accessors
-[ ] Add fields for more spell config info (damage, speed, etc)
+[*] Instead of having saved scenes for spells, it'd be nice to have a singular Spell scene that gets constructed based on what the spell is supposed to do. Or, at least, have enough of itself centralized so that global spell behavior can be condensed into one place so spell stats can be initialized in one place. This will make stat modification easier too in the future, I bet.
+[*] Research if compositing scenes at runtime is faster than instancing scenes normally.
+[x] Make SpellData fields private and give them accessors
+[*] Add fields for more spell config info (damage, speed, etc)
 
 An idea I'm having: We can have a universal Spell Factory, which handles global spell initialization, and a custom spell initializer, which can do custom field/script setup.
 Whether or not the main script of a spell should do its own setup is something to define later.

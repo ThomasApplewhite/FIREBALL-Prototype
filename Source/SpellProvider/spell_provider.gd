@@ -31,8 +31,8 @@ func _ready():
 		$SpellProviderCooldownDisplay.enable_debug_display(self)
 
 func init_cooldown_timer():
-	var base : Array[float]
-	var reduce : Array[float]
+	var base : Array[float] = []
+	var reduce : Array[float] = []
 	var size = spell_datas.size()
 	base.resize(size)
 	reduce.resize(size)

@@ -14,7 +14,7 @@ func init_enemy(new_target : Node2D):
 	target_location = new_target.global_position
 	initialized = true
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not initialized:
 		return
 	

@@ -10,18 +10,17 @@ var stack_labels : Array[Label]
 var display_enabled = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if not display_enabled:
 		return
 		
 	var time_remaining
-	var stacks
 	var time_left = spell_provider.cooldown_timer.get_time_left()
 	var time_max = spell_provider.cooldown_timer.cooldown_timer_max	
 		
 	for i in spell_provider.get_cooldowns().size():
 		var cooldown = spell_provider.get_cooldowns()[i]
-		var base_cooldown = spell_provider.spell_datas[i].cooldown
+		#var base_cooldown = spell_provider.spell_datas[i].cooldown
 		
 		if(cooldown < 0):
 			# account for loop scenario

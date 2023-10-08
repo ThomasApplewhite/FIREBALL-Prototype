@@ -2,14 +2,6 @@ extends GridContainer
 
 var spell_buttons : Array[Button]
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 # spell_datas is an array of spell data resources
 # spell_button_bind is a callable method handle.

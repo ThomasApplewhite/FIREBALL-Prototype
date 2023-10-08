@@ -27,9 +27,6 @@ func _ready():
 	
 	add_to_group(game_state_group_name)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _on_player_death():
 	end_game()
