@@ -1,6 +1,5 @@
 extends Node
 
-@export
 var damage = 10.0
 
 var health_node_path = ^"HealthCounter"

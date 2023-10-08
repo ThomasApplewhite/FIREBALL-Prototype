@@ -6,7 +6,10 @@
 
 [resource]
 script = ExtResource("1_ajc67")
-spell_name = "FIREBALL"
-spell_cooldown = 10.0
-spell_icon = ExtResource("3_drcj8")
+name = "FIREBALL"
+icon = ExtResource("3_drcj8")
 packed_spell = ExtResource("1_gae0w")
+cooldown = 10.0
+global_cooldown_change = 0.0
+damage = 0.0
+speed = 750.0

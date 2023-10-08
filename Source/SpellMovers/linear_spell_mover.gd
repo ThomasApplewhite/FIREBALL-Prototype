@@ -3,7 +3,6 @@ extends Node
 @export
 var spell_node : Node2D
 
-@export
 var spell_speed = 10.0
 
 var move_direction

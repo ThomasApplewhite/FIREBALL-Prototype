@@ -21,7 +21,7 @@ func _process(delta):
 		
 	for i in spell_provider.get_cooldowns().size():
 		var cooldown = spell_provider.get_cooldowns()[i]
-		var base_cooldown = spell_provider.spell_datas[i].spell_cooldown
+		var base_cooldown = spell_provider.spell_datas[i].cooldown
 		
 		if(cooldown < 0):
 			# account for loop scenario

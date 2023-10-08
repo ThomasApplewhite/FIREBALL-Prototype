@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xo43g1fmqpao"]
+[gd_scene load_steps=9 format=3 uid="uid://xo43g1fmqpao"]
 
 [ext_resource type="Script" path="res://Source/SpellProvider/spell_provider.gd" id="1_ryj2y"]
 [ext_resource type="Resource" uid="uid://dedrdyxv5pma6" path="res://Assets/Spells/SpellData/stub_spell_data.tres" id="2_klqqq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://csc6mddwb30s2" path="res://Source/DebugUtils/spell_provider_cooldown_display.tscn" id="5_350ia"]
 [ext_resource type="PackedScene" uid="uid://5llp4orwvhsj" path="res://Source/SpellProvider/spell_button_grid_container.tscn" id="6_2rhjt"]
 [ext_resource type="PackedScene" uid="uid://wr8iy48boafo" path="res://Source/SpellProvider/spell_cooldown_timer.tscn" id="7_2teav"]
+[ext_resource type="PackedScene" uid="uid://14ix3sdc0oui" path="res://Source/SpellProvider/spell_factory.tscn" id="8_bw5wf"]
 
 [node name="SpellProvider" type="Node"]
 script = ExtResource("1_ryj2y")
@@ -20,5 +21,7 @@ debug_enable_cooldowns_display = true
 [node name="SpellButtonGridContainer" parent="." instance=ExtResource("6_2rhjt")]
 
 [node name="SpellCooldownTimer" parent="." instance=ExtResource("7_2teav")]
+
+[node name="SpellFactory" parent="." instance=ExtResource("8_bw5wf")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

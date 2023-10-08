@@ -18,11 +18,11 @@ texture = ExtResource("2_e4ruj")
 
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("2_o83ik")]
 spell_node = NodePath("..")
-spell_speed = 750.0
 
 [node name="GameWinCauser" parent="." instance=ExtResource("5_jafb5")]
 
-[node name="SpellFuncationality" parent="." node_paths=PackedStringArray("spell_mover") instance=ExtResource("6_rc5ju")]
+[node name="SpellFuncationality" parent="." node_paths=PackedStringArray("spell_mover", "spell_damage") instance=ExtResource("6_rc5ju")]
 spell_mover = NodePath("../LinearSpellMover")
+spell_damage = NodePath("../DamageDealer")
 
 [connection signal="spell_launched" from="SpellFuncationality" to="." method="_on_spell_funcationality_spell_launched"]

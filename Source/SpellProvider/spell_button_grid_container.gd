@@ -22,7 +22,7 @@ func init_buttons(spell_datas, spell_button_bind):
 	for i in spell_count:
 		var new_button = Button.new()
 		new_button.set_custom_minimum_size(new_button.size)
-		new_button.icon = spell_datas[i].spell_icon
+		new_button.icon = spell_datas[i].icon
 		new_button.mouse_filter = Button.MOUSE_FILTER_STOP
 		# this is how you capture variables for signal arguments outside
 		# of defining the args for the signal itself

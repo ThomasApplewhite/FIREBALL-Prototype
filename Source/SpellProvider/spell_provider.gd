@@ -11,6 +11,8 @@ var debug_enable_cooldowns_display = false
 var grid_container = $SpellButtonGridContainer
 @onready
 var cooldown_timer = $SpellCooldownTimer
+@onready
+var spell_factory = $SpellFactory
 
 
 
@@ -22,6 +24,7 @@ var cooldowns : Array[float]:
 func _ready():
 	spell_index = starting_spell_index
 	grid_container.init_buttons(spell_datas, spell_button_pressed)
+	spell_factory.init_factory_data(spell_datas)
 	init_cooldown_timer()
 	cooldown_timer.start_cooldown_timer()
 	if debug_enable_cooldowns_display:
@@ -34,7 +37,7 @@ func init_cooldown_timer():
 	base.resize(size)
 	reduce.resize(size)
 	for i in size:
-		base[i] = spell_datas[i].spell_cooldown
+		base[i] = spell_datas[i].cooldown
 		reduce[i] = spell_datas[i].global_cooldown_change
 	cooldown_timer.init_cooldowns(size, base, reduce)
 
@@ -42,12 +45,12 @@ func get_cooldowns() -> Array[float]:
 	return cooldown_timer.cooldowns
 
 
-func cast_selected_spell() -> PackedScene:
+func cast_selected_spell() -> Node2D:
 	if cooldown_timer.get_time_left() >= cooldowns[spell_index]:
 		return null
 	
 	cooldown_timer.adjust_cooldowns_from_spell_cast(spell_index)
-	return spell_datas[spell_index].packed_spell
+	return spell_factory.create_spell_instance(spell_index)
 
 
 func spell_button_pressed(index : int):

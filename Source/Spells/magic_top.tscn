@@ -24,14 +24,13 @@ texture = ExtResource("2_cjdoe")
 
 [node name="LinearSpellMover" parent="." node_paths=PackedStringArray("spell_node") instance=ExtResource("1_1fac3")]
 spell_node = NodePath("..")
-spell_speed = 1000.0
 
 [node name="DamageDealer" parent="." instance=ExtResource("2_vopk1")]
-damage = 1.0
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="SpellFuncationality" parent="." node_paths=PackedStringArray("spell_mover") instance=ExtResource("5_qwyc1")]
+[node name="SpellFuncationality" parent="." node_paths=PackedStringArray("spell_mover", "spell_damage") instance=ExtResource("5_qwyc1")]
 spell_mover = NodePath("../LinearSpellMover")
+spell_damage = NodePath("../DamageDealer")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

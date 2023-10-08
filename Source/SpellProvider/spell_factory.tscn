@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://14ix3sdc0oui"]
+
+[ext_resource type="Script" path="res://Source/SpellProvider/spell_factory.gd" id="1_qutqu"]
+
+[node name="SpellFactory" type="Node"]
+script = ExtResource("1_qutqu")

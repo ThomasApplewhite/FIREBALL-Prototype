@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-07T17:49:50-07:00
+
+====== SpellFactory and Spell Instancing ======
+Created Saturday 07 October 2023
+
+How are spells instanced? Great question!
+
+When the player clicks to cast a spell, player_functionality calls cast_spell.
+cast_spell calls spell_provider.cast_selected_spell
+cast_selected_spell calls spell_factory.create_spell_instance
+
+spell_factory.create_spell_instance() instances spells based on saved spell data.
+It then access the spell's SpellFunctionality node to make spell sub-node data changes.
+If the SpellFactory wants to make changes to a spell's nodes, it can access them through SpellFunctionality.
+
+It's up to the spell author to make sure SpellFunctionality has its exports are set so that SpellFactory can access the needed nodes.

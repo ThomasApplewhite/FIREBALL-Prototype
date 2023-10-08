@@ -6,8 +6,10 @@
 
 [resource]
 script = ExtResource("1_8luxm")
-spell_name = "Zap"
-spell_cooldown = 1.0
-global_cooldown_change = -1.0
-spell_icon = ExtResource("3_0op43")
+name = "Zap"
+icon = ExtResource("3_0op43")
 packed_spell = ExtResource("1_wk663")
+cooldown = 1.0
+global_cooldown_change = -1.0
+damage = 50.0
+speed = 1000.0
