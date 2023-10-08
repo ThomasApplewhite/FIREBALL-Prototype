@@ -13,7 +13,7 @@ Created Monday 02 October 2023
 [*] Clean Spell Provider Functionality^{2}
 [*] Spell Cooldown Testing^{3}
 [*] do some more debugging with the spell stacking and cooldown reduction once the spell provider is cleaned up
-[ ] Spell Factory^{1}
+[*] Spell Factory^{1}
 [ ] Fix the SpellFuncationality spelling error
 [ ] Clear all warning in console
 
