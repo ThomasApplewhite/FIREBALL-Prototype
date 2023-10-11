@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-10T21:23:04-07:00
+
+====== Long-Term Progression ======
+Created Tuesday 10 October 2023
+
+FIREBALL is a factory game, in a sense, where each spell generates cooldown reduction or damage.
+
+A skilled player will be able to manage the growth of these rates to work up to casting FIREBALLs near constantly.
+
+Question: Will players get stat increases and spell upgrades and different spells to spike these rates and build these engines, or will it be a puzzle strategy game where the initial rates and spells are set up so that the player can reach a spun-up super FIREBALL generator for large level clears? So it's more of a puzzle to figure out a way to build the most efficient spell engine to get lots of FIREBALLs without dying in the meantime?
+
+You should research engine building games and learn som quick tips for designing them. Or, idk, make it up.

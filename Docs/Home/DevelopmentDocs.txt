@@ -5,3 +5,14 @@ Creation-Date: 2023-09-11T21:00:10-07:00
 ====== DevelopmentDocs ======
 Created Monday 11 September 2023
 
+What comes next for development?
+
+1. Finishing the other development docs that stiff have stuff on them
+2. Level progression design
+	a. Enemy Scalling
+	b. Spell Selection?
+	c. Upgrade Selection?
+3. Cooldown Visuals on Spell Buttons
+4. Spell Stat Tooltips
+5. More spells! Design maybe... 6 more spells for 8 plus the FIREBALL
+6. Menus
