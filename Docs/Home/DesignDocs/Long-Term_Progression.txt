@@ -12,3 +12,34 @@ A skilled player will be able to manage the growth of these rates to work up to 
 Question: Will players get stat increases and spell upgrades and different spells to spike these rates and build these engines, or will it be a puzzle strategy game where the initial rates and spells are set up so that the player can reach a spun-up super FIREBALL generator for large level clears? So it's more of a puzzle to figure out a way to build the most efficient spell engine to get lots of FIREBALLs without dying in the meantime?
 
 You should research engine building games and learn som quick tips for designing them. Or, idk, make it up.
+
+Okay, I have an idea. It'll need some more engineering legwork, but it might be fun!
+
+When a spell is cast, it can generate cooldown reduction, but also other resources. These resources are consumed by other spells.
+Some spells generate lots of resources, some generate lots of damage, and some generate lots of cooldown reduction.
+
+IDEA!
+Spells can control ??? major resources:
+Damage: Your ability to outscale enemy heath scaling without dropping to 0 health. Generate damage faster than enemies scale to keep them at bay
+Spell Cooldown: Makes spells cast faster (or slower!). Generate spell CD faster than spell usage to keep your spell engine going.
+Health: If this hits 0, you die. Generate faster than you get hurt to make sure you don't lose
+[Maybe] Scrolls: Scrolls mash spells together. They are created very slowly, but allow the players to have more spell 
+[Maybe] Hedglings: Hedge Mages that shoot small spells at the nearest enemy to the player. The generate passive damage, but can also be consumed by spells. Or maybe they can be given a spell slot to auto-cast it.
+
+Other engine ideas:
+Casting loops can be constructed out of spell and inscribed onto scrolls. The scroll's CD is the sum of all the CDs of the spells that make it up, but it casts every spell in it at once on cast.
+
+It might be worth prototyping the game out using only Damage, Spell CD, and Health as resources, and then adding additional resources as game complexity requires.
+Yeah, just do that. Let's keep the game simple.
+
+The functionality we need for that is spells reducing player health, but the real work that's needed is:
+* Level-to-level progression: full intended level end
+* a menu
+* the ability to pause
+* spells that consume health
+* enemy scaling
+* a way to get more spells
+* math for spell progression rates.
+
+Once I've got this all in and have played it out, I can start toying with new features to improve play.
+

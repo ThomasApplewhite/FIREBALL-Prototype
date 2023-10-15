@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-14T17:16:04-07:00
+
+====== ProgressionDevelopment ======
+Created Saturday 14 October 2023
+
+The game needs some progession. Right now, that includes:
+
+The functionality we need for that is spells reducing player health, but the real work that's needed is:
+[ ] Level-to-level progression: full intended level end
+[ ] A start menu
+[ ] the ability to pause
+[ ] spells that consume health
+[ ] enemy scaling
+[ ] a way to get more spells
+[ ] math for spell progression rates.
+
+
+
+
+
+I'll need to figure out more functionality that GameState needs to handle. Maybe it can initialize Player and Enemy scaling?
