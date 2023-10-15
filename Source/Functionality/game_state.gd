@@ -6,7 +6,11 @@ var player : Node2D
 var enemy_spawner : Node2D
 
 @onready
-var main_status_text = $RichTextLabel
+var status_control = $PostLevelControl
+@onready
+var status_text = $PostLevelControl/RichTextLabel
+@onready
+var status_button = $PostLevelControl/Button
 @onready
 var damage_dealer = $DamageDealer
 
@@ -29,32 +33,52 @@ static func get_game_state(context_scene_tree : SceneTree) -> Node:
 func _ready():
 	var player_health = player.get_node(^"HealthCounter")
 	player_health.health_depleted.connect(_on_player_death)
+	# bind an event to parent ready to start the enemy spawner and also set its group name
+	get_parent().ready.connect(begin_level)
 	
 	add_to_group(game_state_group_name)
+
+func begin_level():
+	player.visible = true
+	status_control.visible = false
+	start_enemy_spawning()
 	
-	# bind an event to parent ready to start the enemy spawner and also set its group name
-	get_parent().ready.connect(start_enemy_spawning)
-
-
-func _on_player_death():
-	end_game()
 
 func start_enemy_spawning():
 	enemy_spawner.enemy_group_name = enemy_group_name
 	enemy_spawner.toggle_enemy_spawning(true)
+
 
 func kill_all_enemies():
 	var enemies = get_tree().get_nodes_in_group(enemy_group_name)
 	for enemy in enemies:
 		damage_dealer.instant_kill_node(enemy)
 
+
+func complete_level(won_level : bool):
+	if won_level:
+		win_level()
+	else:
+		end_game()
+
 func win_level():
-	main_status_text.text = "[center]YOU WIN[/center]"
-	main_status_text.visible = true
+	status_text.text = "[center]YOU WIN[/center]"
+	status_button.visible = true
+	status_control.visible = true
 	enemy_spawner.toggle_enemy_spawning(false)
 	kill_all_enemies()
 
+
 func end_game():
-	player.queue_free()
-	main_status_text.text = "[center]YOU LOSE![/center]"
-	main_status_text.visible = true
+	player.visible = false
+	status_text.text = "[center]YOU LOSE![/center]"
+	status_button.visible = false
+	status_control.visible = true
+
+
+func _on_player_death():
+	complete_level(false)
+	
+
+func _on_progression_button_pressed():
+	begin_level()

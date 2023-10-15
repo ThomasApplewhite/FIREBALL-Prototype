@@ -6,8 +6,19 @@
 [node name="GameState" type="Node"]
 script = ExtResource("1_4xlq6")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]
+
+[node name="PostLevelControl" type="Control" parent="."]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PostLevelControl"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -23,4 +34,19 @@ size_flags_horizontal = 4
 bbcode_enabled = true
 text = "[center]TEST TEXT![/center]"
 
-[node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]
+[node name="Button" type="Button" parent="PostLevelControl"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = 29.0
+offset_right = 52.5
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="PostLevelControl/Button" to="." method="_on_progression_button_pressed"]

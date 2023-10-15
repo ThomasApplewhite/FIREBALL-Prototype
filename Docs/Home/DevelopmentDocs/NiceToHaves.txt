@@ -6,6 +6,6 @@ Creation-Date: 2023-09-23T17:20:39-07:00
 Created Saturday 23 September 2023
 
 [ ] Fix the SpellFuncationality spelling error^{1}
-
+[ ] Refactor GameState level control for cleanliness
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.
