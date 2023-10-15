@@ -16,7 +16,7 @@ func damage_node_by_amount(node_to_damage : Node2D, incoming_damage : float):
 		if incoming_damage < 0:
 			incoming_damage = health.max_health * 10
 			
-		health.decrease_health(damage)
+		health.decrease_health(incoming_damage)
 	else:
 		push_warning("Tried to damage %s, but it has no HealthCounter" % node_to_damage.to_string())
 		

@@ -9,6 +9,9 @@ The game needs some progession. Right now, that includes:
 
 The functionality we need for that is spells reducing player health, but the real work that's needed is:
 [ ] Level-to-level progression: full intended level end
+	[*] Disable Spawns while out of level
+	[ ] Pop up a button to continue the game
+	[ ] Restart spawns and scale things when pressed
 [ ] A start menu
 [ ] the ability to pause
 [ ] spells that consume health

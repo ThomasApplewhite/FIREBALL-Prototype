@@ -31,26 +31,27 @@ func _process(_delta):
 	# but it will work even if the spell overshoots the exact position because
 	# of subpixel movement or whatever else.
 	if global_transform.y.dot(dir_to_center) > 0:
-		kill_all_enemies()
+		win_causer.win_triggered.emit()
+		queue_free()
 
 func get_dir_to_explosion_position() -> Vector2:
 	return (explosion_position - global_position).normalized()
 	
 func kill_all_enemies():
-	var space_state = get_world_2d().direct_space_state
-	var query = PhysicsShapeQueryParameters2D.new()
-	query.shape = RectangleShape2D.new()
-	query.shape.set_size(screen_size)
-	query.collision_mask = fireball_collision_mask
-	query.transform = Transform2D(0.0, screen_center)
+	#var space_state = get_world_2d().direct_space_state
+	#var query = PhysicsShapeQueryParameters2D.new()
+	#query.shape = RectangleShape2D.new()
+	#query.shape.set_size(screen_size)
+	#query.collision_mask = fireball_collision_mask
+	#query.transform = Transform2D(0.0, screen_center)
 	
-	for result in space_state.intersect_shape(query):
-		if result.collider:
-			damage_dealer.instant_kill_node(result.collider)
+	#for result in space_state.intersect_shape(query):
+	#	if result.collider:
+	#		damage_dealer.instant_kill_node(result.collider)
 	
-	win_causer.win_triggered.emit()
+	# GameState will cover all effects of a win. FIREBALL does nothing eles.
+	pass
 
-	queue_free()
 
 func _on_spell_funcationality_spell_launched():
 	# rotate towards screen center

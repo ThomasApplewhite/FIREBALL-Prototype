@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://s8b4ffkpnc15"]
+[gd_scene load_steps=3 format=3 uid="uid://s8b4ffkpnc15"]
 
 [ext_resource type="Script" path="res://Source/Functionality/game_state.gd" id="1_4xlq6"]
+[ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_428ch"]
 
 [node name="GameState" type="Node"]
 script = ExtResource("1_4xlq6")
@@ -21,3 +22,5 @@ grow_vertical = 2
 size_flags_horizontal = 4
 bbcode_enabled = true
 text = "[center]TEST TEXT![/center]"
+
+[node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]

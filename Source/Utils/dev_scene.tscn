@@ -22,5 +22,6 @@ position = Vector2(576, -10)
 packed_enemy = ExtResource("3_dbsbs")
 player = NodePath("../Player")
 
-[node name="GameState" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_c6tre")]
+[node name="GameState" parent="." node_paths=PackedStringArray("player", "enemy_spawner") instance=ExtResource("4_c6tre")]
 player = NodePath("../Player")
+enemy_spawner = NodePath("../EnemySpawner")
