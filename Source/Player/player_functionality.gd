@@ -13,6 +13,8 @@ var spell_provider : Node
 
 # If this stops working, make sure all created Controls in play scenes are
 # set to ignore mouse
+# The only exception is GameState's post-level screen. By blocking the mouse there,
+# spells aren't cast between levels
 func _unhandled_input(event):
 	# Any other screen touch not consumed by a UI feature is a spell cast
 	if event is InputEventScreenTouch and event.is_pressed():
