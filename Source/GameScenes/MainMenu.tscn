@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcmd18rsbrh6a"]
+
+[ext_resource type="Script" path="res://Source/GameScenes/main_menu.gd" id="1_3wuq8"]
+[ext_resource type="Theme" uid="uid://c1ldb3mtl66yf" path="res://Assets/Themes/ui_blackwhite_theme.tres" id="1_ck02q"]
+[ext_resource type="PackedScene" uid="uid://dwdjpl0p2513d" path="res://Source/Utils/dev_scene.tscn" id="2_fjhbc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3wuq8")
+packed_gameplay_scene = ExtResource("2_fjhbc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -52.0
+offset_right = 189.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ck02q")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]FIREBALL[/center]"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -236.0
+offset_right = -1.0
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.52, 1.6)
+theme = ExtResource("1_ck02q")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "
+[center]START[/center]"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

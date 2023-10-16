@@ -7,5 +7,7 @@ Created Saturday 23 September 2023
 
 [ ] Fix the SpellFuncationality spelling error^{1}
 [ ] Refactor GameState level control for cleanliness
+[ ] Mathematically align/rearrange main menu elements
+[ ] Custom Splash Screen. It's cute that way!
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

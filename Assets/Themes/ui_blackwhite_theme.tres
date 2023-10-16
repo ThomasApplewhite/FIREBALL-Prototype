@@ -1,4 +1,9 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c1ldb3mtl66yf"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c1ldb3mtl66yf"]
+
+[ext_resource type="FontFile" uid="uid://du1ofg2heekui" path="res://Assets/Fonts/Minimal3x5.ttf" id="1_ff8vq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plqht"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pebs2"]
 
@@ -6,8 +11,11 @@
 bg_color = Color(1, 1, 1, 1)
 
 [resource]
+Button/fonts/font = ExtResource("1_ff8vq")
+Button/styles/normal = SubResource("StyleBoxFlat_plqht")
 ProgressBar/colors/font_color = Color(0, 0, 0, 1)
 ProgressBar/colors/font_outline_color = Color(1, 1, 1, 1)
 ProgressBar/colors/font_shadow_color = Color(0, 0, 0, 0)
 ProgressBar/styles/background = SubResource("StyleBoxEmpty_pebs2")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_amquy")
+RichTextLabel/fonts/normal_font = ExtResource("1_ff8vq")

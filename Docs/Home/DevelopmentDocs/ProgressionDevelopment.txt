@@ -14,7 +14,7 @@ The functionality we need for that is spells reducing player health, but the rea
 		[*] More condensed/methodical start game method
 	[*] Restart spawns and scale things when pressed
 	[*] Disable Spellcasting between levels
-[ ] A start menu
+[*] A start menu
 [ ] the ability to pause
 [ ] spells that consume health
 [ ] enemy scaling

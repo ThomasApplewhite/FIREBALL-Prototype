@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-15T21:33:28-07:00
+
+====== ProjectSettings ======
+Created Sunday 15 October 2023
+
+Texure Filtering is set to Nearest so the intense pixels of the game art maintains sharpness
+Rendering Method is set to Mobile because it's a phone game
+Blender auto-import is disabled to prevent warnings. No need for blender
+Touch is emulated from Mouse for easy testing
