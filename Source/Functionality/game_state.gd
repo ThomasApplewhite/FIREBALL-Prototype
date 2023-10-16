@@ -4,6 +4,8 @@ extends Node
 var player : Node2D
 @export
 var enemy_spawner : Node2D
+@export
+var show_debug_info = true
 
 @onready
 var status_control = $PostLevelControl
@@ -16,6 +18,8 @@ var damage_dealer = $DamageDealer
 
 const game_state_group_name = "GameStates"
 const enemy_group_name = "Enemies"
+
+var level_scale = 0
 
 static func get_game_state(context_scene_tree : SceneTree) -> Node:
 	var game_states = context_scene_tree.get_nodes_in_group(game_state_group_name)
@@ -37,15 +41,21 @@ func _ready():
 	get_parent().ready.connect(begin_level)
 	
 	add_to_group(game_state_group_name)
+	
+	
+	if show_debug_info:
+		$DebugControl.visible = true
 
 func begin_level():
 	player.visible = true
 	status_control.visible = false
+	$DebugControl/RichTextLabel.text = "Level Scale: %d" % level_scale
 	start_enemy_spawning()
 	
 
 func start_enemy_spawning():
 	enemy_spawner.enemy_group_name = enemy_group_name
+	enemy_spawner.enemy_scale = level_scale
 	enemy_spawner.toggle_enemy_spawning(true)
 
 
@@ -67,6 +77,9 @@ func win_level():
 	status_control.visible = true
 	enemy_spawner.toggle_enemy_spawning(false)
 	kill_all_enemies()
+	
+	level_scale += 1
+	
 
 
 func end_game():

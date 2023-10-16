@@ -16,3 +16,5 @@ What comes next for development?
 4. Spell Stat Tooltips
 5. More spells! Design maybe... 6 more spells for 8 plus the FIREBALL
 6. Menus
+
+I should get some assets done at some point

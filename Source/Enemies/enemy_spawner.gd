@@ -7,12 +7,14 @@ var packed_enemy : PackedScene
 @export
 var player : Node2D
 
-var enemy_group_name
 
 @onready
 var collision_shape = $CollisionShape2D
 @onready
 var timer = $Timer
+
+var enemy_group_name: String
+var enemy_scale = 0
 
 func _on_timer_timeout():
 	spawn_enemy()
@@ -33,7 +35,7 @@ func spawn_enemy():
 	get_parent().add_child(enemy_instance)
 	enemy_instance.global_position = get_random_point_in_area()
 	enemy_instance.add_to_group(enemy_group_name)
-	enemy_instance.init_enemy(player)
+	enemy_instance.init_enemy(player, enemy_scale)
 	
 func get_random_point_in_area() -> Vector2:
 	var area_size = collision_shape.shape.get_rect().size

@@ -22,3 +22,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_fnt47")
 show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = -54.0
+offset_top = -38.0
+offset_right = 54.0
+offset_bottom = -15.0
+horizontal_alignment = 1

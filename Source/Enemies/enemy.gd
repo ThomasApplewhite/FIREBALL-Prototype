@@ -3,15 +3,21 @@ extends CharacterBody2D
 @export
 var enemy_speed = 10.0
 @export
+var health_increase = 10.0
+@export
 var enemy_collision_layer = 0x0002
 
 signal _on_non_enemy_collision(Node2D)
 
+@onready
+var health_counter = $HealthCounter
+
 var target_location : Vector2
 var initialized = false
 
-func init_enemy(new_target : Node2D):
+func init_enemy(new_target : Node2D, enemy_scale : int):
 	target_location = new_target.global_position
+	health_counter.set_max_health(health_counter.max_health + (enemy_scale * health_increase))
 	initialized = true
 
 func _physics_process(_delta):

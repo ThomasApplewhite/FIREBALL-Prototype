@@ -12,7 +12,7 @@ The functionality we need for that is spells reducing player health, but the rea
 	[*] Disable Spawns while out of level
 	[*] Pop up a button to continue the game
 		[*] More condensed/methodical start game method
-	[ ] Restart spawns and scale things when pressed
+	[*] Restart spawns and scale things when pressed
 	[ ] Disable Spellcasting between levels
 [ ] A start menu
 [ ] the ability to pause
