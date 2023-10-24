@@ -16,13 +16,17 @@ The functionality we need for that is spells reducing player health, but the rea
 	[*] Disable Spellcasting between levels
 [*] A start menu
 [*] the ability to pause
-[ ] spells that consume health
+[ ] spells that consume health^{1}
 [*] enemy scaling
-[ ] a way to get more spells
-[ ] math for spell progression rates.
+[x] a way to get more spells^{2}
+[*] math for spell progression rates^{3}
 
 
 
-
+1. I am going to wait on this until I refactor spells to be generated of an internally held spell data resource, rather than premade scenes
+2. This needs there to be more spells so I guess that's a task too. Or, maybe we just use dummy zaps for right now. I can add more spells as needed
+	a. jk I am not doing this
+3. Check the [[DesignDocs:ProgressionDesignBrainstormFromGym]] page for this mat
 
 I'll need to figure out more functionality that GameState needs to handle. Maybe it can initialize Player and Enemy scaling?
+I think that is what I did. I also need to spend time figuring out how the game will progress from a mathematical perspective

@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-20T11:34:39-07:00
+
+====== SpellsConsumingPlayerHealth ======
+Created Friday 20 October 2023
+
+Spells have no concept of their caster. If a spell wants to consume the player's health, the player functionality should do it, I think. How should that be handled?
+1. Spells that consume health have a seperate damage dealer that gets set up if they have a health cost. When the spell is cast, the damage dealer hits the player
+2. Add a damage dealer to PlayerFunctionality and somehow feed the health cost to that  damage dealer through a decrease health cost on the player.
+	a. Trouble with this and option 1 is that PlayerFunctionality does not have direct access to spell data. It could be baked into the spelll instance I think, but how would I want to do that...?
+	b. I guess it can just be saved into the spell instance, I guess.. In, like, a node or something?
+	c. Makes me wonder if I can just have all the functionality nodes on spells read from internal spell data. Then we wouldn't really need spell_factory. Like, the spell_functionality would get the spell data, and all the spell nodes like mover and damage dealer just get their information from spell functionality so they don't actually need to know anything? Let's put that into the NiceToHaves.
