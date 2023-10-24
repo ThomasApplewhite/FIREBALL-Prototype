@@ -8,7 +8,7 @@ Created Monday 23 October 2023
 [ ] Refactor GameState level control for cleanliness
 [ ] Mathematically align/rearrange main menu elements
 [*] Change DevScene to be a Node OR create production play scene that is a node (rather than a Node2D)
-[ ] Custom Splash Screen. It's cute that way!
+[*] Custom Splash Screen. It's cute that way!
 [ ] Change Spells to render on top of enemies
 	[ ] And UI to render on top of enemies
 [ ] Decide if all spell functionality should focus its data into a spelldata node on the spell, and individual functionality nodes (mover, damage dealer, etc) just call getters on that spell data node to get their information/data/etc. 
