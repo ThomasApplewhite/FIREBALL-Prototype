@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Source/GameScenes/main_menu.gd" id="1_3wuq8"]
 [ext_resource type="Theme" uid="uid://c1ldb3mtl66yf" path="res://Assets/Themes/ui_blackwhite_theme.tres" id="1_ck02q"]
-[ext_resource type="PackedScene" uid="uid://dwdjpl0p2513d" path="res://Source/Utils/dev_scene.tscn" id="2_fjhbc"]
+[ext_resource type="PackedScene" uid="uid://b771c273nmt07" path="res://Source/GameScenes/play_scene.tscn" id="2_gdfxi"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wuq8")
-packed_gameplay_scene = ExtResource("2_fjhbc")
+packed_gameplay_scene = ExtResource("2_gdfxi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

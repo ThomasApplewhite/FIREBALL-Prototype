@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b771c273nmt07"]
+
+[ext_resource type="PackedScene" uid="uid://cdb8bmcb68xps" path="res://Source/Player/player.tscn" id="1_7wxg3"]
+[ext_resource type="PackedScene" uid="uid://ddsruk6y2ega7" path="res://Source/Enemies/enemy_spawner.tscn" id="2_blr1e"]
+[ext_resource type="PackedScene" uid="uid://bku5f54g2jeph" path="res://Source/Enemies/enemy.tscn" id="3_dmvdw"]
+[ext_resource type="PackedScene" uid="uid://s8b4ffkpnc15" path="res://Source/Functionality/game_state.tscn" id="4_oj5g5"]
+[ext_resource type="PackedScene" uid="uid://dei4prrixcsoq" path="res://Source/UI/pause_menu_control.tscn" id="5_xb26v"]
+
+[node name="PlayScene" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.76, 19.76)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_7wxg3")]
+position = Vector2(580, 575)
+
+[node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_blr1e")]
+position = Vector2(576, -10)
+packed_enemy = ExtResource("3_dmvdw")
+player = NodePath("../Player")
+
+[node name="GameState" parent="." node_paths=PackedStringArray("player", "enemy_spawner") instance=ExtResource("4_oj5g5")]
+player = NodePath("../Player")
+enemy_spawner = NodePath("../EnemySpawner")
+
+[node name="PauseMenuControl" parent="." instance=ExtResource("5_xb26v")]

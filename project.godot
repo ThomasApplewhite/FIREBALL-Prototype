@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FIREBALL"
-run/main_scene="res://Source/Utils/dev_scene.tscn"
+run/main_scene="res://Source/GameScenes/MainMenu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://PlayerIcon.png"
 
