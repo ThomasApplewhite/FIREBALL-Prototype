@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bf7t2l6ea2juh" path="res://Source/Functionality/spell_funcationality.tscn" id="6_rc5ju"]
 
 [node name="FireballSpell" type="Node2D"]
+z_index = 5
 script = ExtResource("1_74lgl")
 fireball_collision_mask = 2
 
