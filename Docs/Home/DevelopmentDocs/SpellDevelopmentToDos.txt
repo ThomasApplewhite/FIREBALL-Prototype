@@ -14,21 +14,40 @@ Later on they'll need description text, maybe, as well as their stats exported t
 Some spells will want a second functionality pass, but that also comes later.
 
 Zap
+Single Projectile
 [*] Visual
 [*] Behavior
 [*] Selector Icon
 
 Sun Ray
+Piercing Layer, cut
 [ ] Visual
 [ ] Behavior
 [ ] Selector Icon
 
 Magic Top
+Shoots a projectile that slows down and stops in place and lingers
 [*] Visual
 [*] Behavior
 [*] Selector Icon
 
 FIREBALL
+Level win!
 [*] Visual
 [*] Behavior
 [*] Selector Icon
+
+Twist of Fate
+No projectile. Immediately twists an enemy's balls. So, no visual projectile. But there is a visual on the enemy that gets twisted
+[ ] Visual
+[ ] Behavior
+[ ] Selector Icon
+
+Ice Spike
+On hit, bursts into a spiky ball
+[ ] Visual
+[ ] Behavior
+[ ] Selector Icon
+
+
+

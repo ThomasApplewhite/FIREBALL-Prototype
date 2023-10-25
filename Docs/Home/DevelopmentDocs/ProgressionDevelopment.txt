@@ -1,32 +1,22 @@
 Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.6
-Creation-Date: 2023-10-14T17:16:04-07:00
+Creation-Date: 2023-10-25T12:22:10-07:00
 
 ====== ProgressionDevelopment ======
-Created Saturday 14 October 2023
+Created Wednesday 25 October 2023
 
-The game needs some progession. Right now, that includes:
+I've got to do progression!
+Okay, what are the action items from this?
 
-The functionality we need for that is spells reducing player health, but the real work that's needed is:
-[*] Level-to-level progression: full intended level end
-	[*] Disable Spawns while out of level
-	[*] Pop up a button to continue the game
-		[*] More condensed/methodical start game method
-	[*] Restart spawns and scale things when pressed
-	[*] Disable Spellcasting between levels
-[*] A start menu
-[*] the ability to pause
-[ ] spells that consume health^{1}
-[*] enemy scaling
-[x] a way to get more spells^{2}
-[*] math for spell progression rates^{3}
+[ ] Twist of Fate spell^{1}
+[ ] Ice Spike spell^{1}
+[ ] Global Buffs System for 
+	[ ] Damage Buff
+	[ ] CD Buff
+	[ ] Health Cap Buff
+	[ ] Health Regen Buff
+[ ] Post-Level Buff Choosing and Incrementing
+[ ] More Intelligent Enemy Health Scaling
+[ ] More Intelligent Enemy Spawnrate Scaling
 
-
-
-1. I am going to wait on this until I refactor spells to be generated of an internally held spell data resource, rather than premade scenes
-2. This needs there to be more spells so I guess that's a task too. Or, maybe we just use dummy zaps for right now. I can add more spells as needed
-	a. jk I am not doing this
-3. Check the [[DesignDocs:ProgressionDesignBrainstormFromGym]] page for this mat
-
-I'll need to figure out more functionality that GameState needs to handle. Maybe it can initialize Player and Enemy scaling?
-I think that is what I did. I also need to spend time figuring out how the game will progress from a mathematical perspective
+1. More info in the //[[SpellDevelopmentToDos]]//
