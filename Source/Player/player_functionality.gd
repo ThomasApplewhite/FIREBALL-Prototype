@@ -32,6 +32,7 @@ func cast_spell(screen_touch_position : Vector2):
 	spell_instance.global_position = spell_spawn_point.global_position
 	
 	var spell_func = spell_instance.get_node(spell_func_path)
+	spell_func.caster = get_parent()
 	spell_func.launch(spell_direction)
 	
 	
