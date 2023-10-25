@@ -6,9 +6,9 @@ var explosion_position_offset : Vector2
 var fireball_collision_mask
 
 @onready
-var spell_mover = $LinearSpellMover
-@onready
-var damage_dealer = $DamageDealer
+var spell_mover = $SpellFuncationality.spell_mover
+#@onready
+#var damage_dealer = $DamageDealer
 @onready
 var win_causer = $GameWinCauser
 

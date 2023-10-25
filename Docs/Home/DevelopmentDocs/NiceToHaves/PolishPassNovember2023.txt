@@ -5,14 +5,14 @@ Creation-Date: 2023-10-23T19:25:52-07:00
 ====== PolishPassNovember2023 ======
 Created Monday 23 October 2023
 
-[ ] Refactor GameState level control for cleanliness
+[x] Refactor GameState level control for cleanliness
+	* On closer review there's really not much to do here
 [ ] Mathematically align/rearrange main menu elements
 [*] Change DevScene to be a Node OR create production play scene that is a node (rather than a Node2D)
 [*] Custom Splash Screen. It's cute that way!
 [*] Change Spells to render on top of enemies
 	[*] And UI to render on top of enemies
-[ ] Decide if all spell functionality should focus its data into a spelldata node on the spell, and individual functionality nodes (mover, damage dealer, etc) just call getters on that spell data node to get their information/data/etc. 
-	* If I did that, then maybe spell_factory can do even more spell generation so I don't need spell scenes. That'd be cool
-	* I could also have a custom initializer node and a custom properties dict so that way I could just initialize my node in a custom way if I needed extra functionality. Hm...
-	* Hell maybe even special data classes that have the custom initialization stuff in them??? Lots of thoughts here. Figure this out later though.
-	* My fear that this is unperformant can be blunted by pooling spell instances ahead of time so they all generate at the same time. So if that happens, I can start doing spell pooling sooner
+[*] Decide if all spell functionality should focus its data into a spelldata node on the spell, and individual functionality nodes (mover, damage dealer, etc) just call getters on that spell data node to get their information/data/etc. 
+	* More info in [[+SpellUnificationRefactor]]
+[ ] Make the fireball face straight forward instead of being tilted
+	

@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-24T19:40:17-07:00
+
+====== SpellUnificationRefactor ======
+Created Tuesday 24 October 2023
+
+Goal: Make all repeated spell functionality be defined in one spot, rather than repeated.
+
+Inherited scenes: Use Godot inheritence to have a parent Spell that defines the shared functionality
+Maybe, but those can be volitile, I think? I didn't even know those were a thing
+Lotta people don't like using it. I'll avoid it for now.
+
+Spell Composition: Define spells entirely in data assets, and composite them together in spell factory
+Cool and redesign resistant, but complicated, especially for unshared spell funcationality
+
+Expand Spell Functionaliy: Place regular/shared spell functionality into/as a child of spell_functionality. Every spell has one anyways.
+Easy, I think
+
+What is shared functionality?
+* Having a Sprite
+	* I think I'll leave this to each spell individually now
+* Dealing Damage
+* Changing Player Health
+	* Including changing it by 0
+* Moving
+	* Including moving nowhere
+* Spell functionality itself
+* Collisions?
+	* idk. Collisions are really specific to each spell. Let's... not for right now.
+
+There can be override exports in spell functionality for this kind of thing. How might those be integrated into spell data? hm... Or maybe spell data is just for general stuff?
+Let's do it now and figure it out later. 
+
+So far, it feels like func nodes like damage dealer should be under spell functionality, but Node2Ds should not because of spacial uniqueness. I can fuck with that.
+
+These are notes I took in the polish doc while I was still thinking about this:
+	* If I did that, then maybe spell_factory can do even more spell generation so I don't need spell scenes. That'd be cool
+	* I could also have a custom initializer node and a custom properties dict so that way I could just initialize my node in a custom way if I needed extra functionality. Hm...
+	* Hell maybe even special data classes that have the custom initialization stuff in them??? Lots of thoughts here. Figure this out later though.
+	* My fear that this is unperformant can be blunted by pooling spell instances ahead of time so they all generate at the same time. So if that happens, I can start doing spell pooling sooner

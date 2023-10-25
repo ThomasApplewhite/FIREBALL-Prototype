@@ -11,13 +11,14 @@ var spell_stoptime = 2.0
 @onready
 var timer = $Timer
 @onready
-var spell_mover = $LinearSpellMover
-@onready
-var damage_dealer = $DamageDealer
-@onready
 var sprite = $Sprite2D
+@onready
+var spell_mover = $SpellFuncationality.spell_mover
+@onready
+var damage_dealer = $SpellFuncationality.spell_damage
 
 var initial_speed
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
