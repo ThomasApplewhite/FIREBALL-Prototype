@@ -7,7 +7,7 @@ Created Monday 23 October 2023
 
 [x] Refactor GameState level control for cleanliness
 	* On closer review there's really not much to do here
-[ ] Mathematically align/rearrange main menu elements
+[*] Mathematically align/rearrange main menu elements
 [*] Change DevScene to be a Node OR create production play scene that is a node (rather than a Node2D)
 [*] Custom Splash Screen. It's cute that way!
 [*] Change Spells to render on top of enemies
