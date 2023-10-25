@@ -16,7 +16,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_7wxg3")]
-position = Vector2(580, 575)
+position = Vector2(576, 575)
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_blr1e")]
 position = Vector2(576, -10)

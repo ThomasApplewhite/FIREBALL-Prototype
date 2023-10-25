@@ -14,5 +14,5 @@ Created Monday 23 October 2023
 	[*] And UI to render on top of enemies
 [*] Decide if all spell functionality should focus its data into a spelldata node on the spell, and individual functionality nodes (mover, damage dealer, etc) just call getters on that spell data node to get their information/data/etc. 
 	* More info in [[+SpellUnificationRefactor]]
-[ ] Make the fireball face straight forward instead of being tilted
+[*] Make the fireball face straight forward instead of being tilted
 	
