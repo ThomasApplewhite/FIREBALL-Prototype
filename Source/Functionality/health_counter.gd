@@ -38,6 +38,8 @@ func adjust_health(health_delta):
 func decrease_health(health_delta : float):
 	adjust_health(-health_delta)
 	
+func increase_health(health_delta : float):
+	adjust_health(health_delta)
 	
 func _check_for_death():
 	if(health <= 0):

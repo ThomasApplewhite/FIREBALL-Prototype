@@ -8,5 +8,6 @@ Created Saturday 23 September 2023
 [ ] Fix the SpellFuncationality spelling error^{1}
 [ ] Visual Indicator for spell cooldowns
 [ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
+[ ] Organize 'Functionality' Folder^{1}
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.
