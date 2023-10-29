@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-10-26T14:23:59-07:00
+
+====== BuffImplementation ======
+Created Thursday 26 October 2023
+
+	* If buff systems are stored in GameState (or a child), anything that gets buffed regularly needs access to it. However, that might only need to be three things:
+		* A custom script for managing the player's health cap and regen
+		* Spell functionality, for adjusting spell damage
+		* Some part of spell provider, to messw ith cooldowns
+			* Cooldowns are hardest, as they are cached early in the game. Do these ever get reset? Probably not, right? Maybe there's a way I can change cooldown so it can adjust the base cooldown with the new cooldown rate.
+
+
+How can systems globably access the buff counters and amounts?
+How should each system use the buff values?
+
+Facts:
+* All Buffs are Multipliers
+* The Buff System will provide the correct multiplier via function. The result is always valid and functional.

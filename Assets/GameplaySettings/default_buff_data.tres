@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BuffData" load_steps=2 format=3 uid="uid://bokm70bni8dnh"]
+
+[ext_resource type="Script" path="res://Source/Utils/buff_data.gd" id="1_wbn3e"]
+
+[resource]
+script = ExtResource("1_wbn3e")
+damage_mult_inc = 0.0
+damage_mult_cap = 0.0
+cooldown_mult_inc = 0.0
+cooldown_mult_cap = 0.0
+healthcap_mult_inc = 0.0
+healthcap_mult_cap = 0.0
+healthregen_mult_inc = 0.0
+healthregen_mult_cap = 0.0
