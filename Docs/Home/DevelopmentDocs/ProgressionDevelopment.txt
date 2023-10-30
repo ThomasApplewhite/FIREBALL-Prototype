@@ -12,7 +12,8 @@ Okay, what are the action items from this?
 [ ] Ice Spike spell^{1}
 [*] Spells that can Heal
 [*] Player Health Regen
-[ ] Global Buffs System for^{2}
+[ ] Global Buffs System for^{2, 4}
+	[*] The actual buff counter
 	[ ] Damage Buff
 	[ ] CD Buff
 	[ ] Health Cap Buff
@@ -24,3 +25,4 @@ Okay, what are the action items from this?
 1. More info in the //[[SpellDevelopmentToDos]]//
 2. More info for implementation in [[FunctionalityDocs:BuffImplementation]]
 3. Needs Player Healing to be fully functional
+4. Individual Buff Choosing should be done before actually implementing buffs

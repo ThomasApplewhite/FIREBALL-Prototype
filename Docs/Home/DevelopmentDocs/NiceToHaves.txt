@@ -9,5 +9,8 @@ Created Saturday 23 September 2023
 [ ] Visual Indicator for spell cooldowns
 [ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
 [ ] Organize 'Functionality' Folder^{1}
+[ ] Screen Layout/Screen Size pass
+[ ] Switch preloaded classes like HealthCounter and GameState to be class_name'd.
+	* Exceptions can be for data types, since loading those ahead of time is probably a reasonable thing to do.
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

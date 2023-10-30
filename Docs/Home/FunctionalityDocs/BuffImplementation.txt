@@ -15,6 +15,17 @@ Created Thursday 26 October 2023
 How can systems globably access the buff counters and amounts?
 How should each system use the buff values?
 
+Something I'm concerned about preloading the buff counter too much. But do I really need to?
+PlayerFunctionality is a good singular place for a buff counter preload.
+PlayerFunctionality can reach the player's health and health regen. Quite easily.
+How do we get the counter to the player's spell CD and Damage?
+SpellFunctionality is a good place for damage, since spells are also player specific. It's also possible that preload is only a performance or memory drag per script its preloaded in, rather than instance.
+
+Wait, should I be preloading for statics or doing classnames? Which is more appropriate?
+Looks like it shoud be class name.  I guess I should refactor those things.
+But if the Buff Counter is a class_name, we can just pull it in anything player-specific.
+So the damage thing can be in spell_func, CD can be somewhere in spell provider
+
 Facts:
 * All Buffs are Multipliers
 * The Buff System will provide the correct multiplier via function. The result is always valid and functional.
