@@ -14,7 +14,7 @@ Okay, what are the action items from this?
 [*] Player Health Regen
 [ ] Global Buffs System for^{2, 4}
 	[*] The actual buff counter
-	[ ] Damage Buff
+	[*] Damage Buff
 	[ ] CD Buff
 	[ ] Health Cap Buff
 	[ ] Health Regen Buff

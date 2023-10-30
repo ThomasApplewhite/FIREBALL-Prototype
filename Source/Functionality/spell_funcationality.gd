@@ -27,7 +27,8 @@ func init_spell_functionality():
 	
 	spell_mover.init_spell_mover(get_parent(), spell_data.speed)
 	
-	spell_damage.damage = spell_data.damage
+	var damage_mult = PlayerBuffCounter.get_buff_multiplier(PlayerBuffCounter.BuffMultiplierType.DAMAGE, get_tree())
+	spell_damage.damage = spell_data.damage * damage_mult
 
 
 func launch(initial_move_direction : Vector2):

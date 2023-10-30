@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://s8b4ffkpnc15"]
+[gd_scene load_steps=5 format=3 uid="uid://s8b4ffkpnc15"]
 
 [ext_resource type="Script" path="res://Source/Functionality/game_state.gd" id="1_4xlq6"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_428ch"]
+[ext_resource type="Script" path="res://Source/Functionality/player_buff_counter.gd" id="3_1hvbc"]
+[ext_resource type="Resource" uid="uid://bokm70bni8dnh" path="res://Assets/GameplaySettings/default_buff_data.tres" id="4_apscd"]
 
 [node name="GameState" type="Node"]
 script = ExtResource("1_4xlq6")
@@ -66,5 +68,9 @@ anchor_right = 1.0
 offset_left = -316.0
 offset_bottom = 74.0
 grow_horizontal = 0
+
+[node name="PlayerBuffCounter" type="Node" parent="."]
+script = ExtResource("3_1hvbc")
+buff_data = ExtResource("4_apscd")
 
 [connection signal="pressed" from="PostLevelControl/Button" to="." method="_on_progression_button_pressed"]
