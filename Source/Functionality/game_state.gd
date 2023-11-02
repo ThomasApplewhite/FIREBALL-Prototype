@@ -21,6 +21,8 @@ const enemy_group_name = "Enemies"
 
 var level_scale = 0
 
+signal level_started(game_state : Node)
+
 static func get_game_state(context_scene_tree : SceneTree) -> Node:
 	var game_states = context_scene_tree.get_nodes_in_group(game_state_group_name)
 	
@@ -50,13 +52,14 @@ func begin_level():
 	player.visible = true
 	status_control.visible = false
 	$DebugControl/RichTextLabel.text = "Level Scale: %d" % level_scale
-	start_enemy_spawning()
+	#start_enemy_spawning()
+	level_started.emit(self)
 	
 
-func start_enemy_spawning():
-	enemy_spawner.enemy_group_name = enemy_group_name
-	enemy_spawner.enemy_scale = level_scale
-	enemy_spawner.toggle_enemy_spawning(true)
+#func start_enemy_spawning():
+#	enemy_spawner.enemy_group_name = enemy_group_name
+#	enemy_spawner.enemy_scale = level_scale
+#	enemy_spawner.toggle_enemy_spawning(true)
 
 
 func kill_all_enemies():

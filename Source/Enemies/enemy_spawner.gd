@@ -18,6 +18,12 @@ var enemy_scale = 0
 
 func _on_timer_timeout():
 	spawn_enemy()
+
+
+func start_enemy_spawning(game_state : Node):
+	enemy_group_name = game_state.enemy_group_name
+	enemy_scale = game_state.level_scale
+	toggle_enemy_spawning(true)
 	
 	
 func toggle_enemy_spawning(toggle : bool):
@@ -36,6 +42,7 @@ func spawn_enemy():
 	enemy_instance.global_position = get_random_point_in_area()
 	enemy_instance.add_to_group(enemy_group_name)
 	enemy_instance.init_enemy(player, enemy_scale)
+	
 	
 func get_random_point_in_area() -> Vector2:
 	var area_size = collision_shape.shape.get_rect().size

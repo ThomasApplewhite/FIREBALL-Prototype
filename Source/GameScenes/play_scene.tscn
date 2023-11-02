@@ -28,3 +28,5 @@ player = NodePath("../Player")
 enemy_spawner = NodePath("../EnemySpawner")
 
 [node name="PauseMenuControl" parent="." instance=ExtResource("5_xb26v")]
+
+[connection signal="level_started" from="GameState" to="EnemySpawner" method="start_enemy_spawning"]

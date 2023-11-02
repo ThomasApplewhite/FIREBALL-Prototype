@@ -18,10 +18,11 @@ Okay, what are the action items from this?
 	[ ] CD Buff^{5}
 	[ ] Health Cap Buff^{5}
 	[ ] Health Regen Buff^{5}
+	[ ] Fix multiplier bug where the default multiplier is '0' and not '1'
 [ ] Post-Level Buff Choosing and Incrementing
 [ ] More Intelligent Enemy Health Scaling
 [ ] More Intelligent Enemy Spawnrate Scaling
-[ ] Refactor level begin functionality in GameState to be signal driven
+[*] Refactor level begin functionality in GameState to be signal driven
 
 1. More info in the //[[SpellDevelopmentToDos]]//
 2. More info for implementation in [[FunctionalityDocs:BuffImplementation]]
