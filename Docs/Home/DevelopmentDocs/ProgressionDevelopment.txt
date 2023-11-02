@@ -15,14 +15,16 @@ Okay, what are the action items from this?
 [ ] Global Buffs System for^{2, 4}
 	[*] The actual buff counter
 	[*] Damage Buff
-	[ ] CD Buff
-	[ ] Health Cap Buff
-	[ ] Health Regen Buff
+	[ ] CD Buff^{5}
+	[ ] Health Cap Buff^{5}
+	[ ] Health Regen Buff^{5}
 [ ] Post-Level Buff Choosing and Incrementing
 [ ] More Intelligent Enemy Health Scaling
 [ ] More Intelligent Enemy Spawnrate Scaling
+[ ] Refactor level begin functionality in GameState to be signal driven
 
 1. More info in the //[[SpellDevelopmentToDos]]//
 2. More info for implementation in [[FunctionalityDocs:BuffImplementation]]
 3. Needs Player Healing to be fully functional
 4. Individual Buff Choosing should be done before actually implementing buffs
+5. Waiting on signal-driven GameState level starts. PlayerFunctionality.gd changes for these is stashed
