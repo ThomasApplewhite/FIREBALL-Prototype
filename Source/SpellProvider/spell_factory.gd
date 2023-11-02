@@ -17,7 +17,6 @@ func create_spell_instance(spell_index : int) -> Node2D:
 	
 	spell.name = data.name
 	spell_func.spell_data = data
-	#spell_func.set_damage(data.damage)
-	#spell_func.set_speed(data.speed)
+	
 	
 	return spell

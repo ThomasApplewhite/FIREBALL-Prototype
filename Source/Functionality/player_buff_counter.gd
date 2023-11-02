@@ -2,7 +2,7 @@ extends Node
 
 class_name PlayerBuffCounter
 
-#const buff_data_type = preload("res://Source/Utils/buff_data.gd")
+const buff_data_type = preload("res://Source/Utils/buff_data.gd")
 const buff_counter_group_name = "BuffCounter"
 
 enum BuffMultiplierType {
@@ -22,26 +22,26 @@ var buff_counts = {
 	BuffMultiplierType.HEALTH_REGEN : 0
 }
 
-static func get_buff_counter(context_scene_tree : SceneTree) -> PlayerBuffCounter:
-	var buff_counters = context_scene_tree.get_nodes_in_group(buff_counter_group_name)
-	
-	if buff_counters.size() < 1:
-		push_error("SceneTree has no PlayerBuffCounter node!")
-		return null
-	
-	if buff_counters.size() > 1:
-		push_warning("There are multiple PlayerBuffCounter nodes. Returning the first to be ready")
+#static func get_buff_counter(context_scene_tree : SceneTree) -> PlayerBuffCounter:
+#	var buff_counters = context_scene_tree.get_nodes_in_group(buff_counter_group_name)
+#	
+#	if buff_counters.size() < 1:
+#		push_error("SceneTree has no PlayerBuffCounter node!")
+#		return null
+#	
+#	if buff_counters.size() > 1:
+#		push_warning("There are multiple PlayerBuffCounter nodes. Returning the first to be ready")
+#
+#	return buff_counters[0]
 
-	return buff_counters[0]
 
-
-static func get_buff_multiplier(buff_type : BuffMultiplierType, context_scene_tree : SceneTree) -> float:
-	var buff_counter = PlayerBuffCounter.get_buff_counter(context_scene_tree)
-	
-	if not buff_counter:
-		return 1.0
-		
-	return buff_counter.get_buff_multiplier_internal(buff_type)
+#static func get_buff_multiplier(buff_type : BuffMultiplierType, context_scene_tree : SceneTree) -> float:
+#	var buff_counter = PlayerBuffCounter.get_buff_counter(context_scene_tree)
+#	
+#	if not buff_counter:
+#		return 1.0
+#		
+#	return buff_counter.get_buff_multiplier_internal(buff_type)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -53,7 +53,11 @@ func increment_buff(buff_type : BuffMultiplierType):
 	buff_counts[buff_type] += 1
 
 
-func get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
+func get_buff_multiplier(buff_type : BuffMultiplierType) -> float:
+	return _get_buff_multiplier_internal(buff_type)
+
+
+func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
 	var buff_mult_inc
 	var buff_mult_cap
 	

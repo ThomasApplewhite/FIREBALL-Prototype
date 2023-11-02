@@ -1,5 +1,7 @@
 extends Node
 
+class_name GameState
+
 @export
 var player : Node2D
 @export
@@ -15,6 +17,8 @@ var status_text = $PostLevelControl/RichTextLabel
 var status_button = $PostLevelControl/Button
 @onready
 var damage_dealer = $DamageDealer
+@onready
+var buff_counter = $PlayerBuffCounter
 
 const game_state_group_name = "GameStates"
 const enemy_group_name = "Enemies"
@@ -54,12 +58,6 @@ func begin_level():
 	$DebugControl/RichTextLabel.text = "Level Scale: %d" % level_scale
 	#start_enemy_spawning()
 	level_started.emit(self)
-	
-
-#func start_enemy_spawning():
-#	enemy_spawner.enemy_group_name = enemy_group_name
-#	enemy_spawner.enemy_scale = level_scale
-#	enemy_spawner.toggle_enemy_spawning(true)
 
 
 func kill_all_enemies():
@@ -74,6 +72,7 @@ func complete_level(won_level : bool):
 	else:
 		end_game()
 
+
 func win_level():
 	status_text.text = "[center]YOU WIN[/center]"
 	status_button.visible = true
@@ -82,7 +81,6 @@ func win_level():
 	kill_all_enemies()
 	
 	level_scale += 1
-	
 
 
 func end_game():
@@ -94,7 +92,7 @@ func end_game():
 
 func _on_player_death():
 	complete_level(false)
-	
+
 
 func _on_progression_button_pressed():
 	begin_level()

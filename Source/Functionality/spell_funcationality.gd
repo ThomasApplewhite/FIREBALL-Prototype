@@ -27,7 +27,8 @@ func init_spell_functionality():
 	
 	spell_mover.init_spell_mover(get_parent(), spell_data.speed)
 	
-	var damage_mult = PlayerBuffCounter.get_buff_multiplier(PlayerBuffCounter.BuffMultiplierType.DAMAGE, get_tree())
+	var buff_counter = GameState.get_game_state(get_tree()).buff_counter
+	var damage_mult = buff_counter.get_buff_multiplier(PlayerBuffCounter.BuffMultiplierType.DAMAGE)#PlayerBuffCounter.get_buff_multiplier(PlayerBuffCounter.BuffMultiplierType.DAMAGE, get_tree())
 	spell_damage.damage = spell_data.damage * damage_mult
 
 
@@ -43,10 +44,3 @@ func damage_spell_caster():
 	
 func _handle_spell_collision(other_body):
 	spell_damage.damage_node(other_body)
-
-#func set_speed(new_speed : float):
-#	spell_mover.spell_speed = new_speed
-
-
-#func set_damage(new_damage : float):
-#	spell_damage.damage = new_damage
