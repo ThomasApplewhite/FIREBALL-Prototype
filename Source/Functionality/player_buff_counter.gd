@@ -14,6 +14,16 @@ enum BuffMultiplierType {
 
 @export
 var buff_data : BuffData
+@export
+var add_startup_buffs : bool
+@export
+var startup_damage : int
+@export
+var startup_cooldown : int
+@export
+var startup_health_cap : int
+@export
+var startup_health_regen : int
 
 var buff_counts = {
 	BuffMultiplierType.DAMAGE : 0,
@@ -47,6 +57,14 @@ var buff_counts = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group(buff_counter_group_name)
+	
+	if add_startup_buffs:
+		buff_counts = {
+			BuffMultiplierType.DAMAGE : startup_damage,
+			BuffMultiplierType.COOLDOWN : startup_cooldown,
+			BuffMultiplierType.HEALTH_CAP : startup_health_cap,
+			BuffMultiplierType.HEALTH_REGEN : startup_health_regen
+		}
 
 
 func increment_buff(buff_type : BuffMultiplierType):
@@ -70,13 +88,13 @@ func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
 			buff_mult_inc = buff_data.damage_mult_inc
 			buff_mult_cap = buff_data.damage_mult_cap
 		BuffMultiplierType.COOLDOWN:
-			buff_mult_inc = buff_data.cooldown_mult_int
-			buff_mult_cap = buff_data.cooldown_mult_cap
+			buff_mult_inc = buff_data.cooldown_mult_inc
+			buff_mult_cap = buff_data.cooldown_mult_capc
 		BuffMultiplierType.HEALTH_CAP:
-			buff_mult_inc = buff_data.healthcap_mult_int
+			buff_mult_inc = buff_data.healthcap_mult_inc
 			buff_mult_cap = buff_data.healthcap_mult_cap
 		BuffMultiplierType.HEALTH_REGEN:
-			buff_mult_inc = buff_data.healthregen_mult_int
+			buff_mult_inc = buff_data.healthregen_mult_inc
 			buff_mult_cap = buff_data.healthregen_mult_cap
 		_:
 			push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")

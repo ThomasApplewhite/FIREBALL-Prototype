@@ -41,8 +41,7 @@ static func get_game_state(context_scene_tree : SceneTree) -> Node:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var player_health = player.get_node(^"HealthCounter")
-	player_health.health_depleted.connect(_on_player_death)
+	connect_startup_signals()
 	# bind an event to parent ready to start the enemy spawner and also set its group name
 	get_parent().ready.connect(begin_level)
 	
@@ -51,6 +50,12 @@ func _ready():
 	
 	if show_debug_info:
 		$DebugControl.visible = true
+
+
+func connect_startup_signals():
+	#var player_health = 
+	player.get_node(^"HealthCounter").health_depleted.connect(_on_player_death)
+	level_started.connect(player.get_node(^"PlayerFunctionality").apply_player_health_multipliers)
 
 func begin_level():
 	player.visible = true

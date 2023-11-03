@@ -18,9 +18,11 @@ texture = ExtResource("1_2hu3t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y4rvp")
 
-[node name="PlayerFunctionality" parent="." node_paths=PackedStringArray("spell_spawn_point", "spell_provider") instance=ExtResource("2_4gyl4")]
+[node name="PlayerFunctionality" parent="." node_paths=PackedStringArray("spell_spawn_point", "spell_provider", "player_health", "player_regen") instance=ExtResource("2_4gyl4")]
 spell_spawn_point = NodePath("../SpellSpawnPoint")
 spell_provider = NodePath("../SpellProvider")
+player_health = NodePath("../HealthCounter")
+player_regen = NodePath("../HealthRegenerator")
 
 [node name="SpellSpawnPoint" type="Node2D" parent="."]
 position = Vector2(0, -85)
