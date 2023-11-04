@@ -56,6 +56,7 @@ func connect_startup_signals():
 	#var player_health = 
 	player.get_node(^"HealthCounter").health_depleted.connect(_on_player_death)
 	level_started.connect(player.get_node(^"PlayerFunctionality").apply_player_health_multipliers)
+	level_started.connect(player.get_node(^"SpellProvider").init_and_start_cooldown_timer)
 
 func begin_level():
 	player.visible = true

@@ -14,8 +14,6 @@ script = ExtResource("1_ryj2y")
 spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("2_klqqq"), ExtResource("3_p80l2"), ExtResource("4_4gxc8")])
 debug_enable_cooldowns_display = true
 
-[node name="Timer" type="Timer" parent="."]
-
 [node name="SpellProviderCooldownDisplay" parent="." instance=ExtResource("5_350ia")]
 
 [node name="SpellButtonGridContainer" parent="." instance=ExtResource("6_2rhjt")]
@@ -23,5 +21,3 @@ debug_enable_cooldowns_display = true
 [node name="SpellCooldownTimer" parent="." instance=ExtResource("7_2teav")]
 
 [node name="SpellFactory" parent="." instance=ExtResource("8_bw5wf")]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -25,8 +25,13 @@ func _ready():
 	spell_index = starting_spell_index
 	grid_container.init_buttons(spell_datas, spell_button_pressed)
 	spell_factory.init_factory_data(spell_datas)
+
+		
+
+func init_and_start_cooldown_timer(_game_state : Node):
 	init_cooldown_timer()
 	cooldown_timer.start_cooldown_timer()
+	
 	if debug_enable_cooldowns_display:
 		$SpellProviderCooldownDisplay.enable_debug_display(self)
 
@@ -39,7 +44,7 @@ func init_cooldown_timer():
 	for i in size:
 		base[i] = spell_datas[i].cooldown
 		reduce[i] = spell_datas[i].global_cooldown_change
-	cooldown_timer.init_cooldowns(size, base, reduce)
+	cooldown_timer.init_cooldowns(size, base, reduce, false)
 
 func get_cooldowns() -> Array[float]:
 	return cooldown_timer.cooldowns

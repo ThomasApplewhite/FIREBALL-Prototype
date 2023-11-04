@@ -42,6 +42,9 @@ func enable_debug_display(new_spell_provider):
 	display_enabled = true
 	
 func generate_display_text():
+	if display_enabled:
+		return
+	
 	var spell_count = spell_provider.cooldowns.size()
 	cool_labels.resize(spell_count)
 	stack_labels.resize(spell_count)

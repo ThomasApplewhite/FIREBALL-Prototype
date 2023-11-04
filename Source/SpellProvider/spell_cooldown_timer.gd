@@ -19,10 +19,14 @@ func start_cooldown_timer():
 	start(cooldown_timer_max)
 
 
-func init_cooldowns(array_size : int, new_base : Array[float], new_adjusts : Array[float]):
+func init_cooldowns(array_size : int, new_base : Array[float], new_adjusts : Array[float], keep_old_cooldowns : bool):
 	base_cooldowns = new_base
 	cooldown_adjusts = new_adjusts
 	cooldowns.resize(array_size)
+	
+	if keep_old_cooldowns:
+		return
+	
 	for i in array_size:
 		cooldowns[i] = cooldown_timer_max - base_cooldowns[i]
 
