@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cjeombouct18o"]
+
+[ext_resource type="Script" path="res://Source/Utils/buff_type_config_data.gd" id="1_gti8u"]
+
+[resource]
+script = ExtResource("1_gti8u")
+increment = 1.0
+cap = 1.0
+base = 1.0

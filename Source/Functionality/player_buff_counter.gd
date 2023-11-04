@@ -78,28 +78,30 @@ func get_buff_multiplier(buff_type : BuffMultiplierType) -> float:
 func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
 	var buff_mult_inc
 	var buff_mult_cap
+	var buff_mult_base
+	var buff_config
 	
-	# this is gonna suck
-	# but it's better than caching everything ahead of time
-	# it would be cool if I could access this more cleanly without caching
-	# well I guess I could put it in a cache friendly format in the resource but whatever who cares
 	match buff_type:
 		BuffMultiplierType.DAMAGE:
-			buff_mult_inc = buff_data.damage_mult_inc
-			buff_mult_cap = buff_data.damage_mult_cap
+			buff_config = buff_data.damage_multiplier
 		BuffMultiplierType.COOLDOWN:
-			buff_mult_inc = buff_data.cooldown_mult_inc
-			buff_mult_cap = buff_data.cooldown_mult_capc
+			buff_config = buff_data.cooldown_multiplier
 		BuffMultiplierType.HEALTH_CAP:
-			buff_mult_inc = buff_data.healthcap_mult_inc
-			buff_mult_cap = buff_data.healthcap_mult_cap
+			buff_config = buff_data.healthcap_multiplier
 		BuffMultiplierType.HEALTH_REGEN:
-			buff_mult_inc = buff_data.healthregen_mult_inc
-			buff_mult_cap = buff_data.healthregen_mult_cap
+			buff_config = buff_data.healthregen_multiplier
 		_:
-			push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")
-			buff_mult_inc = 1.0
-			buff_mult_cap = 1.0
+			pass
+
+	if(buff_config):
+		buff_mult_inc = buff_config.increment
+		buff_mult_cap = buff_config.cap
+		buff_mult_base = buff_config.base
+	else:
+		push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")
+		buff_mult_inc = 1.0
+		buff_mult_cap = 1.0
+		buff_mult_base = 1.0
 	
-	var final_buff_mult = buff_mult_inc * buff_counts[buff_type]
+	var final_buff_mult = (buff_mult_inc * buff_counts[buff_type]) + buff_mult_base
 	return final_buff_mult if final_buff_mult <= buff_mult_cap else buff_mult_cap

@@ -18,10 +18,10 @@ Okay, what are the action items from this?
 	[ ] CD Buff^{5}
 	[*] Health Cap Buff^{5}
 	[*] Health Regen Buff^{5}
-	[ ] Fix multiplier bug where the default multiplier is '0' and not '1'
+	[*] Fix multiplier bug where the default multiplier is '0' and not '1'
 [ ] Post-Level Buff Choosing and Incrementing
-[ ] More Intelligent Enemy Health Scaling
-[ ] More Intelligent Enemy Spawnrate Scaling
+[ ] More Intelligent Enemy Health Scaling^{6}
+[ ] More Intelligent Enemy Spawnrate Scaling^{6}
 [*] Refactor level begin functionality in GameState to be signal driven
 
 1. More info in the //[[SpellDevelopmentToDos]]//
@@ -29,3 +29,4 @@ Okay, what are the action items from this?
 3. Needs Player Healing to be fully functional
 4. Individual Buff Choosing should be done before actually implementing buffs
 5. Waiting on signal-driven GameState level starts. PlayerFunctionality.gd changes for these is stashed
+6. More info in [[DesignDocs:ProgressionDesignBrainstormFromGym]]

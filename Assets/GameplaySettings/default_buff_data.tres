@@ -1,14 +1,11 @@
-[gd_resource type="Resource" script_class="BuffData" load_steps=2 format=3 uid="uid://bokm70bni8dnh"]
+[gd_resource type="Resource" script_class="BuffData" load_steps=3 format=3 uid="uid://bokm70bni8dnh"]
 
 [ext_resource type="Script" path="res://Source/Utils/buff_data.gd" id="1_wbn3e"]
+[ext_resource type="Resource" uid="uid://ysxpr5ohhxfr" path="res://Assets/GameplaySettings/BuffConfigs/zero_buff_config.tres" id="1_xyber"]
 
 [resource]
 script = ExtResource("1_wbn3e")
-damage_mult_inc = 0.0
-damage_mult_cap = 0.0
-cooldown_mult_inc = 0.0
-cooldown_mult_cap = 0.0
-healthcap_mult_inc = 0.0
-healthcap_mult_cap = 0.0
-healthregen_mult_inc = 0.0
-healthregen_mult_cap = 0.0
+damage_multiplier = ExtResource("1_xyber")
+cooldown_multiplier = ExtResource("1_xyber")
+healthcap_multiplier = ExtResource("1_xyber")
+healthregen_multiplier = ExtResource("1_xyber")
