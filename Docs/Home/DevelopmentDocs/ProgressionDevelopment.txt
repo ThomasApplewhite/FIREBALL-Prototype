@@ -12,7 +12,7 @@ Okay, what are the action items from this?
 [ ] Ice Spike spell^{1}
 [*] Spells that can Heal
 [*] Player Health Regen
-[ ] Global Buffs System for^{2, 4}
+[*] Global Buffs System for^{2, 4}
 	[*] The actual buff counter
 	[*] Damage Buff
 	[*] CD Buff^{5}

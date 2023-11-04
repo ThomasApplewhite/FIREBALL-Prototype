@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BuffTypeConfigData" load_steps=2 format=3 uid="uid://cl8lycksghxo2"]
+
+[ext_resource type="Script" path="res://Source/Utils/buff_type_config_data.gd" id="1_wxvjd"]
+
+[resource]
+script = ExtResource("1_wxvjd")
+increment = 1.0
+cap = 0.0
+base = 1.0
+buff_subtracts_from_base = true
