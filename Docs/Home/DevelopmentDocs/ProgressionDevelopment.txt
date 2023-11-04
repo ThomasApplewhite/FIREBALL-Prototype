@@ -15,7 +15,7 @@ Okay, what are the action items from this?
 [ ] Global Buffs System for^{2, 4}
 	[*] The actual buff counter
 	[*] Damage Buff
-	[ ] CD Buff^{5}
+	[*] CD Buff^{5}
 	[*] Health Cap Buff^{5}
 	[*] Health Regen Buff^{5}
 	[*] Fix multiplier bug where the default multiplier is '0' and not '1'

@@ -103,5 +103,12 @@ func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
 		buff_mult_cap = 1.0
 		buff_mult_base = 1.0
 	
-	var final_buff_mult = (buff_mult_inc * buff_counts[buff_type]) + buff_mult_base
-	return final_buff_mult if final_buff_mult <= buff_mult_cap else buff_mult_cap
+	var buff_coef = (buff_mult_inc * buff_counts[buff_type])
+	buff_coef *= -1 if buff_config.buff_subtracts_from_base else 1
+	var final_buff_mult = buff_mult_base + buff_coef
+	# buff-larger-than-cap XOR is-buff-subtractive
+	# If the buff is subtract, it's highest magnitude will be smaller than the base
+	# So, we should use the cap if the buff is too small
+	var should_use_cap = (final_buff_mult > buff_mult_cap) != buff_config.buff_subtracts_from_base
+	
+	return buff_mult_cap if should_use_cap else final_buff_mult
