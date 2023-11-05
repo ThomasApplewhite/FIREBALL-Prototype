@@ -13,6 +13,8 @@ enum BuffMultiplierType {
 }
 
 @export
+var debug_show_buff_count : bool
+@export
 var buff_data : BuffData
 @export
 var add_startup_buffs : bool
@@ -56,6 +58,8 @@ var buff_counts = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$DebugShowBuffsControl.visible = debug_show_buff_count
+	
 	add_to_group(buff_counter_group_name)
 	
 	if add_startup_buffs:
@@ -69,6 +73,10 @@ func _ready():
 
 func increment_buff(buff_type : BuffMultiplierType):
 	buff_counts[buff_type] += 1
+	
+	if debug_show_buff_count:
+		var text = "[right]%d %d %d %d[/right]" % [buff_counts[0], buff_counts[1], buff_counts[2], buff_counts[3]]
+		$DebugShowBuffsControl/RichTextLabel.text = text
 
 
 func get_buff_multiplier(buff_type : BuffMultiplierType) -> float:

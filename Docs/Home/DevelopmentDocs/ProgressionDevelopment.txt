@@ -19,9 +19,10 @@ Okay, what are the action items from this?
 	[*] Health Cap Buff^{5}
 	[*] Health Regen Buff^{5}
 	[*] Fix multiplier bug where the default multiplier is '0' and not '1'
-[ ] Post-Level Buff Choosing and Incrementing
+[*] Post-Level Buff Choosing and Incrementing
 [ ] More Intelligent Enemy Health Scaling^{6}
 [ ] More Intelligent Enemy Spawnrate Scaling^{6}
+[ ] Intelligent Player Buff Scaling
 [*] Refactor level begin functionality in GameState to be signal driven
 
 1. More info in the //[[SpellDevelopmentToDos]]//

@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" path="res://Source/Functionality/game_state.gd" id="1_4xlq6"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_428ch"]
-[ext_resource type="Script" path="res://Source/Functionality/player_buff_counter.gd" id="3_1hvbc"]
+[ext_resource type="PackedScene" uid="uid://dlvsikmfvgk5j" path="res://Source/Functionality/player_buff_counter.tscn" id="3_hx8nk"]
 [ext_resource type="Resource" uid="uid://bokm70bni8dnh" path="res://Assets/GameplaySettings/default_buff_data.tres" id="4_apscd"]
 
-[node name="GameState" type="Node"]
+[node name="GameState" type="Node" node_paths=PackedStringArray("buff_buttons")]
 script = ExtResource("1_4xlq6")
+buff_buttons = [NodePath("PostLevelControl/BuffSelectorGridContainer/DamageButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/CooldownButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/HealthcapButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/HealthregenButton")]
 
 [node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]
 
@@ -36,7 +37,7 @@ size_flags_horizontal = 4
 bbcode_enabled = true
 text = "[center]TEST TEXT![/center]"
 
-[node name="Button" type="Button" parent="PostLevelControl"]
+[node name="BuffSelectorGridContainer" type="GridContainer" parent="PostLevelControl"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -44,12 +45,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.5
-offset_top = 29.0
-offset_right = 52.5
-offset_bottom = 96.0
+offset_left = -261.0
+offset_top = 34.0
+offset_right = 261.0
+offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
+columns = 4
+
+[node name="DamageButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Damage"
+
+[node name="CooldownButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Cooldown"
+
+[node name="HealthcapButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Health"
+
+[node name="HealthregenButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Regeneration"
 
 [node name="DebugControl" type="Control" parent="."]
 layout_mode = 3
@@ -69,8 +95,6 @@ offset_left = -316.0
 offset_bottom = 74.0
 grow_horizontal = 0
 
-[node name="PlayerBuffCounter" type="Node" parent="."]
-script = ExtResource("3_1hvbc")
+[node name="PlayerBuffCounter" parent="." instance=ExtResource("3_hx8nk")]
+debug_show_buff_count = true
 buff_data = ExtResource("4_apscd")
-
-[connection signal="pressed" from="PostLevelControl/Button" to="." method="_on_progression_button_pressed"]

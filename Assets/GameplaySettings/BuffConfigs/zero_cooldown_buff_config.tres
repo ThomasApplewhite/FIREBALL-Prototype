@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_wxvjd")
 increment = 1.0
-cap = 0.0
+cap = 1.0
 base = 1.0
 buff_subtracts_from_base = true
