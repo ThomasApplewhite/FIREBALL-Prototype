@@ -40,5 +40,5 @@ I can put the player buffs and their scaling functions in data assets if I want!
 Okay, what are the action items from this?
 [ ] Twist of Fate spell
 [ ] Ice Spike spell
-[ ] Post-Level Buff Choosing
-[ ] Global Buffs for Damage, CD, Health Cap, and Health Regen
+[*] Post-Level Buff Choosing
+[*] Global Buffs for Damage, CD, Health Cap, and Health Regen
