@@ -1,28 +1,37 @@
 [gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bcyqjjko16xt8"]
 
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_e7ut8"]
-[ext_resource type="Texture2D" uid="uid://qm3imuir4fe6" path="res://PlayerIcon.png" id="2_2bvaj"]
-[ext_resource type="Texture2D" uid="uid://ckbkt1riqg5mw" path="res://Assets/Icons/ZapSpellIcon.png" id="3_vh0o3"]
-[ext_resource type="Texture2D" uid="uid://cfrvkiqia8orv" path="res://Assets/Icons/MagicTopSpellIcon.png" id="4_gxlvv"]
-[ext_resource type="Texture2D" uid="uid://30g2d3kkooy6" path="res://Assets/Icons/FireballSpellIcon.png" id="5_w3hi0"]
+[ext_resource type="Texture2D" uid="uid://ctsbxympi703n" path="res://Assets/Spells/TwistOfFate/TwistOfFateSpellLarge_Sheet.png" id="1_pkwxx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4gb2"]
+atlas = ExtResource("1_pkwxx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ofdc"]
+atlas = ExtResource("1_pkwxx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx7wm"]
+atlas = ExtResource("1_pkwxx")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvwvd"]
+atlas = ExtResource("1_pkwxx")
+region = Rect2(64, 64, 64, 64)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_e7ut8")
+"texture": SubResource("AtlasTexture_r4gb2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_2bvaj")
+"texture": SubResource("AtlasTexture_2ofdc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_vh0o3")
+"texture": SubResource("AtlasTexture_bx7wm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_gxlvv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_w3hi0")
+"texture": SubResource("AtlasTexture_hvwvd")
 }],
 "loop": true,
 "name": &"twist",

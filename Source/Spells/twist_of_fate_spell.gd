@@ -6,11 +6,15 @@ var spell_range : float
 var enemy_collision_layer : int
 @export
 var anim_name = "twist"
+@export
+var enemy_speed_name = "enemy_speed"
 
 @onready
 var spell_func = $SpellFuncationality
 @onready
 var spell_anim = $AnimatedSprite2D
+
+var hit_enemy_collider
 
 
 func create_raycast_params():
@@ -27,15 +31,21 @@ func raycast_for_damage():
 	#print("Raycast: %v -> %v" % [global_position, global_position + (global_transform.y * spell_range)])
 	
 	if hit_enemy:
-		global_transform.y = Vector2.UP
+		global_transform.y = Vector2.DOWN
 		global_transform.x = Vector2.RIGHT
 		global_position = hit_enemy.position
+		hit_enemy_collider = hit_enemy.collider
+		if enemy_speed_name in hit_enemy_collider:
+			hit_enemy_collider.set(enemy_speed_name, 0.0)
 		
 		spell_anim.play(anim_name)
-		
-		spell_func.spell_damage.damage_node(hit_enemy.collider)
 	else:
 		queue_free()
+		
+
+func damage_enemy_and_free_self():
+	spell_func.spell_damage.damage_node(hit_enemy_collider)
+	queue_free()
 
 
 func _on_spell_funcationality_spell_launched():
@@ -43,8 +53,8 @@ func _on_spell_funcationality_spell_launched():
 
 
 func _on_animated_sprite_2d_animation_finished():
-	queue_free()
+	damage_enemy_and_free_self()
 
 
 func _on_animated_sprite_2d_animation_looped():
-	queue_free()
+	damage_enemy_and_free_self()

@@ -12,6 +12,7 @@ enemy_collision_layer = 2
 [node name="SpellFuncationality" parent="." instance=ExtResource("1_kafq6")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 sprite_frames = ExtResource("3_c7b8q")
 animation = &"twist"
 
