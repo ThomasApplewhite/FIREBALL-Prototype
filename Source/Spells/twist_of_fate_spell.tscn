@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi2tt6fxhiybq"]
+
+[ext_resource type="Script" path="res://Source/Spells/twist_of_fate_spell.gd" id="1_a2wef"]
+[ext_resource type="PackedScene" uid="uid://bf7t2l6ea2juh" path="res://Source/Functionality/spell_funcationality.tscn" id="1_kafq6"]
+[ext_resource type="SpriteFrames" uid="uid://bcyqjjko16xt8" path="res://Assets/Spells/TwistOfFate/twist_of_fate_frames.tres" id="3_c7b8q"]
+
+[node name="TwistOfFateSpell" type="Node2D"]
+script = ExtResource("1_a2wef")
+spell_range = 1000.0
+enemy_collision_layer = 2
+
+[node name="SpellFuncationality" parent="." instance=ExtResource("1_kafq6")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_c7b8q")
+animation = &"twist"
+
+[connection signal="spell_launched" from="SpellFuncationality" to="." method="_on_spell_funcationality_spell_launched"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

@@ -40,14 +40,16 @@ Level win!
 Twist of Fate
 No projectile. Immediately twists an enemy's balls. So, no visual projectile. But there is a visual on the enemy that gets twisted
 [ ] Visual
-[ ] Behavior
+[*] Behavior
 [ ] Selector Icon
+[ ] Spell Data
 
 Ice Spike
 On hit, bursts into a spiky ball
 [ ] Visual
 [ ] Behavior
 [ ] Selector Icon
+[ ] Spell Data
 
 
 

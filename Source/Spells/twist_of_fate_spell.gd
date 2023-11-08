@@ -1,0 +1,50 @@
+extends Node2D
+
+@export 
+var spell_range : float
+@export_flags_2d_physics
+var enemy_collision_layer : int
+@export
+var anim_name = "twist"
+
+@onready
+var spell_func = $SpellFuncationality
+@onready
+var spell_anim = $AnimatedSprite2D
+
+
+func create_raycast_params():
+	return PhysicsRayQueryParameters2D.create(
+		global_position, 
+		global_position + (-global_transform.y * spell_range),
+		enemy_collision_layer
+	)
+
+
+func raycast_for_damage():
+	var hit_enemy = get_world_2d().direct_space_state.intersect_ray(create_raycast_params())
+
+	#print("Raycast: %v -> %v" % [global_position, global_position + (global_transform.y * spell_range)])
+	
+	if hit_enemy:
+		global_transform.y = Vector2.UP
+		global_transform.x = Vector2.RIGHT
+		global_position = hit_enemy.position
+		
+		spell_anim.play(anim_name)
+		
+		spell_func.spell_damage.damage_node(hit_enemy.collider)
+	else:
+		queue_free()
+
+
+func _on_spell_funcationality_spell_launched():
+	raycast_for_damage()
+
+
+func _on_animated_sprite_2d_animation_finished():
+	queue_free()
+
+
+func _on_animated_sprite_2d_animation_looped():
+	queue_free()

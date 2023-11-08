@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdb8bmcb68xps"]
+[gd_scene load_steps=11 format=3 uid="uid://cdb8bmcb68xps"]
 
 [ext_resource type="Texture2D" uid="uid://dgyaktecbg6ip" path="res://Assets/Player/Player_Large.png" id="1_2hu3t"]
 [ext_resource type="PackedScene" uid="uid://dqhluqo06p4b3" path="res://Source/Player/player_functionality.tscn" id="2_4gyl4"]
 [ext_resource type="PackedScene" uid="uid://dbnrjfvelxmbi" path="res://Source/Functionality/health_counter.tscn" id="5_j5vxp"]
 [ext_resource type="PackedScene" uid="uid://b6iw75rfsoiqy" path="res://Source/Functionality/health_regenerator.tscn" id="5_lb4yr"]
+[ext_resource type="Resource" uid="uid://dedrdyxv5pma6" path="res://Assets/Spells/SpellData/stub_spell_data.tres" id="5_yasrn"]
+[ext_resource type="Resource" uid="uid://c1v47eymax6vh" path="res://Assets/Spells/SpellData/magic_top_spell_data.tres" id="6_ensdb"]
 [ext_resource type="PackedScene" uid="uid://xo43g1fmqpao" path="res://Source/SpellProvider/spell_provider.tscn" id="6_o616n"]
+[ext_resource type="Resource" uid="uid://cg4wpjso1mh2a" path="res://Assets/Spells/SpellData/twist_of_fate_spell_data.tres" id="7_7fv6f"]
+[ext_resource type="Resource" uid="uid://c2jqoxy3lnyv7" path="res://Assets/Spells/SpellData/fireball_spell_data.tres" id="8_gc8mr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4rvp"]
 size = Vector2(128, 128)
@@ -31,6 +35,7 @@ position = Vector2(0, -85)
 position = Vector2(168, 0)
 
 [node name="SpellProvider" parent="." instance=ExtResource("6_o616n")]
+spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("5_yasrn"), ExtResource("6_ensdb"), ExtResource("7_7fv6f"), ExtResource("8_gc8mr")])
 
 [node name="HealthRegenerator" parent="." node_paths=PackedStringArray("health") instance=ExtResource("5_lb4yr")]
 health = NodePath("../HealthCounter")

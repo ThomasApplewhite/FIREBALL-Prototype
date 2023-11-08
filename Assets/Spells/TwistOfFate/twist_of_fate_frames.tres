@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bcyqjjko16xt8"]
+
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_e7ut8"]
+[ext_resource type="Texture2D" uid="uid://qm3imuir4fe6" path="res://PlayerIcon.png" id="2_2bvaj"]
+[ext_resource type="Texture2D" uid="uid://ckbkt1riqg5mw" path="res://Assets/Icons/ZapSpellIcon.png" id="3_vh0o3"]
+[ext_resource type="Texture2D" uid="uid://cfrvkiqia8orv" path="res://Assets/Icons/MagicTopSpellIcon.png" id="4_gxlvv"]
+[ext_resource type="Texture2D" uid="uid://30g2d3kkooy6" path="res://Assets/Icons/FireballSpellIcon.png" id="5_w3hi0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e7ut8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2bvaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vh0o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gxlvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w3hi0")
+}],
+"loop": true,
+"name": &"twist",
+"speed": 5.0
+}]

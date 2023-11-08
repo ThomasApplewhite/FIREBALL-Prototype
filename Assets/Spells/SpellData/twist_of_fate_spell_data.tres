@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=4 format=3 uid="uid://cg4wpjso1mh2a"]
+
+[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_4pvra"]
+[ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_gd726"]
+[ext_resource type="PackedScene" uid="uid://bi2tt6fxhiybq" path="res://Source/Spells/twist_of_fate_spell.tscn" id="2_7t1bv"]
+
+[resource]
+script = ExtResource("1_gd726")
+name = "Twist of Fate"
+icon = ExtResource("1_4pvra")
+packed_spell = ExtResource("2_7t1bv")
+cooldown = 1.0
+global_cooldown_change = 1.0
+health_cost = 0.0
+damage = 200.0
+speed = 0.0
