@@ -5,9 +5,10 @@
 [ext_resource type="SpriteFrames" uid="uid://ru55mtspsemq" path="res://Assets/Spells/IceSpike/ice_spike_frames.tres" id="3_vi2tt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qg1br"]
-radius = 75.0
+radius = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3qbf"]
+size = Vector2(10, 15)
 
 [node name="IceSpike" type="Area2D"]
 collision_layer = 0

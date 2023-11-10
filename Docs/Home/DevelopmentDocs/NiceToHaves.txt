@@ -20,6 +20,7 @@ Created Saturday 23 September 2023
 [ ] Disable texture filering on splash screen
 [ ] Second pass on art/anim/visuals for Twist of Fate
 [ ] A backboard that destroys spells that fly for too long
+[ ] Figure out why so many sprites look like their blacks are slightly lighter than the background black in Godot
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

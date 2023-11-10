@@ -8,6 +8,9 @@ Created Sunday 15 October 2023
 FIREBALL
 Created by Thomas Applewhite
 
+Godot
+godot contribures
+
 Minimal3x5 Font
 by kheftel
 from OpenGameArt.org
@@ -16,3 +19,6 @@ https://opengameart.org/content/minimalist-pixel-fonts
 Sprites made using Pixelorama
 by ???
 link???
+
+Special Thanks
+Chloe

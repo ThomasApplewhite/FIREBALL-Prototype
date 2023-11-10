@@ -1,22 +1,53 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ru55mtspsemq"]
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://ru55mtspsemq"]
 
-[ext_resource type="Texture2D" uid="uid://bi23ey7rnwkoi" path="res://icon.svg" id="1_vpbxw"]
-[ext_resource type="Texture2D" uid="uid://ckbkt1riqg5mw" path="res://Assets/Icons/ZapSpellIcon.png" id="2_7aqcj"]
-[ext_resource type="Texture2D" uid="uid://cfrvkiqia8orv" path="res://Assets/Icons/MagicTopSpellIcon.png" id="3_f6rrw"]
+[ext_resource type="Texture2D" uid="uid://s5x8ubxt58mi" path="res://Assets/Spells/IceSpike/IceSpikeExplosionLarge_Sheet.png" id="1_mwbbh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ofmj"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn2u3"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ko3"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tfk0"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2y22f"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvsw2"]
+atlas = ExtResource("1_mwbbh")
+region = Rect2(128, 256, 128, 128)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vpbxw")
+"texture": SubResource("AtlasTexture_2ofmj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_7aqcj")
+"texture": SubResource("AtlasTexture_yn2u3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_f6rrw")
+"texture": SubResource("AtlasTexture_e4ko3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tfk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2y22f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvsw2")
 }],
 "loop": true,
 "name": &"explode",
-"speed": 10.0
+"speed": 20.0
 }]

@@ -46,7 +46,7 @@ No projectile. Immediately twists an enemy's balls. So, no visual projectile. Bu
 
 Ice Spike
 On hit, bursts into a spiky ball
-[ ] Visual
+[*] Visual
 [*] Behavior
 [ ] Selector Icon
 [ ] Spell Data
