@@ -19,6 +19,7 @@ Created Saturday 23 September 2023
 [ ] Add black bottom edge/margin to splash screen
 [ ] Disable texture filering on splash screen
 [ ] Second pass on art/anim/visuals for Twist of Fate
+[ ] A backboard that destroys spells that fly for too long
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

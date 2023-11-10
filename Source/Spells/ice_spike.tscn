@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmkks4dtpsvug"]
+
+[ext_resource type="PackedScene" uid="uid://bf7t2l6ea2juh" path="res://Source/Functionality/spell_funcationality.tscn" id="1_242ki"]
+[ext_resource type="Script" path="res://Source/Spells/ice_spike.gd" id="1_bgjfw"]
+[ext_resource type="SpriteFrames" uid="uid://ru55mtspsemq" path="res://Assets/Spells/IceSpike/ice_spike_frames.tres" id="3_vi2tt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qg1br"]
+radius = 75.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3qbf"]
+
+[node name="IceSpike" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_bgjfw")
+explosion_shape = SubResource("CircleShape2D_qg1br")
+
+[node name="SpellFuncationality" parent="." instance=ExtResource("1_242ki")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d3qbf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_vi2tt")
+animation = &"explode"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
