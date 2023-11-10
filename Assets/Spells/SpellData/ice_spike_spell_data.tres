@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="SpellData" load_steps=4 format=3 uid="uid://c5am5y0te4v4c"]
 
 [ext_resource type="Script" path="res://Source/Utils/spell_data.gd" id="1_156ys"]
-[ext_resource type="Texture2D" uid="uid://bpgqjjhr6dbob" path="res://Assets/Icons/IceSpikeSpellIcon.png" id="1_bcwdm"]
+[ext_resource type="Texture2D" uid="uid://ctgsyu8fk26xr" path="res://Assets/Icons/IceSpikeSpellIcon_Thick.png" id="1_xxctp"]
 [ext_resource type="PackedScene" uid="uid://bmkks4dtpsvug" path="res://Source/Spells/ice_spike.tscn" id="2_58l2r"]
 
 [resource]
 script = ExtResource("1_156ys")
 name = "Ice Spike"
-icon = ExtResource("1_bcwdm")
+icon = ExtResource("1_xxctp")
 packed_spell = ExtResource("2_58l2r")
 cooldown = 1.0
 global_cooldown_change = 1.0

@@ -48,7 +48,7 @@ Ice Spike
 On hit, bursts into a spiky ball
 [*] Visual
 [*] Behavior
-[ ] Selector Icon
+[*] Selector Icon
 [ ] Spell Data
 
 
