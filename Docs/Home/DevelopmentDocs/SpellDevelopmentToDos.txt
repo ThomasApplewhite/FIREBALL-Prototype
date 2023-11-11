@@ -49,7 +49,7 @@ On hit, bursts into a spiky ball
 [*] Visual
 [*] Behavior
 [*] Selector Icon
-[ ] Spell Data
+[*] Spell Data
 
 
 

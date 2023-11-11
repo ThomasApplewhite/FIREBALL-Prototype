@@ -36,7 +36,7 @@ position = Vector2(0, -85)
 position = Vector2(168, 0)
 
 [node name="SpellProvider" parent="." instance=ExtResource("6_o616n")]
-spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("5_yasrn"), ExtResource("6_ensdb"), ExtResource("7_7fv6f"), ExtResource("8_gc8mr"), ExtResource("9_cdxyn")])
+spell_datas = Array[Resource("res://Source/Utils/spell_data.gd")]([ExtResource("5_yasrn"), ExtResource("6_ensdb"), ExtResource("9_cdxyn"), ExtResource("7_7fv6f"), ExtResource("8_gc8mr")])
 
 [node name="HealthRegenerator" parent="." node_paths=PackedStringArray("health") instance=ExtResource("5_lb4yr")]
 health = NodePath("../HealthCounter")

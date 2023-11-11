@@ -9,7 +9,7 @@ I've got to do progression!
 Okay, what are the action items from this?
 
 [*] Twist of Fate spell^{1, 3}
-[ ] Ice Spike spell^{1}
+[*] Ice Spike spell^{1}
 [*] Spells that can Heal
 [*] Player Health Regen
 [*] Global Buffs System for^{2, 4}

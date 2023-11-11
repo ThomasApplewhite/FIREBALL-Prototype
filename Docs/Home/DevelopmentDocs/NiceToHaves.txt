@@ -21,6 +21,11 @@ Created Saturday 23 September 2023
 [ ] Second pass on art/anim/visuals for Twist of Fate
 [ ] A backboard that destroys spells that fly for too long
 [ ] Figure out why so many sprites look like their blacks are slightly lighter than the background black in Godot
+[ ] Second pass on sprite thickness for Ice Spike
+[ ] Even More Balance Work!
+	[ ] Better Scaling for FIREBALL's cooldown
+	[ ] Better Balancing for spell values
+	[ ] Ease-of-Use features for computer testing of spells (easier spell picking, like with a keyboard or something)
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.
