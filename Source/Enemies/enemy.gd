@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 @export
 var enemy_speed = 10.0
+# If this stops working, make sure that all the constants are floats
 @export
-var health_increase = 10.0
+var health_increase_formula = "1.0 + ((x * x) / 25.0)"
 @export
 var enemy_collision_layer = 0x0002
 
@@ -13,11 +14,18 @@ signal _on_non_enemy_collision(Node2D)
 var health_counter = $HealthCounter
 
 var target_location : Vector2
+var health_increase_expression : Expression
 var initialized = false
+
+func _ready():
+	health_increase_expression = Expression.new()
+	health_increase_expression.parse(health_increase_formula, ["x"])
 
 func init_enemy(new_target : Node2D, enemy_scale : int):
 	target_location = new_target.global_position
-	health_counter.set_max_health(health_counter.max_health + (enemy_scale * health_increase))
+	var debug_health_mul = health_increase_expression.execute([enemy_scale])
+	print(1 + ((enemy_scale * enemy_scale) / 25.0))
+	health_counter.set_max_health(health_counter.max_health * debug_health_mul)
 	initialized = true
 
 func _physics_process(_delta):

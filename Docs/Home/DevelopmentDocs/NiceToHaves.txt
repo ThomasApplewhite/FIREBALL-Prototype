@@ -8,6 +8,7 @@ Created Saturday 23 September 2023
 [ ] Fix the SpellFuncationality spelling error^{1}
 [ ] Visual Indicator for spell cooldowns
 [ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
+[ ] Refactor Global Cooldown Modifier so I can easily tell what the modifiers are doing
 [ ] Organize 'Functionality' Folder^{1}
 [ ] Screen Layout/Screen Size pass
 [*] More efficient and cleaner buff access in PlayerBuffCounter, probably through the resource type itself
@@ -26,6 +27,7 @@ Created Saturday 23 September 2023
 	[ ] Better Scaling for FIREBALL's cooldown
 	[ ] Better Balancing for spell values
 	[ ] Ease-of-Use features for computer testing of spells (easier spell picking, like with a keyboard or something)
+[ ] Move Enemy scaling out of Enemy.gd and into something more sensical
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

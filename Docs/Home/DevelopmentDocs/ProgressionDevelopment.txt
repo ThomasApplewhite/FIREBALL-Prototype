@@ -20,8 +20,9 @@ Okay, what are the action items from this?
 	[*] Health Regen Buff^{5}
 	[*] Fix multiplier bug where the default multiplier is '0' and not '1'
 [*] Post-Level Buff Choosing and Incrementing
-[ ] More Intelligent Enemy Health Scaling^{6}
-[ ] More Intelligent Enemy Spawnrate Scaling^{6}
+[*] More Intelligent Enemy Health Scaling^{6}
+[x] More Intelligent Enemy Spawnrate Scaling^{6}
+	Right now I feel like the enemy health scaling is sufficient without additional enemies. I might change my mind about that later though
 [ ] Intelligent Player Buff Scaling
 [*] Refactor level begin functionality in GameState to be signal driven
 
