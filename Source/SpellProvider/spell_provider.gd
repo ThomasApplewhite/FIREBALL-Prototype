@@ -39,12 +39,15 @@ func init_cooldown_timer():
 	var base : Array[float] = []
 	var reduce : Array[float] = []
 	var size = spell_datas.size()
-	var player_buffs = GameState.get_game_state(get_tree()).buff_counter
+	var game_state = GameState.get_game_state(get_tree())
+	var player_buffs = game_state.buff_counter
 	var base_multiplier = player_buffs.get_buff_multiplier(PlayerBuffCounter.BuffMultiplierType.COOLDOWN)
 	base.resize(size)
 	reduce.resize(size)
+	var cooldown_with_level_expression = Expression.new()
 	for i in size:
-		base[i] = spell_datas[i].cooldown * base_multiplier
+		cooldown_with_level_expression.parse(spell_datas[i].cooldown_multiplier_with_level, [spell_datas[i].cooldown_multiplier_variable])
+		base[i] = spell_datas[i].cooldown * base_multiplier * cooldown_with_level_expression.execute([game_state.level_scale], self)
 		reduce[i] = spell_datas[i].global_cooldown_change
 	cooldown_timer.init_cooldowns(size, base, reduce, false)
 

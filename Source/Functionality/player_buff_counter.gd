@@ -84,39 +84,60 @@ func get_buff_multiplier(buff_type : BuffMultiplierType) -> float:
 
 
 func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
-	var buff_mult_inc
-	var buff_mult_cap
-	var buff_mult_base
-	var buff_config
+	var buff_formula
 	
 	match buff_type:
 		BuffMultiplierType.DAMAGE:
-			buff_config = buff_data.damage_multiplier
+			buff_formula = buff_data.damage_multiplier_formula
 		BuffMultiplierType.COOLDOWN:
-			buff_config = buff_data.cooldown_multiplier
+			buff_formula = buff_data.cooldown_multiplier_formula
 		BuffMultiplierType.HEALTH_CAP:
-			buff_config = buff_data.healthcap_multiplier
+			buff_formula = buff_data.healthcap_multiplier_formula
 		BuffMultiplierType.HEALTH_REGEN:
-			buff_config = buff_data.healthregen_multiplier
+			buff_formula = buff_data.healthregen_multiplier_formula
 		_:
-			pass
+			push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")
+			buff_formula = "1.0"
+			
+	var buff_expression = Expression.new()
+	buff_expression.parse(buff_formula, [buff_data.scale_variable])
+	return buff_expression.execute([buff_counts[buff_type]], self)
 
-	if(buff_config):
-		buff_mult_inc = buff_config.increment
-		buff_mult_cap = buff_config.cap
-		buff_mult_base = buff_config.base
-	else:
-		push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")
-		buff_mult_inc = 1.0
-		buff_mult_cap = 1.0
-		buff_mult_base = 1.0
-	
-	var buff_coef = (buff_mult_inc * buff_counts[buff_type])
-	buff_coef *= -1 if buff_config.buff_subtracts_from_base else 1
-	var final_buff_mult = buff_mult_base + buff_coef
-	# buff-larger-than-cap XOR is-buff-subtractive
-	# If the buff is subtract, it's highest magnitude will be smaller than the base
-	# So, we should use the cap if the buff is too small
-	var should_use_cap = (final_buff_mult > buff_mult_cap) != buff_config.buff_subtracts_from_base
-	
-	return buff_mult_cap if should_use_cap else final_buff_mult
+
+#func _get_buff_multiplier_internal(buff_type : BuffMultiplierType) -> float:
+#	var buff_mult_inc
+#	var buff_mult_cap
+#	var buff_mult_base
+#	var buff_config
+#	
+#	match buff_type:
+#		BuffMultiplierType.DAMAGE:
+#			buff_config = buff_data.damage_multiplier
+#		BuffMultiplierType.COOLDOWN:
+#			buff_config = buff_data.cooldown_multiplier
+#		BuffMultiplierType.HEALTH_CAP:
+#			buff_config = buff_data.healthcap_multiplier
+#		BuffMultiplierType.HEALTH_REGEN:
+#			buff_config = buff_data.healthregen_multiplier
+#		_:
+#			pass
+#
+#	if(buff_config):
+#		buff_mult_inc = buff_config.increment
+#		buff_mult_cap = buff_config.cap
+#		buff_mult_base = buff_config.base
+#	else:
+#		push_error("Invalid Buff Type given for PlayerBuffCounter.get_buff_multiplier")
+#		buff_mult_inc = 1.0
+#		buff_mult_cap = 1.0
+#		buff_mult_base = 1.0
+#	
+#	var buff_coef = (buff_mult_inc * buff_counts[buff_type])
+#	buff_coef *= -1 if buff_config.buff_subtracts_from_base else 1
+#	var final_buff_mult = buff_mult_base + buff_coef
+#	# buff-larger-than-cap XOR is-buff-subtractive
+#	# If the buff is subtract, it's highest magnitude will be smaller than the base
+#	# So, we should use the cap if the buff is too small
+#	var should_use_cap = (final_buff_mult > buff_mult_cap) != buff_config.buff_subtracts_from_base
+#	
+#	return buff_mult_cap if should_use_cap else final_buff_mult

@@ -28,6 +28,8 @@ Created Saturday 23 September 2023
 	[ ] Better Balancing for spell values
 	[ ] Ease-of-Use features for computer testing of spells (easier spell picking, like with a keyboard or something)
 [ ] Move Enemy scaling out of Enemy.gd and into something more sensical
+[ ] Build Test
+[ ] Test on Mobile
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.

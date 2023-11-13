@@ -10,6 +10,7 @@ name = "Magic Top"
 icon = ExtResource("3_oyfj7")
 packed_spell = ExtResource("1_cegvl")
 cooldown = 3.0
+cooldown_multiplier_with_level = "1.0"
 global_cooldown_change = 2.0
 health_cost = 0.0
 damage = 1.0
