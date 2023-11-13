@@ -6,21 +6,9 @@ Creation-Date: 2023-09-23T17:20:39-07:00
 Created Saturday 23 September 2023
 
 [ ] Fix the SpellFuncationality spelling error^{1}
-[ ] Visual Indicator for spell cooldowns
-[ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
-[ ] Refactor Global Cooldown Modifier so I can easily tell what the modifiers are doing
 [ ] Organize 'Functionality' Folder^{1}
-[ ] Screen Layout/Screen Size pass
-[*] More efficient and cleaner buff access in PlayerBuffCounter, probably through the resource type itself
-[ ] Switch preloaded classes like HealthCounter and GameState to be class_name'd.
-	* Exceptions can be for data types, since loading those ahead of time is probably a reasonable thing to do.
-	[*] GameState
-	[ ] HealthCounter
-[ ] Resolve on-open file change with magic top data
-[ ] Add black bottom edge/margin to splash screen
-[ ] Disable texture filering on splash screen
+[ ] Resolve on-open file change with magic top data^{2}
 [ ] Second pass on art/anim/visuals for Twist of Fate
-[ ] A backboard that destroys spells that fly for too long
 [ ] Figure out why so many sprites look like their blacks are slightly lighter than the background black in Godot
 [ ] Second pass on sprite thickness for Ice Spike
 [ ] Even More Balance Work!
@@ -28,8 +16,8 @@ Created Saturday 23 September 2023
 	[ ] Better Balancing for spell values
 	[ ] Ease-of-Use features for computer testing of spells (easier spell picking, like with a keyboard or something)
 [ ] Move Enemy scaling out of Enemy.gd and into something more sensical
-[ ] Build Test
-[ ] Test on Mobile
+
 
 
 1. Godot 4.1 has been know to crash/corrupt projects during renames/moves. Do this later.
+2. This may have stopped happening

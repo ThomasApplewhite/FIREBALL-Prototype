@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-13T14:27:09-08:00
+
+====== FunctionalDevelopmentPolish ======
+Created Monday 13 November 2023
+
+Necessary polish for the game to be easily workable for me in the future. Mostly refactors.
+
+[ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
+[ ] Refactor Global Cooldown Modifier so I can easily tell what the modifiers are doing
+[ ] Switch preloaded classes like HealthCounter and GameState to be class_name'd.
+	* Exceptions can be for data types, since loading those ahead of time is probably a reasonable thing to do.
+	[*] GameState
+	[ ] HealthCounter
+[*] More efficient and cleaner buff access in PlayerBuffCounter, probably through the resource type itself

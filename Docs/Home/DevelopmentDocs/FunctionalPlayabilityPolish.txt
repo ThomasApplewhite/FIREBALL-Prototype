@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-13T14:26:59-08:00
+
+====== FunctionalPlayabilityPolish ======
+Created Monday 13 November 2023
+
+Necessary polish for the game to be publicly available for people to try.
+
+[ ] Screen Layout/Screen Size pass
+[ ] Visual Indicator for spell cooldowns
+[ ] Add black bottom edge/margin to splash screen
+[ ] Disable texture filering on splash screen
+[ ] Build Test
+[ ] Test on Mobile
+[ ] A backboard that destroys spells that fly for too long

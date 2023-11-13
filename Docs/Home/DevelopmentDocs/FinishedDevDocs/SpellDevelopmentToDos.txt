@@ -21,9 +21,9 @@ Single Projectile
 
 Sun Ray
 Piercing Layer, cut
-[ ] Visual
-[ ] Behavior
-[ ] Selector Icon
+[x] Visual
+[x] Behavior
+[x] Selector Icon
 
 Magic Top
 Shoots a projectile that slows down and stops in place and lingers
