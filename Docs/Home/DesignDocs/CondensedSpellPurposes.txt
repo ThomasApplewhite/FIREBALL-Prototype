@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-13T16:57:58-08:00
+
+====== CondensedSpellPurposes ======
+Created Monday 13 November 2023
+
+Zap: Quick cooldown generation for minimal damage
+Magic Top: High-damage CD consumer to deal with nearby crowds
+Ice Spike: Medium-damage CD creator. A better Zap, but consumes health and cools down slower
+Twist of Fate: Low-damage (in that it is single target) CD consumer. Heals a lot!
