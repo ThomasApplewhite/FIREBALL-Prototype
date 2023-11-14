@@ -39,7 +39,9 @@ func launch(initial_move_direction : Vector2):
 	
 
 func damage_spell_caster():
-	spell_damage.damage_node_by_amount(caster, spell_data.health_cost)
+	# Damage is negated because a positive value is meant to increase health
+	# While a positive value into damage_node decreases health
+	spell_damage.damage_node_by_amount(caster, -spell_data.health_change_on_cast)
 
 	
 func _handle_spell_collision(other_body):
