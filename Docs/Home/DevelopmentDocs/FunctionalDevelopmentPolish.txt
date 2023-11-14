@@ -9,8 +9,9 @@ Necessary polish for the game to be easily workable for me in the future. Mostly
 
 [ ] Refactor Spell Health Costs/Healing so that the whole "positive for damage, negative to heal" thing isn't there it confuses me I don't like it
 [ ] Refactor Global Cooldown Modifier so I can easily tell what the modifiers are doing
-[ ] Switch preloaded classes like HealthCounter and GameState to be class_name'd.
+[*] Switch preloaded classes like HealthCounter and GameState to be class_name'd.
 	* Exceptions can be for data types, since loading those ahead of time is probably a reasonable thing to do.
 	[*] GameState
-	[ ] HealthCounter
+	[x] HealthCounter
+		This doesn't seem to be a thing? I thought something preloaded HealthCounter. Maybe that got taken out.
 [*] More efficient and cleaner buff access in PlayerBuffCounter, probably through the resource type itself
