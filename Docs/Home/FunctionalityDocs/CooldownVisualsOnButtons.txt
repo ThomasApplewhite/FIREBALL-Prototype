@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-11-14T21:56:42-08:00
+
+====== CooldownVisualsOnButtons ======
+Created Tuesday 14 November 2023
+
+TextureProgress nodes provide the visual functionality I want. Button nodes are buttons, obviously. I'd like to combine the two,
+The problem is that bundling the two together as a packed scene does not look the same as a button with an icon. There is no icon margin for the border to be around and the button always renders on top of the texture.
+
+How should I go about making this? Combining the two into one node is a good idea. Maybe I can make a button whose icon is also a TextureProgress and manually fill it the way I want? I will need to look into the Texture2D methods, maybe I can use those to do the "filling" behavior.
+
+What if, instead of having a combo node, we literally just //alternated// the two controls. Instead of having to combine a TextureProgress and Button together, we just replae the button with the texture and vice/versa when the load is done or the button is clicked. If possible. But how do I know when it's time to swap them?
+
+Well, the spell cooldown timer can have a signal for when a spell is cooled down? Maybe? Can it, actually?
+Okay, I have a maybe simpler idea: We make a TextureProgress control with a button node. The TextureProgress (or is it ProgressTexture?) will ignore mouse and the button will work as usual. 'Cause remember, the button should always be clickable.
+Even simpler idea: The TextureProgress is a child of button, and the button's icon is an invisible 64 x 64 rect that holds it size.
+Let's try that.
+
+Okay that works. Now how do we get the value of the cooldown to the texture progress? We'll definitely need a "percentage" method from the timer or the spell provider to determine that easily. That will be hard, since the two are sibling nodes. Well no they share a parent they can be an export. And maybe we can just bind a signal or something?
+
+Or maybe it can be a tick in the grid container. Keep it simple.

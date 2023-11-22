@@ -16,6 +16,9 @@ Created Saturday 23 September 2023
 	[ ] Better Balancing for spell values
 	[ ] Ease-of-Use features for computer testing of spells (easier spell picking, like with a keyboard or something)
 [ ] Move Enemy scaling out of Enemy.gd and into something more sensical
+[ ] Rename cooldowns and/or base_cooldowns in SpellCooldownTimer to highlight that one is the dynamically desired time needed for a spell to be coolded down and the other is a static value
+[ ] Fix Twist of Fate permenantly stopping enemies that it doesn't kill
+[ ] Visual indicator for stacks
 
 
 

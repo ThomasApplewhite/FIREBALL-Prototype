@@ -15,7 +15,6 @@ var cooldown_timer = $SpellCooldownTimer
 var spell_factory = $SpellFactory
 
 
-
 var spell_index : int
 var cooldowns : Array[float]:
 	get = get_cooldowns
@@ -53,6 +52,18 @@ func init_cooldown_timer():
 
 func get_cooldowns() -> Array[float]:
 	return cooldown_timer.cooldowns
+	
+	
+func get_base_cooldowns() -> Array[float]:
+	return cooldown_timer.base_cooldowns
+	
+
+func get_spell_time_remaining(index : int) -> float:
+	return cooldown_timer.get_spell_time_remaining(index)
+
+
+func get_spell_time_percentage(index : int) -> float:
+	return cooldown_timer.get_spell_time_percentage(index)
 
 
 func cast_selected_spell() -> Node2D:

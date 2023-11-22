@@ -7,8 +7,8 @@ var cooldown_adjusts : Array[float]
 # Timer max will be the starting point for timer loops
 # Timers will automatically loop if reduced below cooldown_min to avoid
 # undefined behavior with small timer wait times
-const cooldown_timer_max = 1000
-const reduced_cooldown_min = 5
+const cooldown_timer_max = 1000.0
+const reduced_cooldown_min = 5.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,8 +31,16 @@ func init_cooldowns(array_size : int, new_base : Array[float], new_adjusts : Arr
 		cooldowns[i] = cooldown_timer_max - base_cooldowns[i]
 
 
+func get_spell_time_remaining(index : int) -> float:
+	return maxf(0.0, get_time_left() - cooldowns[index])
+
+
+func get_spell_time_percentage(index : int) -> float:
+	return (base_cooldowns[index] - get_spell_time_remaining(index)) / base_cooldowns[index]
+	
+
 func get_spell_stacks(index : int) -> int:
-	return floor((cooldowns[index] - get_time_left()) / base_cooldowns[index]) + 1
+	return floor(get_spell_time_remaining(index)) + 1
 
 
 func adjust_all_spell_cooldowns(cooldown_change : float):
@@ -40,6 +48,7 @@ func adjust_all_spell_cooldowns(cooldown_change : float):
 	if new_time > reduced_cooldown_min:
 		start(new_time)
 	else:
+		# replace with wrap function?
 		loop_spell_timer(new_time)
 
 

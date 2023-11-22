@@ -16,7 +16,8 @@ debug_enable_cooldowns_display = true
 
 [node name="SpellProviderCooldownDisplay" parent="." instance=ExtResource("5_350ia")]
 
-[node name="SpellButtonGridContainer" parent="." instance=ExtResource("6_2rhjt")]
+[node name="SpellButtonGridContainer" parent="." node_paths=PackedStringArray("spell_percentage_provider") instance=ExtResource("6_2rhjt")]
+spell_percentage_provider = NodePath("..")
 
 [node name="SpellCooldownTimer" parent="." instance=ExtResource("7_2teav")]
 

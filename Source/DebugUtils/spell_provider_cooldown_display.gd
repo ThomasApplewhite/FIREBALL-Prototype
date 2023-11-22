@@ -14,24 +14,8 @@ func _process(_delta):
 	if not display_enabled:
 		return
 		
-	var time_remaining
-	var time_left = spell_provider.cooldown_timer.get_time_left()
-	var time_max = spell_provider.cooldown_timer.cooldown_timer_max	
-		
 	for i in spell_provider.get_cooldowns().size():
-		var cooldown = spell_provider.get_cooldowns()[i]
-		#var base_cooldown = spell_provider.spell_datas[i].cooldown
-		
-		if(cooldown < 0):
-			# account for loop scenario
-			time_remaining = (time_max + time_left) - (time_max + cooldown)
-		else:
-			time_remaining = time_left - cooldown
-		
-		# math for stacks  might not be accurate for loops. I didn't check
-		time_remaining = 0 if time_remaining <= 0 else time_remaining
-		
-		cool_labels[i].text = "%.2f" % time_remaining
+		cool_labels[i].text = "%.2f" % spell_provider.cooldown_timer.get_spell_time_remaining(i)
 		stack_labels[i].text = "%d" % spell_provider.cooldown_timer.get_spell_stacks(i)
 		
 
