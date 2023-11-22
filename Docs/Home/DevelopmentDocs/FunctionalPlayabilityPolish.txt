@@ -8,9 +8,10 @@ Created Monday 13 November 2023
 Necessary polish for the game to be publicly available for people to try.
 
 [ ] Screen Layout/Screen Size pass
+[ ] Quick spell scaling and damage pass. Not too intense, just quick-balance some stuff
 [*] Visual Indicator for spell cooldowns
-[ ] Add black bottom edge/margin to splash screen
-[ ] Disable texture filering on splash screen
+[*] Add black bottom edge/margin to splash screen
+[*] Disable texture filering on splash screen
 [ ] Build Test
 [ ] Test on Mobile
 [ ] A backboard that destroys spells that fly for too long
