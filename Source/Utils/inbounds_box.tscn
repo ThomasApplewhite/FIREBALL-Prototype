@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://3dcto64tcfbt"]
+
+[ext_resource type="Script" path="res://Source/Utils/inbounds_box.gd" id="1_rh8vr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qtht"]
+size = Vector2(2000, 2000)
+
+[node name="InboundsBox" type="Area2D"]
+script = ExtResource("1_rh8vr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2qtht")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
