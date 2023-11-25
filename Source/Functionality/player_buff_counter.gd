@@ -4,6 +4,12 @@ class_name PlayerBuffCounter
 
 const buff_data_type = preload("res://Source/Utils/buff_data.gd")
 const buff_counter_group_name = "BuffCounter"
+const zero_buffs = {
+	BuffMultiplierType.DAMAGE : 0,
+	BuffMultiplierType.COOLDOWN : 0,
+	BuffMultiplierType.HEALTH_CAP : 0,
+	BuffMultiplierType.HEALTH_REGEN : 0
+}
 
 enum BuffMultiplierType {
 	DAMAGE,
@@ -27,12 +33,8 @@ var startup_health_cap : int
 @export
 var startup_health_regen : int
 
-var buff_counts = {
-	BuffMultiplierType.DAMAGE : 0,
-	BuffMultiplierType.COOLDOWN : 0,
-	BuffMultiplierType.HEALTH_CAP : 0,
-	BuffMultiplierType.HEALTH_REGEN : 0
-}
+
+var buff_counts
 
 #static func get_buff_counter(context_scene_tree : SceneTree) -> PlayerBuffCounter:
 #	var buff_counters = context_scene_tree.get_nodes_in_group(buff_counter_group_name)
@@ -62,6 +64,7 @@ func _ready():
 	
 	add_to_group(buff_counter_group_name)
 	
+	reset_buffs()
 	if add_startup_buffs:
 		buff_counts = {
 			BuffMultiplierType.DAMAGE : startup_damage,
@@ -77,6 +80,10 @@ func increment_buff(buff_type : BuffMultiplierType):
 	if debug_show_buff_count:
 		var text = "[right]%d %d %d %d[/right]" % [buff_counts[0], buff_counts[1], buff_counts[2], buff_counts[3]]
 		$DebugShowBuffsControl/RichTextLabel.text = text
+		
+
+func reset_buffs():
+	buff_counts = zero_buffs.duplicate()
 
 
 func get_buff_multiplier(buff_type : BuffMultiplierType) -> float:

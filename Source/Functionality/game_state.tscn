@@ -1,18 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://s8b4ffkpnc15"]
+[gd_scene load_steps=6 format=3 uid="uid://s8b4ffkpnc15"]
 
 [ext_resource type="Script" path="res://Source/Functionality/game_state.gd" id="1_4xlq6"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_428ch"]
+[ext_resource type="Theme" uid="uid://c1ldb3mtl66yf" path="res://Assets/Themes/ui_blackwhite_theme.tres" id="3_6or6t"]
 [ext_resource type="PackedScene" uid="uid://dlvsikmfvgk5j" path="res://Source/Functionality/player_buff_counter.tscn" id="3_hx8nk"]
 [ext_resource type="Resource" uid="uid://bokm70bni8dnh" path="res://Assets/GameplaySettings/default_buff_data.tres" id="4_apscd"]
 
 [node name="GameState" type="Node" node_paths=PackedStringArray("buff_buttons")]
 script = ExtResource("1_4xlq6")
-buff_buttons = [NodePath("PostLevelControl/BuffSelectorGridContainer/DamageButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/CooldownButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/HealthcapButton"), NodePath("PostLevelControl/BuffSelectorGridContainer/HealthregenButton")]
+buff_buttons = [NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/DamageButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/CooldownButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/HealthcapButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/HealthregenButton")]
 
 [node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]
 
 [node name="PostLevelControl" type="Control" parent="."]
 visible = false
+z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +22,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PostLevelControl"]
+[node name="WinControl" type="Control" parent="PostLevelControl"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PostLevelControl/WinControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,10 +47,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 bbcode_enabled = true
-text = "[center]TEST TEXT![/center]"
+text = "[center]YOU WIN[/center]"
+scroll_active = false
 
-[node name="BuffSelectorGridContainer" type="GridContainer" parent="PostLevelControl"]
-visible = false
+[node name="BuffSelectorGridContainer" type="GridContainer" parent="PostLevelControl/WinControl"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,29 +65,73 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="DamageButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+[node name="DamageButton" type="Button" parent="PostLevelControl/WinControl/BuffSelectorGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Damage"
 
-[node name="CooldownButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+[node name="CooldownButton" type="Button" parent="PostLevelControl/WinControl/BuffSelectorGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Cooldown"
 
-[node name="HealthcapButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+[node name="HealthcapButton" type="Button" parent="PostLevelControl/WinControl/BuffSelectorGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Health"
 
-[node name="HealthregenButton" type="Button" parent="PostLevelControl/BuffSelectorGridContainer"]
+[node name="HealthregenButton" type="Button" parent="PostLevelControl/WinControl/BuffSelectorGridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Regeneration"
+
+[node name="LoseControl" type="Control" parent="PostLevelControl"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PostLevelControl/LoseControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.5
+offset_top = -20.0
+offset_right = 203.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+bbcode_enabled = true
+text = "[center]YOU LOSE[/center]"
+scroll_active = false
+
+[node name="Button" type="Button" parent="PostLevelControl/LoseControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = 56.0
+offset_right = 105.5
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_6or6t")
+text = "RETRY"
 
 [node name="DebugControl" type="Control" parent="."]
 layout_mode = 3
@@ -98,3 +154,5 @@ grow_horizontal = 0
 [node name="PlayerBuffCounter" parent="." instance=ExtResource("3_hx8nk")]
 debug_show_buff_count = true
 buff_data = ExtResource("4_apscd")
+
+[connection signal="pressed" from="PostLevelControl/LoseControl/Button" to="." method="_on_restart_button_pressed"]

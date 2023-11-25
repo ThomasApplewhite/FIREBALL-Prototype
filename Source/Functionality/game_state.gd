@@ -11,12 +11,13 @@ var buff_buttons : Array[Button]
 @export
 var show_debug_info = true
 
+
 @onready
 var status_control = $PostLevelControl
 @onready
-var status_text = $PostLevelControl/RichTextLabel
+var win_control = $PostLevelControl/WinControl
 @onready
-var status_buff_buttons = $PostLevelControl/BuffSelectorGridContainer
+var lose_control = $PostLevelControl/LoseControl
 @onready
 var damage_dealer = $DamageDealer
 @onready
@@ -69,6 +70,8 @@ func init_buff_buttons():
 func begin_level():
 	player.visible = true
 	status_control.visible = false
+	win_control.visible = false
+	lose_control.visible = false
 	$DebugControl/RichTextLabel.text = "Level Scale: %d" % level_scale
 	#start_enemy_spawning()
 	level_started.emit(self)
@@ -88,20 +91,24 @@ func complete_level(won_level : bool):
 
 
 func win_level():
-	status_text.text = "[center]YOU WIN[/center]"
-	status_buff_buttons.visible = true
 	status_control.visible = true
+	win_control.visible = true
 	enemy_spawner.toggle_enemy_spawning(false)
 	kill_all_enemies()
 	
 	level_scale += 1
 
 
+func reset_game():
+	level_scale = 0
+	buff_counter.reset_buffs()
+	begin_level()
+	
+
 func end_game():
 	player.visible = false
-	status_text.text = "[center]YOU LOSE![/center]"
-	status_buff_buttons.visible = false
 	status_control.visible = true
+	lose_control.visible = true
 
 
 func _on_player_death():
@@ -110,4 +117,11 @@ func _on_player_death():
 
 func _on_progression_button_pressed(buff_selected : int):
 	buff_counter.increment_buff(buff_selected)
+	begin_level()
+
+
+func _on_restart_button_pressed():
+	buff_counter.reset_buffs()
+	kill_all_enemies()
+	level_scale = 0
 	begin_level()
