@@ -15,6 +15,6 @@ Necessary polish for the game to be publicly available for people to try.
 [ ] Build Test
 [ ] Test on Mobile
 [*] A backboard that destroys spells that fly for too long
-[ ] Ability to exit game
+[*] Ability to exit game
 [*] Ability to restart game
 [*] Consistent calculation for raw seconds before a spell is cooled down. Ideally one that is efficient.

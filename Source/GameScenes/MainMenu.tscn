@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcmd18rsbrh6a"]
+[gd_scene load_steps=5 format=3 uid="uid://dcmd18rsbrh6a"]
 
 [ext_resource type="Script" path="res://Source/GameScenes/main_menu.gd" id="1_3wuq8"]
 [ext_resource type="Theme" uid="uid://c1ldb3mtl66yf" path="res://Assets/Themes/ui_blackwhite_theme.tres" id="1_ck02q"]
 [ext_resource type="PackedScene" uid="uid://b771c273nmt07" path="res://Source/GameScenes/play_scene.tscn" id="2_gdfxi"]
+[ext_resource type="StyleBox" uid="uid://cfqwc076o2m3u" path="res://Assets/Themes/StyleBoxes/black_with_white_border_styleflat.tres" id="4_tcxhl"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -42,7 +43,7 @@ theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "[center]FIREBALL[/center]"
 
-[node name="Button" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -56,8 +57,9 @@ offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ck02q")
+theme_override_styles/normal = ExtResource("4_tcxhl")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
+[node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
 custom_minimum_size = Vector2(50, 12)
 layout_mode = 1
 anchors_preset = 8
@@ -82,4 +84,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 450.0
+offset_right = 626.0
+offset_bottom = 475.0
+theme = ExtResource("1_ck02q")
+theme_override_styles/normal = ExtResource("4_tcxhl")
+text = "QUIT"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
