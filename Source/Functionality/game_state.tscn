@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://s8b4ffkpnc15"]
+[gd_scene load_steps=7 format=3 uid="uid://s8b4ffkpnc15"]
 
 [ext_resource type="Script" path="res://Source/Functionality/game_state.gd" id="1_4xlq6"]
 [ext_resource type="PackedScene" uid="uid://b4utuabq3jous" path="res://Source/Functionality/damage_dealer.tscn" id="2_428ch"]
 [ext_resource type="Theme" uid="uid://c1ldb3mtl66yf" path="res://Assets/Themes/ui_blackwhite_theme.tres" id="3_6or6t"]
 [ext_resource type="PackedScene" uid="uid://dlvsikmfvgk5j" path="res://Source/Functionality/player_buff_counter.tscn" id="3_hx8nk"]
 [ext_resource type="Resource" uid="uid://bokm70bni8dnh" path="res://Assets/GameplaySettings/default_buff_data.tres" id="4_apscd"]
+[ext_resource type="StyleBox" uid="uid://cfqwc076o2m3u" path="res://Assets/Themes/StyleBoxes/black_with_white_border_styleflat.tres" id="4_sjgwa"]
 
 [node name="GameState" type="Node" node_paths=PackedStringArray("buff_buttons")]
 script = ExtResource("1_4xlq6")
@@ -131,6 +132,7 @@ offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_6or6t")
+theme_override_styles/normal = ExtResource("4_sjgwa")
 text = "RETRY"
 
 [node name="DebugControl" type="Control" parent="."]
