@@ -19,6 +19,7 @@ Created Saturday 23 September 2023
 [ ] Rename cooldowns and/or base_cooldowns in SpellCooldownTimer to highlight that one is the dynamically desired time needed for a spell to be coolded down and the other is a static value
 [ ] Fix Twist of Fate permenantly stopping enemies that it doesn't kill
 [ ] Visual indicator for stacks
+[ ] Add Quit Button to Retry Screen
 
 
 
