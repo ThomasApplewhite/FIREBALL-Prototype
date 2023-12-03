@@ -8,3 +8,6 @@ Created Saturday 02 December 2023
 How should I test the Android APKs?
 
 Waydroid doesn't seem to work. Anbox is discontinued. What should I do? What stuff does Godot have for this?
+
+Oh hey one-click deploys! Nice!
+https://docs.godotengine.org/en/3.4/tutorials/export/one-click_deploy.html
