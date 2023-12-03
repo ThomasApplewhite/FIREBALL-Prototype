@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-02T18:20:09-08:00
+
+====== TestingOnAndroid ======
+Created Saturday 02 December 2023
+
+How should I test the Android APKs?
+
+Waydroid doesn't seem to work. Anbox is discontinued. What should I do? What stuff does Godot have for this?
