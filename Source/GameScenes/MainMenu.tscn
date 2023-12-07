@@ -27,39 +27,42 @@ color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -189.0
-offset_top = -52.0
-offset_right = 189.0
-offset_bottom = 52.0
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.164
+anchor_right = 0.847
+anchor_bottom = 0.534
+offset_left = 9.74399
+offset_top = 39.728
+offset_right = 10.256
+offset_bottom = -50.032
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ck02q")
-theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/normal_font_size = 196
 bbcode_enabled = true
 text = "[center]FIREBALL[/center]"
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = 76.0
-offset_right = 50.0
-offset_bottom = 101.0
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.569
+anchor_right = 0.661
+anchor_bottom = 0.724
+offset_left = 0.471985
+offset_top = 0.287994
+offset_right = -0.472046
+offset_bottom = -0.152039
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ck02q")
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = ExtResource("4_tcxhl")
+text = "START"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
+visible = false
 custom_minimum_size = Vector2(50, 12)
 layout_mode = 1
 anchors_preset = 8
@@ -85,12 +88,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="QuitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 526.0
-offset_top = 450.0
-offset_right = 626.0
-offset_bottom = 475.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.759
+anchor_right = 0.661
+anchor_bottom = 0.914
+offset_left = 0.471985
+offset_top = 0.167969
+offset_right = -0.472046
+offset_bottom = -0.272034
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_ck02q")
+theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = ExtResource("4_tcxhl")
 text = "QUIT"
 

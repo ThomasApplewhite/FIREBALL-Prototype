@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=1000
 
 [display]
 
+window/size/mode=3
 window/size/resizable=false
 
 [filesystem]

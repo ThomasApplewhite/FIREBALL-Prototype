@@ -11,3 +11,9 @@ Waydroid doesn't seem to work. Anbox is discontinued. What should I do? What stu
 
 Oh hey one-click deploys! Nice!
 https://docs.godotengine.org/en/3.4/tutorials/export/one-click_deploy.html
+
+Android UI layout is also not right atm. I can't test literally this instant because I don't have my phone rn, but the answer is correctly using my controls better to FORCE being the full size of the screen.
+I may also need to change how the UI elements work out to make them bigger. Use Anchors to determine margins, I think? I still dob't get Godot UI.
+
+Okay it looks like Anchors determine how much nodes stretch, while their size is obviously their size.
+
