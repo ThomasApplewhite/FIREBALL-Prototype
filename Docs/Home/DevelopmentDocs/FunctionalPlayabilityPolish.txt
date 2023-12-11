@@ -10,7 +10,7 @@ Necessary polish for the game to be publicly available for people to try.
 [*] Screen Layout/Screen Size pass
 	[*] Fix scaling issues on Mobile
 	[*] Fix background and game not being centered on Mobile
-[ ] Quick spell scaling and damage pass. Not too intense, just quick-balance some stuff
+[*] Quick spell scaling and damage pass. Not too intense, just quick-balance some stuff
 [*] Visual Indicator for spell cooldowns
 [*] Add black bottom edge/margin to splash screen
 [*] Disable texture filering on splash screen

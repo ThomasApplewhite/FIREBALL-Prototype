@@ -25,3 +25,13 @@ Really, the entire game is screen size  sensitive, but I don't think I'm going t
 Mostly, player position, enemy spawner size, and UI need to be adjusted for the viewport.
 
 Okay got it I just needed to mess with the screen stretch mode it doesn't look //great// but I don't really care.
+
+
+Zap and Cooldown Buff are both too strong. Potential fixes:
+* Decrease Zap's cooldown mod
+* Increase Enemy Speed
+* Increase Enemy Health
+* Increase FIREBALL scaling speed
+
+We want to avoid players just picking cooldown and spamming zap the whole time.
+(it might be worth writeing this info down and making small changes, but pushing the first build unbalanced so I can get people to play it anyways)
