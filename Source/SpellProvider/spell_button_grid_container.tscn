@@ -11,3 +11,4 @@ offset_right = 40.0
 grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("1_j6b8e")
+debug_keyboard_spell_selection = true

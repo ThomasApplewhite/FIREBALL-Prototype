@@ -21,6 +21,7 @@ Created Saturday 23 September 2023
 [ ] Visual indicator for stacks
 [ ] Add Quit Button to Retry Screen
 [ ] Remove numbers from healthbars?
+[ ] Instructions In-Game
 
 
 

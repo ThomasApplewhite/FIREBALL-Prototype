@@ -3,10 +3,19 @@ extends GridContainer
 const progress_undertexture = preload("res://Assets/Icons/BlackIcon.png")
 const normal_button_style_name = "Normal"
 const hover_button_style_name = "Hover"
+const debug_selection_keys = {
+	KEY_1 : 0,
+	KEY_2 : 1,
+	KEY_3 : 2,
+	KEY_4 : 3,
+	KEY_5 : 4
+}
 
 @onready
 var empty_stylebox = StyleBoxEmpty.new()
 
+@export
+var debug_keyboard_spell_selection = false
 @export
 var spell_percentage_provider : Node
 @export 
@@ -20,6 +29,13 @@ func _process(_delta):
 		# These buttons always have the texture progress as their only child
 		var remaining_percentage = spell_percentage_provider.get_spell_time_percentage(i)
 		get_child(i).get_child(0).value = remaining_percentage * 100.0
+
+
+func _unhandled_key_input(event):
+	if debug_keyboard_spell_selection and event.pressed and debug_selection_keys.has(event.keycode):
+		var button = get_child(debug_selection_keys[event.keycode])
+		button.grab_focus()
+		button.pressed.emit()
 
 
 # spell_datas is an array of spell data resources

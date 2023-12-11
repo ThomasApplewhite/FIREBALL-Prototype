@@ -20,5 +20,5 @@ Necessary polish for the game to be publicly available for people to try.
 [*] Ability to exit game
 [*] Ability to restart game
 [*] Consistent calculation for raw seconds before a spell is cooled down. Ideally one that is efficient.
-[ ] Hotkeys for spell selection on PC
-[ ] Get that weird grey bar out of the scene
+[*] Hotkeys for spell selection on PC
+[*] Get that weird grey bar out of the scene
