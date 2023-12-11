@@ -22,6 +22,7 @@ Created Saturday 23 September 2023
 [ ] Add Quit Button to Retry Screen
 [ ] Remove numbers from healthbars?
 [ ] Instructions In-Game
+[ ] Efficient multi-platform exporting and version numbering
 
 
 
