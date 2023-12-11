@@ -20,6 +20,7 @@ Created Saturday 23 September 2023
 [ ] Fix Twist of Fate permenantly stopping enemies that it doesn't kill
 [ ] Visual indicator for stacks
 [ ] Add Quit Button to Retry Screen
+[ ] Remove numbers from healthbars?
 
 
 

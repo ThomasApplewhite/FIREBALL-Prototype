@@ -10,6 +10,7 @@
 [node name="GameState" type="Node" node_paths=PackedStringArray("buff_buttons")]
 script = ExtResource("1_4xlq6")
 buff_buttons = [NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/DamageButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/CooldownButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/HealthcapButton"), NodePath("PostLevelControl/WinControl/BuffSelectorGridContainer/HealthregenButton")]
+show_debug_info = false
 
 [node name="DamageDealer" parent="." instance=ExtResource("2_428ch")]
 
@@ -136,6 +137,7 @@ theme_override_styles/normal = ExtResource("4_sjgwa")
 text = "RETRY"
 
 [node name="DebugControl" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -154,7 +156,6 @@ offset_bottom = 74.0
 grow_horizontal = 0
 
 [node name="PlayerBuffCounter" parent="." instance=ExtResource("3_hx8nk")]
-debug_show_buff_count = true
 buff_data = ExtResource("4_apscd")
 
 [connection signal="pressed" from="PostLevelControl/LoseControl/Button" to="." method="_on_restart_button_pressed"]

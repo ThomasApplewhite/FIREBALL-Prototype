@@ -17,3 +17,11 @@ I may also need to change how the UI elements work out to make them bigger. Use 
 
 Okay it looks like Anchors determine how much nodes stretch, while their size is obviously their size.
 
+The  problem with the level elements is that they're viewport size sensitive. Where they go depends on how big the viewport is. Hmm.
+Do I actually want to do that? Maybe I should adjust the camera depending on viewport size? I actually kinda don't know what I should do. Hmm...
+What if I had a force camera size and it just stretched? This is something I should think about.
+
+Really, the entire game is screen size  sensitive, but I don't think I'm going to worry  about that for right now.
+Mostly, player position, enemy spawner size, and UI need to be adjusted for the viewport.
+
+Okay got it I just needed to mess with the screen stretch mode it doesn't look //great// but I don't really care.

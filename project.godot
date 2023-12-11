@@ -23,6 +23,7 @@ boot_splash/minimum_display_time=1000
 
 window/size/mode=3
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [filesystem]
 
