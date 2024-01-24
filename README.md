@@ -1,0 +1,1 @@
+FIREBALL is a mobile game made in Godot that I developed from September to December 2023 to better familiarize myself with Godot, GDScript, and how the engine works. All the commits from "Game King" are me :). You can play this game on itch.io: https://thomasapplewhite.itch.io/fireball
