@@ -6,7 +6,18 @@ Creation-Date: 2023-12-11T10:04:38-08:00
 Created Monday 11 December 2023
 
 [ ] Cover Image
+[*] Basic Test Description
+[*] Feedback Form
 [ ] Instructions
 [ ] Tagline
 [ ] Description
 [ ] Screenshots
+[ ] Builds
+	[*] Android
+	[ ] Web
+	[*] Windows
+	[*] Linux
+
+Importaant notes for itch page:
+* Web and Windows versions have not been tested
+* Web version does not work on iOS or Mac

@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2023-12-15T09:57:02-08:00
+
+====== ItchLinkDecember ======
+Created Friday 15 December 2023
+
+3 players, as far as I can tell
+
+--Copy Pasted--
+One player on Linux, one on Windows
+
+How far were you able to get?
+2 responses
+Pressed the cool down button twice after winning and basically auto won every game after that. 
+tested using numpad for spells, windows 10.  Got to enemies having 300 health before i realized spell #3 does damage to myself and killed myself.  Did not read the spell rules going in, my fault LMAO.
+
+Did you encounter any bugs or glitches while playing?
+2 responses
+None
+no bugs or glitches, however I would mention that the second and fourth spells have a max range, as they dont show up for further enemies. 
+
+Do you have any feedback on what you think might improve the game?
+2 responses
+Spawn less enemies in quick succession / increase fireball timer 
+beyond the feedback I left for the Linux testing (slower/less enemies and longer cooldown for fireball?) I think sound would be nice as an indicator for lessening health or an indicator that fireball is ready
+
+--Handwritten notes from Chloe--
+Chloe played on Linux
+
+Bugs:
+twist of fate sprite stuck on screen
+upgrades dont reset after retry
+game can crash at high upgrade levels?
+
+Chloe Notes:
+Doesn't like that FIREBALL cooldown penalties exist
+Cooldown feels like the best upgrade
+Players should know when Cooldown upgrade maxes
+
+My Notes:
+Chloe doesn't know the point of the game. She didn't read the page desceiprion, but there's also no in game explanation
+CHLOE DOESN'T KNOW ABOUT SPELL STACKING. THAT'S ACTUALLY A HUGE BLINDSPOT
